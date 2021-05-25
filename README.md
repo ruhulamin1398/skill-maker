@@ -1,16 +1,18 @@
-Requirements:
-	•	Since it is a Digital Learning Platform; Where we will have Virtual Meet and Video Series so we need to incorporate all kinds of SERVICES, SEMINARS, TRAININGS, SUPPORT in General Category. 
-	•	We should have a Landing Page where every visiting Learner will Sign Up with us providing NAME, CONTACT NUMBER, EMAIL, PROFESSION, STATE & COUNTRY. 
-	•	If any Student/Learner Enrolled in any Subject, We can direct him/her to Orientation Room. Where Student will see a Recorded Video from CEO mentioning ROADMAP and a Brief IDEA on PARTICULAR SUBJECT.
-	•	We need to have FAQ (Frequently Asked Questions) Tab. 
-	•	We will have Our VIDEO SERIES in our WEBSITE. 
-	•	We will have an ANIMATED ROADMAP in Our WEBSITE
-	•	We have to add CHAT BOX to attend Visiting Customers Query. 
-	•	Add PAYMENT GATEWAY > PayPal, VISA, MASTER, Bkash through Stripe. 
-	•	We will have every Ambassador's Introductory Video Clip as Profile. 
-	•	We will have SUCCESS STORIES with Profile & Details. 
-	•	We will Have OUR OFFICES/OUR GLOBAL PRESENCE - It will be an address with a City View.
-	•	We will have a TAB on CERTIFICATION. 
-	•	We will have a TAB on INVESTMENT CLUB - If anyone wants to sell in Amazon USA/UK or any other marketplace, this is for him/her Business. 
-	•	We will have a MARKETPLACE. 
-	•	When any Learner/Students ENROLL or EMAIL ANY QUERY, HE/SHE WILL GET A CONFIRMATION EMAIL WITH TICKET NUMBER. EVERY SUPPORT SYSTEM WILL HAVE THE SOCIAL MEDIA PLATFORM LINK. WE WILL ENCOURAGE OUR STUDENTS TO PLACE HIS QUERY TO SMM PLATFORM TO GET QUICKER ANSWER. SO CONNECTIVITY WITH SOCIAL MEDIA PLATFORM
+<p><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">Requirements: </span></p>
+<ul style="list-style-type: circle;">
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">Since it is a Digital Learning Platform; Where we will have Virtual Meet and Video Series so we need to incorporate all kinds of SERVICES, SEMINARS, TRAININGS, SUPPORT in General Category.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We should have a Landing Page where every visiting Learner will Sign Up with us providing NAME, CONTACT NUMBER, EMAIL, PROFESSION, STATE &amp; COUNTRY.&nbsp; <br /></span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">If any Student/Learner Enrolled in any Subject, We can direct him/her to Orientation Room. Where Student will see a Recorded Video from CEO mentioning ROADMAP and a Brief IDEA on PARTICULAR SUBJECT.&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We need to have FAQ (Frequently Asked Questions) Tab.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We will have Our VIDEO SERIES in our WEBSITE.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We will have an ANIMATED ROADMAP in Our WEBSITE&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We have to add CHAT BOX to attend Visiting Customers Query.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> Add PAYMENT GATEWAY &gt; PayPal, VISA, MASTER, Bkash through Stripe.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We will have every Ambassador's Introductory Video Clip as Profile.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We will have SUCCESS STORIES with Profile &amp; Details.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We will Have OUR OFFICES/OUR GLOBAL PRESENCE - It will be an address with a City View. </span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">We will have a TAB on CERTIFICATION.&nbsp; </span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41">We will have a TAB on INVESTMENT CLUB - If anyone wants to sell in Amazon USA/UK or any other marketplace, this is for him/her Business.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> We will have a MARKETPLACE.&nbsp;&nbsp;</span></li>
+<li><span class="tojvnm2t a6sixzi8 abs2jz4q a8s20v7p t1p8iaqh k5wvi7nf q3lfd5jv pk4s997a bipmatt0 cebpdrjk qowsmv63 owwhemhu dp1hu0rb dhp61c6y iyyx5f41"> When any Learner/Students ENROLL or EMAIL ANY QUERY, HE/SHE WILL GET A CONFIRMATION EMAIL WITH TICKET NUMBER. EVERY SUPPORT SYSTEM WILL HAVE THE SOCIAL MEDIA PLATFORM LINK. WE WILL ENCOURAGE OUR STUDENTS TO PLACE HIS QUERY TO SMM PLATFORM TO GET QUICKER ANSWER. SO CONNECTIVITY WITH SOCIAL MEDIA PLATFORM</span></li>
+</ul>
