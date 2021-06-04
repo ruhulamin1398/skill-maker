@@ -38,7 +38,6 @@
 </ul>
 <p><br /><br /></p>
 <h1><strong>6. animated roadmap</strong></h1>
-<p><span style="font-weight: 400;">[the hardware that the proposed software will be compatible with]</span></p>
 <p>&nbsp;</p>
 <h1><strong>7. support</strong></h1>
 <ul>
