@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class service extends Model
+class officer extends Model
 {
     use HasFactory;
-    protected $table = 'services';
+    protected $table = 'officers';
     protected $fillable = [
-      'title', 'sub_title', 'description', 'service_image'
+      'country', 'location', 'description', 'map_link', 'image'
     ];
 }

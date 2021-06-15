@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\OfficerController;
+use App\Http\Controllers\SuccessStoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::resource('/service', ServiceController::class);
+Route::resource('/officer', OfficerController::class);
+Route::resource('/success_story', SuccessStoryController::class);

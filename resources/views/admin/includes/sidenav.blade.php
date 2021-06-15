@@ -16,6 +16,51 @@
                     <div class="nk-sidebar-content">
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
+                            <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">Manage Service</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{route('service.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Service</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('service.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Service</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">Manage Officers</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('officer.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Officer</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('officer.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Officers</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">Manage Success Story</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{route('success_story.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Story</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('success_story.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Story</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
                                 <li class="nk-menu-item">
                                     <a href="html/index.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
