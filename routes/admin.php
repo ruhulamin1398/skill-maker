@@ -2,8 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\OfficerController;
+use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\SuccessStoryController;
+use App\Http\Controllers\SeminarController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +25,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::resource('/service', ServiceController::class);
-Route::resource('/officer', OfficerController::class);
+Route::resource('/office', OfficeController::class);
 Route::resource('/success_story', SuccessStoryController::class);
+Route::resource('/seminar', SeminarController::class);

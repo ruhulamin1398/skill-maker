@@ -34,14 +34,29 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text">Manage Officers</span>
+                                        <span class="nk-menu-text">Manage Offices</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('officer.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Officer</span></a>
+                                            <a href="{{ route('office.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Office</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{  route('officer.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Officers</span></a>
+                                            <a href="{{  route('office.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Offices</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">Manage Seminars</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('seminar.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Seminar</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Seminar</span></a>
                                         </li>
 
                                     </ul>
