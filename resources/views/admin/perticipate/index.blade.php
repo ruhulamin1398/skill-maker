@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('seminar.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Add New Seminar</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('perticipate.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Add New Perticipaer</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -18,32 +18,28 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Location</th>
-                                <th>Venue</th>
-                                <th>Date</th>
-                                <th>Price</th>
-                                <th>Status</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Father Name</th>
+                                <th>More</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($seminar as $i=>$seminars)
+                            @foreach($perticipate as $i=>$perticipaters)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $seminars->location }}</td>
-                                    <td>{{ $seminars->venue }}</td>
-                                    <td>{{ date('d-M-Y', strtotime($seminars->date)) }}</td>
-                                    <td>{{ number_format($seminars->price, '2') }}</td>
+                                    <td>{{ $perticipaters->name }}</td>
+                                    <td>{{ $perticipaters->email }}</td>
+                                    <td>{{ $perticipaters->number }}</td>
+                                    <td>{{ $perticipaters->father_name }}</td>
                                     <td>
-                                        @if ($seminars->status == '0')
-                                           <label class="text-success">Published</label>
-                                            @else
-                                            <label class="text-danger">Un-Published</label>
-                                        @endif
+                                        <a href="{{ route('perticipate.show', $perticipaters->id) }}" class="btn btn-success">View</a> 
                                     </td>
                                     <td>
-                                        <form action="{{ route('seminar.destroy', $seminars->id) }}" method="post">
-                                            <a href="{{ route('seminar.edit', $seminars->id) }}" class="btn btn-primary">Edit</a> |
+                                        <form action="{{ route('perticipate.destroy', $perticipaters->id) }}" method="post">
+                                            <a href="{{ route('perticipate.edit', $perticipaters->id) }}" class="btn btn-primary">Edit</a> |
                                             @csrf
                                             @method('DELETE')
                                             <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete !!');" value="Delete">

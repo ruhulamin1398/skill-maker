@@ -33,7 +33,13 @@
                                     <span class="text-danger ">{{ $errors->first('map_link') }}</span>
                                 @endif
                             </div>
-                        
+                            <div class="form-group">
+                                <label class="form-label">Image<sup class="text-danger">*</sup></label><br/>
+                                <img src="{{ asset('office/images/'.$office->image) }}" style="height: 120px; width: 120px"><br/>
+                                <div class="mt-1">
+                                    <input type="file" name="image" class="form-control" >
+                                </div>
+                            </div>
                             <div class="form-group">
                                 <label class="form-label">Description<sup class="text-danger">*</sup></label>
                                 <textarea name="description" class="summernote-basic">{{ $office->description }}</textarea>

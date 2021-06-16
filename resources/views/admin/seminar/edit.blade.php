@@ -52,7 +52,20 @@
                                     <span class="text-danger ">{{ $errors->first('price') }}</span>
                                 @endif
                             </div>
-                           
+                            <div class="form-group">
+                                <label class="form-label">Status<sup class="text-danger">*</sup></label>
+                                @if ($seminar->status == '0')
+                                    <input type="radio" checked name="status" value="0"> Publish
+                                    <input type="radio" name="status" value="1"> Un-Publish
+                                    @elseif ($seminar->status == '1')
+                                    <input type="radio"  name="status" value="0"> Publish
+                                    <input type="radio" checked name="status" value="1"> Un-Publish
+                                @endif
+                              
+                                @if($errors->has('price'))
+                                    <span class="text-danger ">{{ $errors->first('price') }}</span>
+                                @endif
+                            </div>
                             <div class="form-group">
                                 <input type="submit" name="btn"  class="btn btn-primary col-6 btn-block" value="Submit">
                             </div>

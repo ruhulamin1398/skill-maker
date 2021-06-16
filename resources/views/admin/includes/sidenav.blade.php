@@ -19,7 +19,7 @@
                             <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text">Manage Service</span>
+                                        <span class="nk-menu-text"> Services</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
@@ -34,7 +34,7 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text">Manage Offices</span>
+                                        <span class="nk-menu-text"> Offices</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
@@ -49,7 +49,7 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text">Manage Seminars</span>
+                                        <span class="nk-menu-text"> Seminars</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
@@ -64,7 +64,7 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text">Manage Success Story</span>
+                                        <span class="nk-menu-text"> Success Storys</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
@@ -76,7 +76,38 @@
 
                                     </ul>
                                 </li>
-                                <li class="nk-menu-item">
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Faqs</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('faq.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Faq</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('faq.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Faq</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Manage Perticiper</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('perticipate.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Perticiper</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('perticipate.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Perticiper</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                {{-- <li class="nk-menu-item">
                                     <a href="html/index.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
                                         <span class="nk-menu-text">Default Dashboard</span>
@@ -508,7 +539,7 @@
                                         <span class="nk-menu-icon"><em class="icon ni ni-text-rich"></em></span>
                                         <span class="nk-menu-text">Email Template</span>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul><!-- .nk-menu -->
                         </div><!-- .nk-sidebar-menu -->
                     </div><!-- .nk-sidebar-content -->

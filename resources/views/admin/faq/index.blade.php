@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('seminar.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Add New Seminar</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('faq.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Add New Faq</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -18,32 +18,20 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Location</th>
-                                <th>Venue</th>
-                                <th>Date</th>
-                                <th>Price</th>
-                                <th>Status</th>
+                                <th>Question</th>
+                                <th>Answere</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($seminar as $i=>$seminars)
+                            @foreach($faq as $i=>$faqs)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $seminars->location }}</td>
-                                    <td>{{ $seminars->venue }}</td>
-                                    <td>{{ date('d-M-Y', strtotime($seminars->date)) }}</td>
-                                    <td>{{ number_format($seminars->price, '2') }}</td>
+                                    <td>{{ $faqs->question }}</td>
+                                    <td>{{ $faqs->answere }}</td>
                                     <td>
-                                        @if ($seminars->status == '0')
-                                           <label class="text-success">Published</label>
-                                            @else
-                                            <label class="text-danger">Un-Published</label>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        <form action="{{ route('seminar.destroy', $seminars->id) }}" method="post">
-                                            <a href="{{ route('seminar.edit', $seminars->id) }}" class="btn btn-primary">Edit</a> |
+                                        <form action="{{ route('faq.destroy', $faqs->id) }}" method="post">
+                                            <a href="{{ route('faq.edit', $faqs->id) }}" class="btn btn-primary">Edit</a> |
                                             @csrf
                                             @method('DELETE')
                                             <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete !!');" value="Delete">

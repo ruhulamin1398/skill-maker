@@ -110,8 +110,28 @@ class ServiceController extends Controller
             'description'   => 'required',
         ]);
 
-        $service->update($request->all());
+        // $service->update($request->all());
 
+        $service->title = $request->title;
+        $service->sub_title = $request->sub_title;
+        $service->description = $request->description;
+
+        if($request->service_image == ''){
+            // $office->update($request->all());
+            // $office->save();
+        }else{
+            if ($request->hasFile('service_image')) {
+                $file = $request->file('service_image');
+                $extension = $file->getClientOriginalExtension();
+                $fileName = time() . '.' . $extension;
+                $file->move('service/images/', $fileName);
+                $service->service_image = $fileName;
+            } else {
+                return $request;
+                $service->service_image = '';
+            }
+
+        }
         $service->save();
         return redirect()->route('service.index')->with('success','Service Data Update Successful');
     }

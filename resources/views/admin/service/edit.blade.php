@@ -26,6 +26,13 @@
                                 <input type="text" name="sub_title" placeholder="Enter Sub Title"  class="form-control" value="{{ $service->sub_title }}">
                             </div>
                             <div class="form-group">
+                                <label class="form-label">Image<sup class="text-danger">*</sup></label><br/>
+                                <img src="{{ asset('service/images/'.$service->service_image) }}" style="height: 120px; width: 120px"><br/>
+                                <div class="mt-1">
+                                    <input type="file" name="service_image" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label class="form-label">Description<sup class="text-danger">*</sup></label>
                                 <textarea name="description" class="summernote-basic">{{ $service->description }}</textarea>
                             </div>

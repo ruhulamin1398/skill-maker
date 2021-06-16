@@ -45,13 +45,14 @@ class SeminarController extends Controller
             'venue'    => 'required',
             'date'     => 'required',
             'price'    => 'required',
-        
+            'status'   => 'required'
         ],[
             'title.required'     => 'Please Enter Seminar Ttle',
             'location.required'  => 'Please Enter Location',
             'venue.required'     => 'Please Enter Venu Name',
             'date.required'      => 'Please Enter Date',
             'price.required'     => 'Please Enter Price',
+            'status.required'    => 'Please Select Status'
         ]);
 
         $seminar = new seminar();
@@ -60,6 +61,7 @@ class SeminarController extends Controller
         $seminar->venue     = $request->venue;
         $seminar->date      = $request->date;
         $seminar->price     = $request->price;
+        $seminar->status    = $request->status;
 
         $seminar->save();
         return redirect()->route('seminar.index')->with('success','New Seminar Added Successful');

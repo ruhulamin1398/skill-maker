@@ -117,8 +117,31 @@ class officeController extends Controller
             'map_link'      => 'required',
         ]);
 
-        $office->update($request->all());
+        // $update = office::find($office);
+
+        $office->country        = $request->country;
+        $office->location       = $request->location;
+        $office->description    = $request->description;
+        $office->map_link       = $request->map_link;
+
+        if($request->image == ''){
+            // $office->update($request->all());
+            // $office->save();
+        }else{
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $extension = $file->getClientOriginalExtension();
+                $fileName = time() . '.' . $extension;
+                $file->move('office/images/', $fileName);
+                $office->image = $fileName;
+            } else {
+                return $request;
+                $office->image = '';
+            }
+          
+        }
         $office->save();
+       
         return redirect()->route('office.index')->with('success','office Data Update Successfull');
 
     }
