@@ -1,0 +1,8 @@
+
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mumixhqm/demos.abasas.tech/website/other/skillmaker
+    - /bin/cp -r * $DEPLOYPATH #copy all from root
+    # - /bin/cp -r ./public/* $DEPLOYPATH/
+    # - /bin/cp ln -nfs $DEPLOYPATH/public $DEPLOYPATH
