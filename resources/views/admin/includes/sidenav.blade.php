@@ -16,7 +16,98 @@
                     <div class="nk-sidebar-content">
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
-                                <li class="nk-menu-item">
+                            <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Services</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{route('service.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Service</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('service.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Service</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Offices</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('office.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Office</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('office.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Offices</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Seminars</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('seminar.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Seminar</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Seminar</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Success Storys</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{route('success_story.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Story</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('success_story.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Story</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Faqs</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('faq.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Faq</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('faq.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Faq</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Manage Perticiper</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('perticipate.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Perticiper</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('perticipate.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Perticiper</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                {{-- <li class="nk-menu-item">
                                     <a href="html/index.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
                                         <span class="nk-menu-text">Default Dashboard</span>
@@ -448,7 +539,7 @@
                                         <span class="nk-menu-icon"><em class="icon ni ni-text-rich"></em></span>
                                         <span class="nk-menu-text">Email Template</span>
                                     </a>
-                                </li>
+                                </li> --}}
                             </ul><!-- .nk-menu -->
                         </div><!-- .nk-sidebar-menu -->
                     </div><!-- .nk-sidebar-content -->

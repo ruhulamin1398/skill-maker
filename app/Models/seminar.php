@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class service extends Model
+class seminar extends Model
 {
     use HasFactory;
-    protected $table = 'services';
+    protected $table = 'seminars';
     protected $fillable = [
-      'title', 'sub_title', 'description', 'service_image'
+     'title', 'location', 'venue', 'date', 'price','status'
     ];
 }

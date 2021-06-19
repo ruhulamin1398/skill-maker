@@ -14,6 +14,8 @@
     <!-- StyleSheets  -->
     <link rel="stylesheet" href="{{asset('theme/admin/assets/css/dashlite.css?ver=2.4.0')}}">
     <link id="skin-default" rel="stylesheet" href="{{asset('theme/admin/assets/css/theme.css?ver=2.4.0')}}">
+    <link rel="stylesheet" href="{{asset('theme/admin/assets/css/editors/summernote.css?ver=2.4.0')}}">
+    <link rel="stylesheet" href="{{ asset('theme/admin/assets/css/libs/fontawesome-icons.css?ver=2.4.0') }}">
     @yield('css')
 </head>
 
@@ -21,17 +23,17 @@
     <div class="nk-app-root">
         <!-- main @s -->
         <div class="nk-main ">
-            
+
         @include('admin.includes.sidenav')
             <!-- wrap @s -->
             <div class="nk-wrap ">
                 <!-- main header @s -->
-               
+
         @include('admin.includes.nav')
                 <!-- main header @e -->
                 <!-- content @s -->
                 <div class="nk-content ">
-                
+
                     <div class="container-fluid">
                         <div class="nk-content-inner">
                             <div class="nk-content-body">
@@ -67,10 +69,12 @@
     </div>
     <!-- app-root @e -->
     <!-- JavaScript -->
-    <script src="{{('theme/admin/assets/js/bundle.js?ver=2.4.0')}}"></script>
-    <script src="{{('theme/admin/assets/js/scripts.js?ver=2.4.0')}}"></script>
-    <script src="{{('theme/admin/assets/js/charts/gd-default.js?ver=2.4.0')}}"></script>
-
+    <script src="{{asset('theme/admin/assets/js/bundle.js?ver=2.4.0')}}"></script>
+    <script src="{{asset('theme/admin/assets/js/scripts.js?ver=2.4.0')}}"></script>
+    <script src="{{asset('theme/admin/assets/js/charts/gd-default.js?ver=2.4.0')}}"></script>
+    <script src="{{asset('theme/admin/assets/js/editors.js?ver=2.4.0') }}"></script>
+    <script src="{{asset('theme/admin/assets/js/libs/editors/summernote.js?ver=2.4.0')}}"></script>
+    <script src="{{asset('theme/admin/assets/js/editors.js?ver=2.4.0')}}"></script>
     @yield('js')
 </body>
 
