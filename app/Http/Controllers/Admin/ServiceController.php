@@ -1,9 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\service;
 use Illuminate\Http\Request;
+
 
 class ServiceController extends Controller
 {

@@ -1,12 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\OfficeController;
-use App\Http\Controllers\SuccessStoryController;
-use App\Http\Controllers\SeminarController;
-use App\Http\Controllers\FaqController;
-use App\Http\Controllers\ManagePerticipateController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
