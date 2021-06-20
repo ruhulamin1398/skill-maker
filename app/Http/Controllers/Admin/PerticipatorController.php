@@ -1,12 +1,12 @@
 <?php
-namespace App\Http\Controllers\Admin;
 
+namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
-use App\Models\managePerticipate;
+use App\Models\perticipator;
 use Illuminate\Http\Request;
 
-class ManagePerticipateController extends Controller
+class PerticipatorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,9 @@ class ManagePerticipateController extends Controller
      */
     public function index()
     {
-        $page_name = 'All Perticiper List';
-        $perticipate = managePerticipate::all();
-        return view('admin.perticipate.index', compact('page_name','perticipate'));
+        $page_name = 'All Perticipator List';
+        $perticipator =  perticipator::all();
+        return view('admin.perticipators.index', compact('page_name','perticipator'));
     }
 
     /**
@@ -27,8 +27,8 @@ class ManagePerticipateController extends Controller
      */
     public function create()
     {
-        $page_name = 'New Perticipate';
-        return view('admin.perticipate.create', compact('page_name'));
+        $page_name = 'New Perticipator';
+        return view('admin.perticipators.create', compact('page_name'));   
     }
 
     /**
@@ -66,56 +66,56 @@ class ManagePerticipateController extends Controller
 
         ]);
 
-        $perticipate = new managePerticipate();
-        $perticipate->name         = $request->name;
-        $perticipate->father_name  = $request->father_name;
-        $perticipate->number       = $request->number;
-        $perticipate->email        = $request->email;
-        $perticipate->pasport	   = $request->pasport;
-        $perticipate->city         = $request->city;
-        $perticipate->country      = $request->country;
-        $perticipate->occopation   = $request->occopation;
-        $perticipate->training     = $request->training;
-        $perticipate->enablers     = $request->enablers;
-        $perticipate->payment_type = $request->payment_type;
+        $perticipators = new perticipator();
+        $perticipators->name         = $request->name;
+        $perticipators->father_name  = $request->father_name;
+        $perticipators->number       = $request->number;
+        $perticipators->email        = $request->email;
+        $perticipators->pasport	   = $request->pasport;
+        $perticipators->city         = $request->city;
+        $perticipators->country      = $request->country;
+        $perticipators->occopation   = $request->occopation;
+        $perticipators->training     = $request->training;
+        $perticipators->enablers     = $request->enablers;
+        $perticipators->payment_type = $request->payment_type;
 
-        $perticipate->save();
-        return redirect()->route('perticipate.index')->with('success','Successful');
+        $perticipators->save();
+        return redirect()->route('perticipators.index')->with('success','Successful');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\managePerticipate  $managePerticipate
+     * @param  \App\Models\perticipator  $perticipator
      * @return \Illuminate\Http\Response
      */
-    public function show(managePerticipate $managePerticipate)
+    public function show(perticipator $perticipator)
     {
-        $page_name = 'Perticiper Details';
-        return view('admin.perticipate.show', compact('page_name','managePerticipate'));
+        $page_name = 'Perticipator Details';
+        return view('admin.perticipators.show', compact('page_name','perticipator'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\managePerticipate  $managePerticipate
+     * @param  \App\Models\perticipator  $perticipator
      * @return \Illuminate\Http\Response
      */
-    public function edit(managePerticipate $managePerticipate)
+    public function edit(perticipator $perticipator)
     {
+        // return $perticipator;
         $page_name = 'Perticiper Details Update';
-        dd($managePerticipate);
-        return view('admin.perticipate.edit', compact('page_name','managePerticipate'));
+        return view('admin.perticipators.edit', compact('page_name','perticipator'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\managePerticipate  $managePerticipate
+     * @param  \App\Models\perticipator  $perticipator
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, managePerticipate $managePerticipate)
+    public function update(Request $request, perticipator $perticipator)
     {
         $this->validate($request, [
             'name'        => 'required',
@@ -130,21 +130,21 @@ class ManagePerticipateController extends Controller
             'enablers'    => 'required',
             'payment_type' => 'required'
         ]);
-        $managePerticipate->update($request->all());
-        $managePerticipate->save();
-        return redirect()->route('perticipate.index')->with('success','Perticpar Data Update Successfull');
+        $perticipator->update($request->all());
+        $perticipator->save();
+        return redirect()->route('perticipators.index')->with('success','perticipator Data Update Successfull');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\managePerticipate  $managePerticipate
+     * @param  \App\Models\perticipator  $perticipator
      * @return \Illuminate\Http\Response
      */
-    public function destroy(managePerticipate $managePerticipate)
+    public function destroy(perticipator $perticipator)
     {
-        $managePerticipate->delete();
+        $perticipator->delete();
+        return redirect()->route('perticipators.index')->with('success','perticipator Data Delete Successfull');
     
-        return redirect()->route('perticipate.index')->with('success','Perticpar Data Delete Successfull');
     }
 }

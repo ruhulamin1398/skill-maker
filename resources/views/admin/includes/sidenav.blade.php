@@ -98,10 +98,10 @@
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('perticipate.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Perticiper</span></a>
+                                            <a href="{{ route('perticipators.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Perticiper</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{  route('perticipate.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Perticiper</span></a>
+                                            <a href="{{  route('perticipators.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Perticiper</span></a>
                                         </li>
 
                                     </ul>
