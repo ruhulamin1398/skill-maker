@@ -104,7 +104,7 @@ class TrainerController extends Controller
      */
     public function edit(Trainer $trainer)
     {
-        $page_name = 'Update office Data';
+        $page_name = 'Update Trainer Data';
         return view('admin.trainers.edit', compact('page_name', 'trainer'));
     }
 

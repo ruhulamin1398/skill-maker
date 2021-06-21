@@ -121,7 +121,37 @@
 
                                     </ul>
                                 </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">  Buy Course</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('buycourses.create') }}" class="nk-menu-link"><span class="nk-menu-text">Buy New Course</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('buycourses.index') }}" class="nk-menu-link"><span class="nk-menu-text">All Course</span></a>
+                                        </li>
 
+                                    </ul>
+                                </li>
+
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">  Supports</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('supports.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Support</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('supports.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Support</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
                                 {{-- <li class="nk-menu-item">
                                     <a href="html/index.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
