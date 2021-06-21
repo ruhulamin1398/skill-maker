@@ -28,3 +28,5 @@ Route::resource('seminar', SeminarController::class);
 Route::resource('faq', FaqController::class);
 Route::resource('perticipators', PerticipatorController::class);
 Route::resource('trainers', TrainerController::class);
+Route::resource('buycourses', BuycourseController::class);
+Route::resource('supports', SupportController::class);
