@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('perticipate.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Perticiper</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('perticipators.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Perticiper</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -14,68 +14,68 @@
                 @endif
                 <div class="card card-preview">
                     <div class="card-inner">
-                        <form action="{{ route('perticipate.update', $managePerticipate->id ) }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('perticipators.update', $perticipator->id ) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Name<sup class="text-danger">*</sup></label>
-                                <input type="text" name="name" placeholder="Enter Name"  class="form-control" value="{{ $managePerticipate->name }}">
+                                <input type="text" name="name" placeholder="Enter Name"  class="form-control" value="{{ $perticipator->name }}">
                                 @if($errors->has('name'))
                                     <span class="text-danger ">{{ $errors->first('name') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Father Name<sup class="text-danger">*</sup></label>
-                                <input type="text" name="father_name" placeholder="Enter Father Name"  class="form-control" value="{{ $managePerticipate->father_name }}">
+                                <input type="text" name="father_name" placeholder="Enter Father Name"  class="form-control" value="{{ $perticipator->father_name }}">
                                 @if($errors->has('father_name'))
                                     <span class="text-danger ">{{ $errors->first('father_name') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Phoner Number<sup class="text-danger">*</sup></label>
-                                <input type="text" name="number" placeholder="Enter Phone Number"  class="form-control" value="{{ $managePerticipate->number }}">
+                                <input type="text" name="number" placeholder="Enter Phone Number"  class="form-control" value="{{ $perticipator->number }}">
                                 @if($errors->has('number'))
                                     <span class="text-danger ">{{ $errors->first('number') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Email<sup class="text-danger">*</sup></label>
-                                <input type="email" name="email" placeholder="Enter Email"  class="form-control" value="{{ $managePerticipate->email }}">
+                                <input type="email" name="email" placeholder="Enter Email"  class="form-control" value="{{ $perticipator->email }}">
                                 @if($errors->has('email'))
                                     <span class="text-danger ">{{ $errors->first('email') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Passport Number<sup class="text-danger">*</sup></label>
-                                <input type="text" name="pasport" placeholder="Enter Passport Number"  class="form-control" value="{{ $managePerticipate->pasport }}">
+                                <input type="text" name="pasport" placeholder="Enter Passport Number"  class="form-control" value="{{ $perticipator->pasport }}">
                                 @if($errors->has('pasport'))
                                     <span class="text-danger ">{{ $errors->first('pasport') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> City<sup class="text-danger">*</sup></label>
-                                <input type="text" name="city" placeholder="Enter City Name"  class="form-control" value="{{ $managePerticipate->city }}">
+                                <input type="text" name="city" placeholder="Enter City Name"  class="form-control" value="{{ $perticipator->city }}">
                                 @if($errors->has('city'))
                                     <span class="text-danger ">{{ $errors->first('city') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Country<sup class="text-danger">*</sup></label>
-                                <input type="text" name="country" placeholder="Enter Country Name"  class="form-control" value="{{ $managePerticipate->country }}">
+                                <input type="text" name="country" placeholder="Enter Country Name"  class="form-control" value="{{ $perticipator->country }}">
                                 @if($errors->has('country'))
                                     <span class="text-danger ">{{ $errors->first('country') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Occupation<sup class="text-danger">*</sup></label>
-                                <input type="text" name="occopation" placeholder="Enter Occupation"  class="form-control" value="{{ $managePerticipate->occopation }}">
+                                <input type="text" name="occopation" placeholder="Enter Occupation"  class="form-control" value="{{ $perticipator->occopation }}">
                                 @if($errors->has('occopation'))
                                     <span class="text-danger ">{{ $errors->first('occopation') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Training<sup class="text-danger">*</sup></label>
-                                <input type="text" name="training" placeholder="Enter Training"  class="form-control" value="{{ $managePerticipate->training }}">
+                                <input type="text" name="training" placeholder="Enter Training"  class="form-control" value="{{ $perticipator->training }}">
                                 @if($errors->has('training'))
                                     <span class="text-danger ">{{ $errors->first('training') }}</span>
                                 @endif

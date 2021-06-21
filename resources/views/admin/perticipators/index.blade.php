@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('perticipate.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Add New Perticipaer</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('perticipators.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Add New Perticipaer</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -27,19 +27,19 @@
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($perticipate as $i=>$perticipaters)
+                            @foreach($perticipator as $i=>$perticipators)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $perticipaters->name }}</td>
-                                    <td>{{ $perticipaters->email }}</td>
-                                    <td>{{ $perticipaters->number }}</td>
-                                    <td>{{ $perticipaters->father_name }}</td>
+                                    <td>{{ $perticipators->name }}</td>
+                                    <td>{{ $perticipators->email }}</td>
+                                    <td>{{ $perticipators->number }}</td>
+                                    <td>{{ $perticipators->father_name }}</td>
                                     <td>
-                                        <a href="{{ route('perticipate.show', $perticipaters->id) }}" class="btn btn-success">View</a> 
+                                        <a href="{{ route('perticipators.show', $perticipators->id) }}" class="btn btn-success">View</a> 
                                     </td>
                                     <td>
-                                        <form action="{{ route('perticipate.destroy', $perticipaters->id) }}" method="post">
-                                            <a href="{{ route('perticipate.edit', $perticipaters->id) }}" class="btn btn-primary">Edit</a> |
+                                        <form action="{{ route('perticipators.destroy', $perticipators->id) }}" method="post">
+                                            <a href="{{ route('perticipators.edit', $perticipators->id) }}" class="btn btn-primary">Edit</a> |
                                             @csrf
                                             @method('DELETE')
                                             <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete !!');" value="Delete">

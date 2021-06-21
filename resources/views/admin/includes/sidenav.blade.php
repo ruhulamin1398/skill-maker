@@ -94,14 +94,29 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Manage Perticiper</span>
+                                        <span class="nk-menu-text">  Perticiper</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('perticipate.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Perticiper</span></a>
+                                            <a href="{{ route('perticipators.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Perticiper</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{  route('perticipate.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Perticiper</span></a>
+                                            <a href="{{  route('perticipators.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Perticiper</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">  Trainers</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('trainers.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Trainer</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('trainers.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Trainer</span></a>
                                         </li>
 
                                     </ul>

@@ -26,4 +26,5 @@ Route::resource('office', OfficeController::class);
 Route::resource('success_story', SuccessStoryController::class);
 Route::resource('seminar', SeminarController::class);
 Route::resource('faq', FaqController::class);
-Route::resource('perticipate', ManagePerticipateController::class);
+Route::resource('perticipators', PerticipatorController::class);
+Route::resource('trainers', TrainerController::class);
