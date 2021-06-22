@@ -15,9 +15,9 @@ class CreateBuycoursesTable extends Migration
     {
         Schema::create('buycourses', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('userID');
-            $table->bigInteger('courseID');
-            $table->bigInteger('assignID');
+            $table->bigInteger('user_id');
+            $table->bigInteger('course_id');
+            $table->bigInteger('assign_id');
             $table->float('price','10','2');
             $table->bigInteger('status');
             $table->string('comment');
