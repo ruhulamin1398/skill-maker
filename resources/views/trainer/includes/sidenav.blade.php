@@ -19,12 +19,12 @@
                             <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Seminar List</span>
+                                        <span class="nk-menu-text"> Perticipator List</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                     
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('trainer_seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">My List</span></a>
+                                            <a href="{{ route('trainer_seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Perticipator List</span></a>
                                         </li>
 
                                     </ul>
@@ -32,12 +32,12 @@
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Course List</span>
+                                        <span class="nk-menu-text"> Student List</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                     
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('trainer_course.index') }}" class="nk-menu-link"><span class="nk-menu-text">My List</span></a>
+                                            <a href="{{ route('trainer_course.index') }}" class="nk-menu-link"><span class="nk-menu-text">Student List</span></a>
                                         </li>
 
                                     </ul>

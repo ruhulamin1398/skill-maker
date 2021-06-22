@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Join New Course</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('training.create') }}" class="float-right btn btn-primary text-white"><i class="fas fa-plus"></i> <span class="ml-2">Join New Training</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
