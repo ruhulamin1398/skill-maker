@@ -19,8 +19,9 @@
                             <tr>
                                 <th>#</th>
                                 <th>Course Name</th>
-                                <th>Price</th>
+                                <th>Title</th>
                                 <th>Status</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -28,34 +29,53 @@
                                 <tr>
                                     <td>1</td>
                                     <td>test course </td>
-                                    <td>1,000.00</td>
+                                    <td>test Title</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>test course2 </td>
-                                    <td>1,000.00</td>
+                                    <td>test course </td>
+                                    <td>test Title</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>test course3</td>
-                                    <td>11,000.00</td>
+                                    <td>test course </td>
+                                    <td>test Title</td>
                                     <td>Paid</td>
+                                    <td>
+                                         <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td>test course4 </td>
-                                    <td>5,000.00</td>
+                                    <td>test course </td>
+                                    <td>test Title</td>
                                     <td>Paid</td>
+                                    <td>
+                                         <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>5</td>
-                                    <td>test course5 </td>
-                                    <td>1,000.00</td>
+                                    <td>1</td>
+                                    <td>test course </td>
+                                    <td>test Title</td>
                                     <td>Paid</td>
+                                    <td>
+                                         <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
-                            
                             {{-- @endforeach --}}
                             </tbody>
                         </table>

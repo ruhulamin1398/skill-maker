@@ -14,9 +14,10 @@ class TrainerSeminarController extends Controller
      */
     public function index()
     {
-        $page_name = "My List";
+        $page_name = "Perticifator List";
         return view('trainer.seminar.index', compact('page_name'));
     }
+   
 
     /**
      * Show the form for creating a new resource.
@@ -25,7 +26,8 @@ class TrainerSeminarController extends Controller
      */
     public function create()
     {
-        
+        $page_name = "Trainign List";
+        return view('trainer.seminar.trainig_list', compact('page_name'));
     }
 
     /**

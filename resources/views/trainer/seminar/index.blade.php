@@ -18,44 +18,63 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Course Name</th>
-                                <th>Price</th>
-                                <th>Status</th>
+                                <th>Student Name</th>
+                                <th>Join Date</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             {{-- @foreach($course as $i=>$courses) --}}
                                 <tr>
                                     <td>1</td>
-                                    <td>test course </td>
-                                    <td>1,000.00</td>
-                                    <td>Paid</td>
+                                    <td>Test Student </td>
+                                    <td>11 Jun 2021</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>test course2 </td>
-                                    <td>1,000.00</td>
-                                    <td>Paid</td>
+                                    <td>Test Student </td>
+                                    <td>11 Jun 2021</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>test course3</td>
-                                    <td>11,000.00</td>
-                                    <td>Paid</td>
+                                    <td>Test Student </td>
+                                    <td>11 Jun 2021</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
-                                    <td>test course4 </td>
-                                    <td>5,000.00</td>
-                                    <td>Paid</td>
+                                    <td>Test Student </td>
+                                    <td>11 Jun 2021</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
-                                    <td>test course5 </td>
-                                    <td>1,000.00</td>
-                                    <td>Paid</td>
+                                    <td>Test Student </td>
+                                    <td>11 Jun 2021</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
                                 </tr>
-                            
+                                <tr>
+                                    <td>6</td>
+                                    <td>Test Student </td>
+                                    <td>11 Jun 2021</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">Chat</a>
+                                    </td>
+                                </tr>
+
+    
                             {{-- @endforeach --}}
                             </tbody>
                         </table>

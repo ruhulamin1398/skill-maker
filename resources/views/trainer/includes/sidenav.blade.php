@@ -19,27 +19,29 @@
                             <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Perticipator List</span>
+                                        <span class="nk-menu-text"> Course List</span>
                                     </a>
                                     <ul class="nk-menu-sub">
-                    
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('trainer_seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Perticipator List</span></a>
+                                            <a href="{{ route('trainer_course.index') }}" class="nk-menu-link"><span class="nk-menu-text">Course List</span></a>
                                         </li>
-
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('trainer_seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Student List</span></a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Student List</span>
+                                        <span class="nk-menu-text"> Training</span>
                                     </a>
                                     <ul class="nk-menu-sub">
-                    
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('trainer_course.index') }}" class="nk-menu-link"><span class="nk-menu-text">Student List</span></a>
+                                            <a href="{{ route('trainer_seminar.create') }}" class="nk-menu-link"><span class="nk-menu-text">Training List</span></a>
                                         </li>
-
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('trainer_seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Perticifator List</span></a>
+                                        </li>
                                     </ul>
                                 </li>
                                 

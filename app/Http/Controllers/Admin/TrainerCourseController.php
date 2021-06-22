@@ -15,7 +15,7 @@ class TrainerCourseController extends Controller
     public function index()
     {
         $page_name = "My List";
-        return view('trainer.seminar.index', compact('page_name'));
+        return view('trainer.course.index', compact('page_name'));
     }
 
     /**
