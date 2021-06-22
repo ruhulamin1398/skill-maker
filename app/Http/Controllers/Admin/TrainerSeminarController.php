@@ -30,6 +30,7 @@ class TrainerSeminarController extends Controller
         return view('trainer.seminar.trainig_list', compact('page_name'));
     }
 
+    
     /**
      * Store a newly created resource in storage.
      *
