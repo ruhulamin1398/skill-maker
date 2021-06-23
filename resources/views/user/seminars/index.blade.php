@@ -21,6 +21,7 @@
                                 <th> Date</th>
                                 <th>Location</th>
                                 <th>Venue</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -29,30 +30,50 @@
                                     <td>11 Jun</td>
                                     <td>Dhaka</td>
                                     <td>Dhaka</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>12 May</td>
                                     <td>Dhaka</td>
                                     <td>Dhaka</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>1 July</td>
                                     <td>Dhaka</td>
                                     <td>Dhaka</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>12 Sept</td>
                                     <td>Dhaka</td>
                                     <td>Dhaka</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>4 Nov</td>
                                     <td>Dhaka</td>
                                     <td>Dhaka</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                             </tbody>
                         </table>

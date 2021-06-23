@@ -14,7 +14,7 @@ class TrainerSeminarController extends Controller
      */
     public function index()
     {
-        $page_name = "Perticifator List";
+        $page_name = "Perticipator List";
         return view('trainer.seminar.index', compact('page_name'));
     }
    

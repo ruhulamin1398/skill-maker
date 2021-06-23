@@ -14,5 +14,8 @@ class seminar extends Model
     ];
     public function perticaptes(){
         return $this->hasMany(buycourse::class,'course_id','id');
+    } 
+    public function trainers(){
+        return $this->hasMany(seminerTrainer::class,'seminer_id','id');
     }
 }

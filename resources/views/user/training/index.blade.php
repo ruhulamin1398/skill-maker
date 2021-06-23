@@ -21,6 +21,7 @@
                                 <th>Trainign Name</th>
                                 <th>Price</th>
                                 <th>Status</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -29,30 +30,50 @@
                                     <td>test training </td>
                                     <td>1,000.00</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>test training2 </td>
                                     <td>1,000.00</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>test training3</td>
                                     <td>11,000.00</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>test training4 </td>
                                     <td>5,000.00</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>test training5 </td>
                                     <td>1,000.00</td>
                                     <td>Paid</td>
+                                    <td>
+                                        <a href="" class="btn btn-info">View</a> |
+                                        <a href="" class="btn btn-success">Chat Now</a>
+                                     </td>
                                 </tr>
                             </tbody>
                         </table>
