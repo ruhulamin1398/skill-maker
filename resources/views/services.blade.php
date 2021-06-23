@@ -74,7 +74,7 @@
             COACHING</h3>
           <p>Great mentors procreate and shape brilliant students who, in the long run….</p>
           <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            <a href="{{route('oneToOne')}}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
           </div>
         </div>
       </div>
