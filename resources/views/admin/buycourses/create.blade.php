@@ -18,9 +18,8 @@
                             @csrf
                             <div class="form-group">
                                 <label class="form-label"> Price<sup class="text-danger">*</sup></label>
-                                <input type="text" name="userID" hidden  class="form-control" value="1">
-                                <input type="text" name="courseID" hidden  class="form-control" value="1">
-                                <input type="text" name="assignID"  hidden class="form-control" value="1">
+                                <input type="text" name="course_id" hidden  class="form-control" value="1">
+                                <input type="text" name="assign_id"  hidden class="form-control" value="1">
                                 <input type="text" name="price" placeholder="Enter Course Price"  class="form-control" value="{{ old('price') }}">
                             </div>
                             <div class="form-group">

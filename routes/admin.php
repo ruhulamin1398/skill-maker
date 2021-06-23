@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +29,16 @@ Route::resource('perticipators', PerticipatorController::class);
 Route::resource('trainers', TrainerController::class);
 Route::resource('buycourses', BuycourseController::class);
 Route::resource('supports', SupportController::class);
+
+Route::get('/user', function(){
+    return view('user.index');
+});
+Route::get('/trainer', function(){
+    return view('trainer.index');
+});
+
+Route::resource('courses', CourseController::class);
+Route::resource('training', TrainingController::class);
+Route::resource('seminars', UserSeminarController::class);
+Route::resource('trainer_seminar', TrainerSeminarController::class);
+Route::resource('trainer_course', TrainerCourseController::class);

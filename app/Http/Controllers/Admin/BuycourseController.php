@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Models\buycourse;
+use App\Models\seminar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BuycourseController extends Controller
 {
@@ -16,6 +18,8 @@ class BuycourseController extends Controller
      */
     public function index()
     {
+        $buycourse = seminar::find(1);
+        return $buycourse->perticaptes->first()->course;
         $page_name = 'My Courses';
         $cousre = buycourse::all();
         return view('admin.buycourses.index', compact('page_name','cousre'));
@@ -41,9 +45,8 @@ class BuycourseController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'userID'     => 'required',
-            'courseID'   => 'required',
-            'assignID'   => 'required',
+            'course_id'   => 'required',
+            'assign_id'   => 'required',
             'price'      => 'required',
             'comment'    => 'required'
         ],[
@@ -53,9 +56,9 @@ class BuycourseController extends Controller
 
         $buycourse = new buycourse();
 
-        $buycourse->userID   = $request->userID;
-        $buycourse->courseID = $request->courseID;
-        $buycourse->assignID = $request->assignID;
+        $buycourse->user_id   = Auth::user()->id;
+        $buycourse->course_id = $request->course_id;
+        $buycourse->assign_id = $request->assign_id;
         $buycourse->price    = $request->price;
         $buycourse->status   = '0';
         $buycourse->comment  = $request->comment;
