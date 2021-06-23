@@ -886,6 +886,144 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+
+
+
+/*--------------------------------------------------------------
+# Club Work
+--------------------------------------------------------------*/
+#claubWork{
+  padding: 60px 0;
+}
+#claubWork h2 {
+  color: #f25c2f;
+  font-size: 36px;
+}
+#claubWork h3{
+  color: #000000;
+  font-size: 22px;
+  line-height: 35px;
+  margin-top: 0;
+  font-weight: bold;
+}
+#claubWork span{
+  font-size: 22px;
+  line-height: 30px;
+  color: #f25c2f;
+  font-weight: bold;
+  padding-top: 10px;
+  display: block;
+}
+#claubWork p{
+  font-size: 22px;
+  line-height: 31px;
+  color: #000;
+}
+#claubWork img{
+ width: 100%;
+}
+/*--------------------------------------------------------------
+# Help you seciton
+--------------------------------------------------------------*/
+#helpYou{
+  padding: 60px 0;
+  text-align: center;
+  background: #101823;
+}
+#helpYou h2{
+  font-weight: bold;
+  font-size: 36px;
+}
+#helpYou a{
+  background: #f05b2e;
+  color: #fff;
+  width: 370px;
+  padding: 10px;
+  min-height: 50px;
+  border: none;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  transition: all .3s ease;
+  margin-top: 20px;
+}
+#helpYou a:hover{
+    background: #258cf5;
+    color: #fff;
+} 
+/*--------------------------------------------------------------
+# Make It Ease section
+--------------------------------------------------------------*/
+#makeItEase{
+  padding: 60px 0;
+}
+#makeItEase h2{
+  font-size: 36px;
+  font-weight: bold;
+}
+#makeItEase h3{
+  color: #f25c2f;
+  font-size: 36px;
+  line-height: 1.2;
+}
+#makeItEase p{
+  font-size: 22px;
+  color: #000;
+}
+#makeItEase img{
+  width: 200px;
+  margin-top: 50px;
+}
+#makeItEase .box{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #ebebeb;
+}
+#makeItEase .box:last-child{
+  border-bottom: none;
+}
+/*--------------------------------------------------------------
+# Form
+--------------------------------------------------------------*/
+#enableForm{
+  padding: 60px 0;;
+}
+#enableForm p{
+  font-size: 18px;
+  color: #000;
+  font-weight: 800;
+}
+#enableForm form{
+  padding-top: 30px;
+}
+#enableForm label{
+  font-weight: 800;
+  color: #000;
+}
+#enableForm input, #enableForm select{
+  padding: 25px;
+}
+#enableForm .form-group{
+  margin-bottom: 30px;
+}
+#enableForm .submit{
+    background: #ff9c49;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 25px;
+    margin-top: 30px;
+    transition: all .3s ease;
+}
+#enableForm .submit:hover{
+  background: #258cf5;
+}
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
