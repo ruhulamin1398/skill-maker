@@ -1,6 +1,7 @@
 <?php
-use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\SeminerTrainerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,3 +43,5 @@ Route::resource('training', TrainingController::class);
 Route::resource('seminars', UserSeminarController::class);
 Route::resource('trainer_seminar', TrainerSeminarController::class);
 Route::resource('trainer_course', TrainerCourseController::class);
+Route::resource('seminar-trainers', SeminerTrainerController::class);
+Route::get('seminar-trainers/index/{id}', [SeminerTrainerController::class, 'seminar'])->name('admin.seminar-trainers.seminar');

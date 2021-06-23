@@ -24,6 +24,7 @@
                                 <th>Price</th>
                                 <th>Status</th>
                                 <th>Action</th>
+                                <th>Trainer</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -48,6 +49,10 @@
                                             @method('DELETE')
                                             <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete !!');" value="Delete">
                                         </form>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('admin.seminar-trainers.seminar', $seminars->id) }}" class="btn btn-success">Add </a> |
+                                        <a href="" class="btn btn-info">View </a>
                                     </td>
                                 </tr>
                             @endforeach

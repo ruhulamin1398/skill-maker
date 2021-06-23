@@ -18,58 +18,18 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Course Name</th>
+                                <th>Course Title</th>
                                 <th>Price</th>
                                 <th>Status</th>
                                 <th>More</th>
                             </tr>
                             </thead>
                             <tbody>
-                            {{-- @foreach($course as $i=>$courses) --}}
+                            @foreach($course as $i=>$courses)
                                 <tr>
-                                    <td>1</td>
-                                    <td>test course </td>
-                                    <td>1,000.00</td>
-                                    <td>Paid</td>
-                                    <td>
-                                       <a href="" class="btn btn-info">View</a> |
-                                       <a href="" class="btn btn-success">Chat Now</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>test course2 </td>
-                                    <td>1,000.00</td>
-                                    <td>Paid</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>test course3</td>
-                                    <td>11,000.00</td>
-                                    <td>Paid</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>test course4 </td>
-                                    <td>5,000.00</td>
-                                    <td>Paid</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>test course5 </td>
-                                    <td>1,000.00</td>
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ $courses->title }}</td>
+                                    <td>{{ number_format($courses->price,'2') }}</td>
                                     <td>Paid</td>
                                     <td>
                                         <a href="" class="btn btn-info">View</a> |
@@ -77,7 +37,7 @@
                                      </td>
                                 </tr>
                             
-                            {{-- @endforeach --}}
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

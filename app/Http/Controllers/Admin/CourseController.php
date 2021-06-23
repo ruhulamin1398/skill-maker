@@ -18,9 +18,9 @@ class CourseController extends Controller
     public function index()
     {
         $page_name = 'My Assigned List';
-        // $course = seminar::all();
+        $course = seminar::all();
         // $course->perticipates->first()->course;
-        return view('user.courses.index', compact('page_name'));
+        return view('user.courses.index', compact('page_name', 'course'));
     }
 
     /**
