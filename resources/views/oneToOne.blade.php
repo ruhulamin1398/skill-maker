@@ -53,7 +53,7 @@
                 <div class="col-md-4">
                     <div class="box text-center">
                         <div class="mentor-image">
-                            <img src="assets/img/khuram.jpg" alt="">
+                            <img src="{{asset('images/ava.png')}}" alt="">
                         </div>
                         <div class="mentor-content">
                             <h2>Khurram Khalid</h2>
@@ -67,7 +67,7 @@
                 <div class="col-md-4">
                     <div class="box text-center">
                         <div class="mentor-image">
-                            <img src="assets/img/khuram.jpg" alt="">
+                            <img src="{{asset('images/ava.png')}}" alt="">
                         </div>
                         <div class="mentor-content">
                             <h2>Khurram Khalid</h2>
@@ -81,7 +81,7 @@
                 <div class="col-md-4">
                     <div class="box text-center">
                         <div class="mentor-image">
-                            <img src="assets/img/khuram.jpg" alt="">
+                            <img src="{{asset('images/ava.png')}}" alt="">
                         </div>
                         <div class="mentor-content">
                             <h2>Khurram Khalid</h2>
@@ -95,7 +95,7 @@
                 <div class="col-md-4">
                     <div class="box text-center">
                         <div class="mentor-image">
-                            <img src="assets/img/khuram.jpg" alt="">
+                            <img src="{{asset('images/ava.png')}}" alt="">
                         </div>
                         <div class="mentor-content">
                             <h2>Khurram Khalid</h2>
@@ -109,7 +109,7 @@
                 <div class="col-md-4">
                     <div class="box text-center">
                         <div class="mentor-image">
-                            <img src="assets/img/khuram.jpg" alt="">
+                            <img src="{{asset('images/ava.png')}}" alt="">
                         </div>
                         <div class="mentor-content">
                             <h2>Khurram Khalid</h2>
@@ -123,7 +123,7 @@
                 <div class="col-md-4">
                     <div class="box text-center">
                         <div class="mentor-image">
-                            <img src="assets/img/khuram.jpg" alt="">
+                            <img src="{{asset('images/ava.png')}}" alt="">
                         </div>
                         <div class="mentor-content">
                             <h2>Khurram Khalid</h2>
