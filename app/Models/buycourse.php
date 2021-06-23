@@ -12,4 +12,8 @@ class buycourse extends Model
     protected $fillable = [
         'userID', 'courseID', 'assignID', 'price','status','comment'
     ];
+
+    public function course(){
+        return $this->belongsTo(seminar::class,'course_id','id');
+    }
 }

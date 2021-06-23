@@ -12,4 +12,7 @@ class seminar extends Model
     protected $fillable = [
      'title', 'location', 'venue', 'date', 'price','status'
     ];
+    public function perticaptes(){
+        return $this->hasMany(buycourse::class,'course_id','id');
+    }
 }
