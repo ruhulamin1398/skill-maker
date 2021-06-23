@@ -43,144 +43,110 @@
       <!-- <h2>Our Values</h2> -->
       <p class="section--header"> &nbsp; </p>
     </header>
-    <!-- ======= Seminar table ======= -->
+    
 
-    <section id="enableSeminar">
-      <div class="container">
-        <div class="row text-center">
-          <div class="col h-100">
-            <h2>UPCOMING ENABLERS SEMINARS</h2>
-            <div class="seminar-rs d-flex justify-content-center align-items-center">
-              <h2>PARTICIPATION COST:</h2>
-              <span>Rs.800</span>
-            </div>
-          </div>
-        </div>
-        <!-- content -->
-        <div class="row">
-          <div class="col">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th scope="col" style="width: 20%;">Date</th>
-                  <th scope="col" style="width: 20%;">Locations</th>
-                  <th scope="col" style="width: 40%;">Venue</th>
-                  <th scope="col" style="width: 20%;">Registration</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col text-center pt-4">
-            <a href="" class="table-btn">RESERVE MY SEAT</a>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ======= seminar Blog  ======= -->
-    <section id="seminarBlog">
-      <div class="container">
-        <!-- box 1 -->
-        <div class="box">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <img src="https://www.enablers.org/wp-content/uploads/2020/02/enablers-amazon-fba-successful-business-pakistan.png" alt="">
-                </div>
-                <div class="col-md-6">
-                    <h3>AMAZON ACCOUNT <br>
-                        SETUP</h3>
-                        <p>Amazon is one of the largest E-Commerce stores across the globe. With a huge number of sellers are already selling various commodities on this platform, it can be a difficult feat to boost your sales and get an edge over the rest of the sellers.
-                            <br><br>
-                          However, with the premium services of Enablers, your Amazon account will be up and running with your products in no time. Our experienced trainers will handle A to Z.
-                            <br><br>
-                          Now You Can Have The Exact System Thousands Have Used To Build A Million Dollar Business, Achieve Their Dreams & Live Free From The 9 To 5 Rat Race! </p>
-                </div>
-            </div>
+    <!-- ======= Team Section ======= -->
+    <section id="doctors" class="doctors2">
+      <div class="container" data-aos="fade-up">
+
+        <div>
+          <h2>LISTEN FROM , WHO NEVER GAVE UP</h2>
         </div>
-        <!-- Bosx 2 -->
-        <div class="box">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <h3>AMAZON ACCOUNT <br>
-                        SETUP</h3>
-                        <p>Amazon is one of the largest E-Commerce stores across the globe. With a huge number of sellers are already selling various commodities on this platform, it can be a difficult feat to boost your sales and get an edge over the rest of the sellers.
-                          <br><br>
-                          However, with the premium services of Enablers, your Amazon account will be up and running with your products in no time. Our experienced trainers will handle A to Z.
-                          <br><br>
-                          Now You Can Have The Exact System Thousands Have Used To Build A Million Dollar Business, Achieve Their Dreams & Live Free From The 9 To 5 Rat Race! </p>
-                </div>
-                <div class="col-md-6 text-center">
-                     <img src="https://www.enablers.org/wp-content/uploads/2020/02/enablers-amazon-fba-business-opportunity.png" alt="">
-                </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Abdul Muqeet</h4>
+                <strong>Karachi</strong>
+                <span>My 1st Success Story....</span>
+                <a href="">Read More</a>
+              </div>
             </div>
-        </div>
-        <!-- box 3 -->
-        <div class="box">
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                     <img src="https://www.enablers.org/wp-content/uploads/2020/02/enablers-amazon-growth-oppotunity.png" alt="">
-                </div>
-                <div class="col-md-6">
-                    <h3>AMAZON ACCOUNT <br>
-                        SETUP</h3>
-                        <p>Amazon is one of the largest E-Commerce stores across the globe. With a huge number of sellers are already selling various commodities on this platform, it can be a difficult feat to boost your sales and get an edge over the rest of the sellers.
-                          <br><br>
-                          However, with the premium services of Enablers, your Amazon account will be up and running with your products in no time. Our experienced trainers will handle A to Z.
-                          <br><br>
-                          Now You Can Have The Exact System Thousands Have Used To Build A Million Dollar Business, Achieve Their Dreams & Live Free From The 9 To 5 Rat Race! </p>
-                </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Abdul Muqeet</h4>
+                <strong>Karachi</strong>
+                <span>My 1st Success Story....</span>
+                <a href="">Read More</a>
+              </div>
             </div>
-        </div>
-        <!-- Bosx 4 -->
-        <div class="box">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <h3>AMAZON ACCOUNT <br>
-                        SETUP</h3>
-                        <p>Amazon is one of the largest E-Commerce stores across the globe. With a huge number of sellers are already selling various commodities on this platform, it can be a difficult feat to boost your sales and get an edge over the rest of the sellers.
-                          <br><br>
-                          However, with the premium services of Enablers, your Amazon account will be up and running with your products in no time. Our experienced trainers will handle A to Z.
-                          <br><br>
-                          Now You Can Have The Exact System Thousands Have Used To Build A Million Dollar Business, Achieve Their Dreams & Live Free From The 9 To 5 Rat Race! </p>
-                </div>
-                <div class="col-md-6 text-center">
-                     <img src="https://www.enablers.org/wp-content/uploads/2020/02/enablers-amazon-growth-oppotunity.png" alt="">
-                </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Abdul Muqeet</h4>
+                <strong>Karachi</strong>
+                <span>My 1st Success Story....</span>
+                <a href="">Read More</a>
+              </div>
             </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Abdul Muqeet</h4>
+                <strong>Karachi</strong>
+                <span>My 1st Success Story....</span>
+                <a href="">Read More</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Abdul Muqeet</h4>
+                <strong>Karachi</strong>
+                <span>My 1st Success Story....</span>
+                <a href="">Read More</a>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Abdul Muqeet</h4>
+                <strong>Karachi</strong>
+                <span>My 1st Success Story....</span>
+                <a href="">Read More</a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
-    </section>
-    <!-- ======= Seminar Blog  ======= -->
-
+    </section><!-- End Team Section -->
 
 
 @endsection

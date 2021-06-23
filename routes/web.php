@@ -40,3 +40,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('one-one', function () {
     return view('oneToOne');
 })->name('oneToOne');
+Route::get('officies', function () {
+    return view('officies');
+})->name('officies');
+Route::get('support', function () {
+    return view('support');
+})->name('support');

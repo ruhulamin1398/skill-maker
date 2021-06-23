@@ -6,8 +6,8 @@
           <li><a href="{{route('seminer')}}">Seminer</a></li>
           <li><a href="{{route('success-stories')}}">Success Stories</a></li>
          
-          <li><a href="#contact">Support</a></li>
-          <li><a href="#contact">Our Offices</a></li>
-
+          <li><a href="{{route('support')}}">Support</a></li>
+          <li><a href="{{route('officies')}}">Our Offices</a></li>
+          
         </ul>
       </nav><!-- .nav-menu -->

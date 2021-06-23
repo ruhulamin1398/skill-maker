@@ -58,7 +58,7 @@
 
       <!-- <h1 class="logo mr-auto"><a href="index.html">Medilab</a></h1> -->
       <!-- Uncomment below if you prefer to use an image logo -->
-      <a href="index.html" class="logo mr-auto"><img src="{{asset('images/skillmaker.png')}}" alt="" class="img-fluid"></a>
+      <a href=" " class="logo mr-auto"><img src="{{asset('images/skillmaker.png')}}" alt="" class="img-fluid"></a>
 
       @include('includes.nav')
 

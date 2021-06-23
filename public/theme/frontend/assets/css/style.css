@@ -656,6 +656,234 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
+/*--------------------------------------------------------------
+# Featured Services
+--------------------------------------------------------------*/
+.featured-services2 strong{
+  font-weight:8900;
+  padding-bottom: 50px;
+  display: block;
+  font-size: 18px;
+}
+.featured-services2 .icon-box {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  border-radius: 50px 0 50px 0;
+}
+.featured-services2 .support-link{
+  display: block;
+  padding: 60px 30px;
+}
+
+.featured-services2 .icon-box::before {
+  content: '';
+  position: absolute;
+  background: #cbe0fb;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.featured-services2 .icon-box:hover::before {
+  background: #f25c2f;
+  top: 0;
+  border-radius: 0px;
+}
+
+.featured-services2 .icon {
+  margin-bottom: 15px;
+}
+
+.featured-services2 .icon i {
+  font-size: 48px;
+  line-height: 1;
+  color: #106eea;
+  transition: all 0.3s ease-in-out;
+}
+
+.featured-services2 .title {
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+}
+
+.featured-services2 .title a {
+  color: #111;
+}
+
+.featured-services2 .description {
+  font-size: 15px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.featured-services2 .icon-box:hover .title, .featured-services2 .icon-box:hover .description {
+  color: #fff;
+}
+
+.featured-services2 .icon-box:hover .icon i {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Team member
+--------------------------------------------------------------*/
+.doctors2 h2 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.doctors2 strong {
+  font-weight: 700;
+}
+.doctors2 a {
+  text-transform: uppercase;
+  background: #258cf6;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 25px;
+  margin-top: 20px;
+  display: block;
+  transition: all .3s ease;
+}
+.doctors2 a:hover {
+  background: #f05b2d  ;
+}
+.doctors2 .member {
+  margin-bottom: 30px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 4px;
+  background: #f1f1f1;
+  box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.1);
+  border-radius: 50px 0 50px 0;
+  
+}
+
+.doctors2 .member .member-img {
+  overflow: hidden;
+  height: 250px;
+}
+
+.doctors2 .member .member-info {
+  padding: 30px 20px;
+}
+
+.doctors2 .member .member-info h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: #555555;
+}
+
+.doctors2 .member .member-info span {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.doctors2 .member .member-info p {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 26px;
+  color: #777777;
+}
+
+.doctors2 .member:hover .social {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Office
+--------------------------------------------------------------*/
+.enablerOffice h2 {
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.enablerOffice strong {
+  font-weight: 700;
+}
+.enablerOffice a {
+  text-transform: uppercase;
+  background: #258cf6;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 25px;
+  transition: all .3s ease;
+}
+.enablerOffice a:hover {
+  background: #f05b2d  ;
+}
+.enablerOffice .member {
+  margin-bottom: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.3);
+  border-radius: 20px;
+  
+}
+
+.enablerOffice .member .member-img {
+  overflow: hidden;
+  height: 350px;
+}
+
+.enablerOffice .member .member-info {
+  padding: 15px 20px 50px 20px;
+}
+
+.enablerOffice .member .member-info h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 36px;
+  color: #f15c2f;
+  text-transform: uppercase;
+}
+.enablerOffice .member .member-info h5 {
+    font-size: 20px;
+    color: #000;
+    font-weight: 700;
+}
+
+.enablerOffice .member .member-info span {
+  display: block;
+  font-size: 18px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.enablerOffice .member .member-info p {
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.enablerOffice .member:hover .social {
+  opacity: 1;
+}
+
+
 
 
 /*--------------------------------------------------------------
