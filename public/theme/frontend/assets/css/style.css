@@ -454,6 +454,12 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Seminar table
 --------------------------------------------------------------*/
+.trainingHero{
+    background: url("../img/training-1.jpg") top center;
+}
+.seminarHero{
+    background: url("../img/seminar.jpg") top center;
+}
 #enableSeminar{
   padding-top: 60px;
 }
@@ -659,13 +665,16 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
+.supportHero{
+    background: url("../img/support.jpg") top center;
+}
 .featured-services2 strong{
   font-weight:8900;
   padding-bottom: 50px;
   display: block;
   font-size: 18px;
 }
-.featured-services2 .icon-box {
+.featured-services2 .icon-box{
   width: 100%;
   margin-bottom: 30px;
   position: relative;
@@ -699,15 +708,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0px;
 }
 
-.featured-services2 .icon {
-  margin-bottom: 15px;
-}
-
-.featured-services2 .icon i {
-  font-size: 48px;
-  line-height: 1;
-  color: #106eea;
-  transition: all 0.3s ease-in-out;
+.featured-services2 .icon img{
+  width: 60px;
 }
 
 .featured-services2 .title {
@@ -739,6 +741,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Team member
 --------------------------------------------------------------*/
+.successHero{
+    background: url("../img/success-stories.jpg") top center;
+}
 .doctors2 h2 {
   font-size: 36px;
   font-weight: 600;
@@ -769,7 +774,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #f1f1f1;
   box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.1);
   border-radius: 50px 0 50px 0;
-  
+
 }
 
 .doctors2 .member .member-img {
@@ -809,6 +814,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Office
 --------------------------------------------------------------*/
+.officesHero{
+    background: url("../img/office.jpg") top center;
+}
 .enablerOffice h2 {
   font-size: 36px;
   font-weight: 600;
@@ -839,7 +847,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.3);
   border-radius: 20px;
-  
+
 }
 
 .enablerOffice .member .member-img {
@@ -900,7 +908,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .container {
   position: relative;
-    
+
 }
 }
 
@@ -2344,10 +2352,44 @@ section {
   text-decoration: none;
 }
 /*--------------------------------------------------------------
+# Page Hero
+--------------------------------------------------------------*/
+#pageHero{
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    position: relative;
+    margin-top: 96px;
+}
+#pageHero h1{
+    font-size: 45px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 800;
+}
+@media (max-width: 992px) {
+    #pageHero {
+      height: 100vh;
+    }
+    #pageHero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  @media (max-height: 500px) {
+    #pageHero {
+      height: auto;
+    }
+  }
+/*--------------------------------------------------------------
 # Services 2
 --------------------------------------------------------------*/
+.servicesHero{
+    background: url("../img/services-1.jpg") top center;
+}
 .services1 .service-box {
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  box-shadow: 0px 0 30px rgba(27, 77, 163, 0.08);
   height: 100%;
   padding: 60px 30px;
   text-align: center;
@@ -2355,7 +2397,7 @@ section {
   border-radius: 5px;
 }
 
-.services1 .service-box .icon {
+.services1 .service-box .icon{
   font-size: 36px;
   padding: 40px 20px;
   border-radius: 4px;

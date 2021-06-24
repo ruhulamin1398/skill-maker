@@ -12,17 +12,27 @@
 @endsection
 
 @section('hero')
-{{---
+-
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
+{{-- <section id="hero" class="d-flex align-items-center">
   <div class="container">
-    <!-- <h1>Welcome to Medilab</h1> -->
-    <!-- <h2>We are team of talented designers making websites with Bootstrap</h2> -->
-    <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+    <h1>Welcome to Medilab</h1>
+    <h2>We are team of talented designers making websites with Bootstrap</h2>
+    <a href="#about" class="btn-get-started scrollto">Get Started</a>
   </div>
-</section><!-- End Hero -->
+</section> --}}
+<section id="pageHero" class="servicesHero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+          <div class="col">
+              <h1>LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
+          </div>
+      </div>
+    </div>
+</section>
+<!-- End Hero -->
 
---}}
+
 @endsection
 
 @section('content')
@@ -35,10 +45,10 @@
 
   <div class="container" data-aos="fade-up">
 
-    <header class="section-header2">
+    {{-- <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
       <p class="section--header"> &nbsp; </p>
-    </header>
+    </header> --}}
 
     <div class="row">
 

@@ -27,23 +27,23 @@
 </section><!-- End Hero -->
 
 --}}
+<section id="pageHero" class="officesHero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+          <div class="col">
+              <h1>LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
+          </div>
+      </div>
+    </div>
+</section>
 @endsection
 
 @section('content')
 
-
-
-
-
-
-
-
-
-
-<header class="section-header2">
+{{-- <header class="section-header2">
     <!-- <h2>Our Values</h2> -->
     <p class="section--header"> &nbsp; </p>
-</header>
+</header> --}}
 <!-- ======= Seminar table ======= -->
 
  <!-- ======= Team Section ======= -->
