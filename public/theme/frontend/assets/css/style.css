@@ -2537,3 +2537,214 @@ section {
 .services1 .service-box:hover .icon {
   background: #fff;
 }
+/*--------------------------------------------------------------
+# Aout Us 2
+--------------------------------------------------------------*/
+.aboutHero{
+    background: url("../img/about-us.jpg") top center;
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about2 .title {
+    padding-bottom: 50px;
+  }
+.about2 h2 {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .about2 p {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .about2 img {
+    width: 100%;
+    padding-right: 20px;
+  }
+  .about2 .content h3 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28px;
+    }
+  .about2 .content p{
+    font-weight: 600;
+  }
+
+
+/*--------------------------------------------------------------
+# Our Vision
+--------------------------------------------------------------*/
+.vission1 .icon-box {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 25px 0 25px 0;
+    background: #258cf5;
+    min-height: 280px;
+  }
+  .vission1 .icon-box2 {
+    background: #62cf62;
+  }
+  .vission1 .icon-box3 {
+    background: #8876fe;
+  }
+  /* .vission1 .icon-box i {
+    float: left;
+    color: #fff;
+    font-size: 40px;
+  } */
+
+  .vission1 .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .vission1 .icon-box p {
+    line-height: 24px;
+    font-size: 16px;
+    color: #fff;
+  }
+/*--------------------------------------------------------------
+# Founder
+--------------------------------------------------------------*/
+.founder{
+    margin-top: -60px;
+}
+.founder .title{
+    margin-bottom: 50px;
+}
+.founder .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(85, 98, 112, 0.08);
+    padding: 30px;
+    border-radius: 4px;
+    background: white;
+    margin-bottom: 30px;
+  }
+
+  .founder .member .pic {
+    overflow: hidden;
+    width: 140px;
+    border-radius: 4px;
+  }
+
+  .founder .member .pic img {
+    transition: ease-in-out 0.3s;
+  }
+
+  .founder .member:hover img {
+    transform: scale(1.1);
+  }
+
+  .founder .member .member-info {
+    padding-left: 30px;
+  }
+
+  .founder .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #556270;
+  }
+
+  .founder .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+  }
+
+  .founder .member span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #dee2e6;
+    bottom: 0;
+    left: 0;
+  }
+
+  .founder .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+  }
+
+  .founder .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .founder .member .social a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    background: #8795a4;
+  }
+
+  .founder .member .social a i {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 2px;
+  }
+
+  .founder .member .social a:hover {
+    background: #d9232d;
+  }
+
+  .founder .member .social a + a {
+    margin-left: 8px;
+  }
+/*--------------------------------------------------------------
+# About Values
+--------------------------------------------------------------*/
+#aboutValues{
+    background: url("../img/about-section.jpg") center center no-repeat;
+    background-size: cover;
+}
+#aboutValues .content{
+    padding: 0 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#aboutValues h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+#aboutValues p{
+    font-size: 18px;
+    font-weight: 600;
+}
+#aboutValues li{
+    font-size: 18px;
+    font-weight: 600;
+}
+#aboutValues .image{
+    padding-top: 50px ;
+}
+#aboutValues .image div{
+    padding: 0 10px 20px 10px;
+}
+#aboutValues .image img {
+    width: 80px;
+    padding-bottom: 16px;
+}
+#aboutValues .image h4 {
+    font-size: 22px;
+    text-align: center;
+}
+@media (max-width: 992px) {
+    #aboutValues .content{
+        padding: 0;
+    }
+  }
+

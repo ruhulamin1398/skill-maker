@@ -37,15 +37,15 @@
 
 
 
- 
 
-<header class="section-header2">
+
+    <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
       <p class="section--header"> &nbsp; </p>
     </header>
     <!-- ======= Seminar table ======= -->
- 
- 
+
+
 
 
 
