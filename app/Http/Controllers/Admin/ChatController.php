@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\seminar;
 use App\Http\Controllers\Controller;
-use App\Models\Chat;
-use App\Models\Trainer;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class UserSeminarController extends Controller
+use App\Models\Chat;
+use App\Models\chatMessage;
+use App\Models\seminar;
+use Illuminate\Http\Request;
+
+class ChatController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +18,8 @@ class UserSeminarController extends Controller
      */
     public function index()
     {
-        $page_name = 'My Assigned List';
-        $seminars = seminar::all();
-        // $course->perticipates->first()->course;
-        // $trainer = seminar::where('id', '=', 'chat.model_id');
-        // dd($seminars);
-        return view('user.seminars.index', compact('page_name','seminars'));
+        // $page_name = 'Chat Now';
+        // return  view('user.chats.index', compact('page_name'));
     }
 
     /**
@@ -33,9 +29,7 @@ class UserSeminarController extends Controller
      */
     public function create()
     {
-        $page_name = 'Join New Course';
-        $course = seminar::all();
-        return view('user.seminars.join', compact('page_name', 'course'));
+        //
     }
 
     /**
@@ -46,27 +40,40 @@ class UserSeminarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'message' => 'required'
+        ]);
+
+        $chat_now = new chatMessage();
+        $chat_now->chat_id    = $request->chat_id;
+        $chat_now->user_id    = 1;
+        $chat_now->message    = $request->message;
+
+        $chat_now->save();
+        return back();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Chat  $chat
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Chat $chat)
     {
-        //
+        $messages = chatMessage::all();
+        $page_name = "Chat Now";
+        $chat->messages;
+        return view('chat.messages', compact('page_name','chat', 'messages'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Chat  $chat
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Chat $chat)
     {
         //
     }
@@ -75,10 +82,10 @@ class UserSeminarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Chat  $chat
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Chat $chat)
     {
         //
     }
@@ -86,10 +93,10 @@ class UserSeminarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Chat  $chat
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Chat $chat)
     {
         //
     }

@@ -18,63 +18,28 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th> Date</th>
+                                <th>Date</th>
+                                <th> Title</th>
                                 <th>Location</th>
                                 <th>Venue</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
+                                @foreach ($seminars as $i=>$seminar)
                                 <tr>
-                                    <td>1</td>
-                                    <td>11 Jun</td>
-                                    <td>Dhaka</td>
-                                    <td>Dhaka</td>
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ date('M-d', strtotime($seminar->date)) }}</td>
+                                    <td>{{ $seminar->title }}</td>
+                                    <td>{{ $seminar->location }}</td>
+                                    <td>{{ $seminar->venue }}</td>
                                     <td>
                                         <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
+                                        <a href="{{ route('chats.show',$seminar->chat()->id) }}" class="btn btn-success">Chat Now</a>
                                      </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>12 May</td>
-                                    <td>Dhaka</td>
-                                    <td>Dhaka</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>1 July</td>
-                                    <td>Dhaka</td>
-                                    <td>Dhaka</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>12 Sept</td>
-                                    <td>Dhaka</td>
-                                    <td>Dhaka</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>4 Nov</td>
-                                    <td>Dhaka</td>
-                                    <td>Dhaka</td>
-                                    <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
-                                     </td>
-                                </tr>
+
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

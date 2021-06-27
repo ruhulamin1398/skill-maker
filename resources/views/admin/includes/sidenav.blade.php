@@ -1,4 +1,4 @@
-<!-- sidebar @s -->
+0<!-- sidebar @s -->
 <div class="nk-sidebar nk-sidebar-fixed is-dark " data-content="sidebarMenu">
                 <div class="nk-sidebar-element nk-sidebar-head">
                     <div class="nk-menu-trigger">
@@ -148,6 +148,21 @@
                                         </li>
                                         <li class="nk-menu-item">
                                             <a href="{{  route('supports.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Support</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text">  Courses</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('courses.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Course</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('courses.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Course</span></a>
                                         </li>
 
                                     </ul>

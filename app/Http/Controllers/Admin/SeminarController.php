@@ -2,7 +2,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\Chat;
 use App\Models\seminar;
 use Illuminate\Http\Request;
 
@@ -65,6 +65,9 @@ class SeminarController extends Controller
         $seminar->status    = $request->status;
 
         $seminar->save();
+
+        $chat = Chat::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
+        
         return redirect()->route('seminar.index')->with('success','New Seminar Added Successful');
     }
 

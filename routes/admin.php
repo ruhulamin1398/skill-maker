@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\SeminerTrainerController;
+//use App\Http\Controllers\Admin\SeminerTrainerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,6 +30,9 @@ Route::resource('perticipators', PerticipatorController::class);
 Route::resource('trainers', TrainerController::class);
 Route::resource('buycourses', BuycourseController::class);
 Route::resource('supports', SupportController::class);
+Route::resource('courses', CourseControllernew::class);
+Route::resource('coursetrainers', CourseTrainerController::class);
+Route::resource('coursevideos', CourseVideoController::class);
 
 Route::get('/user', function(){
     return view('user.index');
@@ -38,10 +41,13 @@ Route::get('/trainer', function(){
     return view('trainer.index');
 });
 
-Route::resource('courses', CourseController::class);
+// Route::resource('courses', CourseController::class);
 Route::resource('training', TrainingController::class);
 Route::resource('seminars', UserSeminarController::class);
 Route::resource('trainer_seminar', TrainerSeminarController::class);
 Route::resource('trainer_course', TrainerCourseController::class);
 Route::resource('seminar-trainers', SeminerTrainerController::class);
-Route::get('seminar-trainers/index/{id}', [SeminerTrainerController::class, 'seminar'])->name('admin.seminar-trainers.seminar');
+Route::resource('chats', ChatController::class);
+Route::resource('chat-messages', ChatMessageController::class);
+
+//Route::get('seminar-trainers/index/{id}', [SeminerTrainerController::class, 'seminar'])->name('admin.seminar-trainers.seminar');
