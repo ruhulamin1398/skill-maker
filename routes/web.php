@@ -33,9 +33,9 @@ Route::get('tranings', function () {
     return view('traning');
 })->name('traning');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+// Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+//     return view('dashboard');
+// })->name('dashboard');
 
 Route::get('one-one', function () {
     return view('oneToOne');
@@ -49,3 +49,11 @@ Route::get('support', function () {
 Route::get('about', function(){
     return view('about');
 }) -> name('about');
+
+Route::get('marketplace', function(){
+    return view('marketplace');
+}) -> name('marketplace');
+
+Route::get('freelancer-profile', function(){
+    return view('freelancerProfile');
+}) -> name('freelancer-profile');

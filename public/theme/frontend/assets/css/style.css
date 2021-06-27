@@ -2747,4 +2747,225 @@ section {
         padding: 0;
     }
   }
+/*--------------------------------------------------------------
+# Marketplace Hero
+--------------------------------------------------------------*/
+.marketplaceHero{
+    background: url("../img/marketplace.jpg") top center;
+    height: 70vh !important;
+}
+.marketplaceHero h1{
+    font-size: 54px !important;
+}
+.marketplaceHero span {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600px;
+}
+/*--------------------------------------------------------------
+# Marketplace Disclaimer
+--------------------------------------------------------------*/
+#disclaimer{
+    background: #f1f3f9;
+}
+#disclaimer h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+}
+#disclaimer p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+#disclaimer .content{
+    padding-bottom: 50px;
+}
+#disclaimer .icon-box{
+    margin-bottom: 30px;
+}
+#disclaimer .icon-box img{
+    margin-bottom: 20px;
+}
+#disclaimer .icon-box h5{
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+.disclaimer-box{
+    padding-top: 30px;
+}
+.disclaimer-box p{
+    color: red !important;
+}
+/*--------------------------------------------------------------
+# Freelancer
+--------------------------------------------------------------*/
+#freelancer h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    padding-bottom: 50px;
+}
+#freelancer .box {
+    padding: 30px 20px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 30px;
+}
+#freelancer .box img, #freeProfile .box img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ebebeb;
+}
+#freelancer .header h5, #freeProfile .header h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+#freelancer .box .body, #freeProfile .box .body{
+    margin-top: 20px;
+}
+#freelancer .box .detail-box, #freeProfile .box .detail-box{
+    padding: 3px 0;
+}
+#freelancer .box .footer, #freeProfile .box .footer{
+    padding-top: 30px;
+}
+#freelancer .box .footer a, #freeProfile .box .footer a {
+    background: #f15c2f;
+    color: #fff;
+    padding: 10px 30px;
+    transition: all .3s ease;
+}
+#freelancer .box .footer a:hover,  #freeProfile .box .footer a:hover {
+    background: #007bff;
+}
+#freelancer .view-all{
+    margin-top: 20px;
+}
+#freelancer .view-all a {
+    border: 2px solid #1977cc;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    color: #1977cc;
+}
+#freelancer .view-all a:hover {
+    background-color: #1977cc;
+    color: #fff;
+}
+/*--------------------------------------------------------------
+# Exploer
+--------------------------------------------------------------*/
+#explore{
+    background: #f1f3f9;
+    padding-top: 90px;
+}
+#explore h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    padding-bottom: 50px;
+}
+#explore .box{
+    margin-bottom: 40px;
+}
+#explore img {
+    width: 60px;
+    max-width: 72px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+}
+#explore span {
+    display: block;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+/*--------------------------------------------------------------
+# Freelancer Find
+--------------------------------------------------------------*/
+#freeFind{
+    background: #f15c2f;
+}
+#freeFind h1{
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+}
+#freeFind p {
+    color: #fff;
+    font-size: 18px;
+    padding: 0 300px;
+    margin-top: 15px;
+}
+#freeFind a {
+    color: #fff;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 15px 50px;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+#freeFind a:hover {
+    color: #000;
+    background: #fff;
+}
+/*--------------------------------------------------------------
+# Freelancer Profile
+--------------------------------------------------------------*/
+#freeProfile{
+    margin-top: 90px;
+}
+#freeProfile .left-side{
+    border: 1px solid #ebebeb;
+}
+#freeProfile .left-side .border {
+    border: 1px solid #ebebeb;
+}
+#freeProfile .left-side .box {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+#freeProfile .des .border-top{
+    border-top: 1px solid #ebebeb;
+}
+#freeProfile .des .des-box{
+    padding: 30px 20px;
+}
+#freeProfile .des .des-box h5{
+    font-weight: 700;
+    margin: 20px 0;
+}
+#freeProfile .des .des-box p{
+    font-size: 16px;
+}
+#freeProfile .des .des-box .lang p{
+    font-size: 16px;
+    font-weight: 400;
+}
+#freeProfile .des .des-box .skill span a{
+    color: #000;
+    border: 1px solid #ebebeb;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 25px;
+}
+#freeProfile .right-side-border{
+    border: 1px solid #ebebeb;
+}
+#freeProfile .right-side-border .right-box{
+    padding: 30px 20px;
+}
+#freeProfile .right-side-border .right-box .review{
+    padding-bottom: 10px;
+}
+#freeProfile .right-side-border .right-box .see-more{
+    padding: 10px 0;
+    border-top: 1px solid #ebebeb;
+}
 
