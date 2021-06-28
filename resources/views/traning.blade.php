@@ -24,28 +24,28 @@
     <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
   </div>
 </section><!-- End Hero -->
-
 --}}
+<section id="pageHero" class="trainingHero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+          <div class="col">
+              <h1>ECOMMERCE TRAINING COURSES IN PAKISTAN</h1>
+          </div>
+      </div>
+    </div>
+</section>
 @endsection
 
 @section('content')
 
 
-
-
-
-
-
-
-
-
 <section id="services" class="services">
   <div class="container">
 
-  <header class="section-header2">
+  {{-- <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
       <p class="section--header"> &nbsp; </p>
-    </header>
+    </header> --}}
 
     <div class="row">
       <div class="col-lg-4 col-md-6 d-flex align-items-stretch">

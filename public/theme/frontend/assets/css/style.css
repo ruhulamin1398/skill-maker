@@ -454,6 +454,12 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Seminar table
 --------------------------------------------------------------*/
+.trainingHero{
+    background: url("../img/training-1.jpg") top center;
+}
+.seminarHero{
+    background: url("../img/seminar.jpg") top center;
+}
 #enableSeminar{
   padding-top: 60px;
 }
@@ -659,13 +665,16 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Featured Services
 --------------------------------------------------------------*/
+.supportHero{
+    background: url("../img/support.jpg") top center;
+}
 .featured-services2 strong{
   font-weight:8900;
   padding-bottom: 50px;
   display: block;
   font-size: 18px;
 }
-.featured-services2 .icon-box {
+.featured-services2 .icon-box{
   width: 100%;
   margin-bottom: 30px;
   position: relative;
@@ -699,15 +708,8 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0px;
 }
 
-.featured-services2 .icon {
-  margin-bottom: 15px;
-}
-
-.featured-services2 .icon i {
-  font-size: 48px;
-  line-height: 1;
-  color: #106eea;
-  transition: all 0.3s ease-in-out;
+.featured-services2 .icon img{
+  width: 60px;
 }
 
 .featured-services2 .title {
@@ -739,6 +741,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Team member
 --------------------------------------------------------------*/
+.successHero{
+    background: url("../img/success-stories.jpg") top center;
+}
 .doctors2 h2 {
   font-size: 36px;
   font-weight: 600;
@@ -769,7 +774,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #f1f1f1;
   box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.1);
   border-radius: 50px 0 50px 0;
-  
+
 }
 
 .doctors2 .member .member-img {
@@ -809,6 +814,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Office
 --------------------------------------------------------------*/
+.officesHero{
+    background: url("../img/office.jpg") top center;
+}
 .enablerOffice h2 {
   font-size: 36px;
   font-weight: 600;
@@ -839,7 +847,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff;
   box-shadow: 0px 2px 15px rgba(63, 187, 192, 0.3);
   border-radius: 20px;
-  
+
 }
 
 .enablerOffice .member .member-img {
@@ -1038,7 +1046,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero .container {
   position: relative;
-    
+
 }
 }
 
@@ -2482,10 +2490,44 @@ section {
   text-decoration: none;
 }
 /*--------------------------------------------------------------
+# Page Hero
+--------------------------------------------------------------*/
+#pageHero{
+    width: 100%;
+    height: 45vh;
+    background-size: cover;
+    position: relative;
+    margin-top: 96px;
+}
+#pageHero h1{
+    font-size: 45px;
+    line-height: 1.2;
+    color: #fff;
+    font-weight: 800;
+}
+@media (max-width: 992px) {
+    #pageHero {
+      height: 100vh;
+    }
+    #pageHero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  @media (max-height: 500px) {
+    #pageHero {
+      height: auto;
+    }
+  }
+/*--------------------------------------------------------------
 # Services 2
 --------------------------------------------------------------*/
+.servicesHero{
+    background: url("../img/services-1.jpg") top center;
+}
 .services1 .service-box {
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  box-shadow: 0px 0 30px rgba(27, 77, 163, 0.08);
   height: 100%;
   padding: 60px 30px;
   text-align: center;
@@ -2493,7 +2535,7 @@ section {
   border-radius: 5px;
 }
 
-.services1 .service-box .icon {
+.services1 .service-box .icon{
   font-size: 36px;
   padding: 40px 20px;
   border-radius: 4px;
@@ -2633,3 +2675,435 @@ section {
 .services1 .service-box:hover .icon {
   background: #fff;
 }
+/*--------------------------------------------------------------
+# Aout Us 2
+--------------------------------------------------------------*/
+.aboutHero{
+    background: url("../img/about-us.jpg") top center;
+}
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about2 .title {
+    padding-bottom: 50px;
+  }
+.about2 h2 {
+    font-weight: 700;
+    font-size: 36px;
+  }
+  .about2 p {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .about2 img {
+    width: 100%;
+    padding-right: 20px;
+  }
+  .about2 .content h3 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 28px;
+    }
+  .about2 .content p{
+    font-weight: 600;
+  }
+
+
+/*--------------------------------------------------------------
+# Our Vision
+--------------------------------------------------------------*/
+.vission1 .icon-box {
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 25px 0 25px 0;
+    background: #258cf5;
+    min-height: 280px;
+  }
+  .vission1 .icon-box2 {
+    background: #62cf62;
+  }
+  .vission1 .icon-box3 {
+    background: #8876fe;
+  }
+  /* .vission1 .icon-box i {
+    float: left;
+    color: #fff;
+    font-size: 40px;
+  } */
+
+  .vission1 .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .vission1 .icon-box p {
+    line-height: 24px;
+    font-size: 16px;
+    color: #fff;
+  }
+/*--------------------------------------------------------------
+# Founder
+--------------------------------------------------------------*/
+.founder{
+    margin-top: -60px;
+}
+.founder .title{
+    margin-bottom: 50px;
+}
+.founder .member {
+    position: relative;
+    box-shadow: 0px 2px 15px rgba(85, 98, 112, 0.08);
+    padding: 30px;
+    border-radius: 4px;
+    background: white;
+    margin-bottom: 30px;
+  }
+
+  .founder .member .pic {
+    overflow: hidden;
+    width: 140px;
+    border-radius: 4px;
+  }
+
+  .founder .member .pic img {
+    transition: ease-in-out 0.3s;
+  }
+
+  .founder .member:hover img {
+    transform: scale(1.1);
+  }
+
+  .founder .member .member-info {
+    padding-left: 30px;
+  }
+
+  .founder .member h4 {
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #556270;
+  }
+
+  .founder .member span {
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+  }
+
+  .founder .member span::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #dee2e6;
+    bottom: 0;
+    left: 0;
+  }
+
+  .founder .member p {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+  }
+
+  .founder .member .social {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .founder .member .social a {
+    transition: ease-in-out 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    background: #8795a4;
+  }
+
+  .founder .member .social a i {
+    color: #fff;
+    font-size: 16px;
+    margin: 0 2px;
+  }
+
+  .founder .member .social a:hover {
+    background: #d9232d;
+  }
+
+  .founder .member .social a + a {
+    margin-left: 8px;
+  }
+/*--------------------------------------------------------------
+# About Values
+--------------------------------------------------------------*/
+#aboutValues{
+    background: url("../img/about-section.jpg") center center no-repeat;
+    background-size: cover;
+}
+#aboutValues .content{
+    padding: 0 200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#aboutValues h2{
+    font-size: 36px;
+    font-weight: 700;
+}
+#aboutValues p{
+    font-size: 18px;
+    font-weight: 600;
+}
+#aboutValues li{
+    font-size: 18px;
+    font-weight: 600;
+}
+#aboutValues .image{
+    padding-top: 50px ;
+}
+#aboutValues .image div{
+    padding: 0 10px 20px 10px;
+}
+#aboutValues .image img {
+    width: 80px;
+    padding-bottom: 16px;
+}
+#aboutValues .image h4 {
+    font-size: 22px;
+    text-align: center;
+}
+@media (max-width: 992px) {
+    #aboutValues .content{
+        padding: 0;
+    }
+  }
+/*--------------------------------------------------------------
+# Marketplace Hero
+--------------------------------------------------------------*/
+.marketplaceHero{
+    background: url("../img/marketplace.jpg") top center;
+    height: 70vh !important;
+}
+.marketplaceHero h1{
+    font-size: 54px !important;
+}
+.marketplaceHero span {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600px;
+}
+/*--------------------------------------------------------------
+# Marketplace Disclaimer
+--------------------------------------------------------------*/
+#disclaimer{
+    background: #f1f3f9;
+}
+#disclaimer h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+}
+#disclaimer p{
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+#disclaimer .content{
+    padding-bottom: 50px;
+}
+#disclaimer .icon-box{
+    margin-bottom: 30px;
+}
+#disclaimer .icon-box img{
+    margin-bottom: 20px;
+}
+#disclaimer .icon-box h5{
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+}
+.disclaimer-box{
+    padding-top: 30px;
+}
+.disclaimer-box p{
+    color: red !important;
+}
+/*--------------------------------------------------------------
+# Freelancer
+--------------------------------------------------------------*/
+#freelancer h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    padding-bottom: 50px;
+}
+#freelancer .box {
+    padding: 30px 20px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 30px;
+}
+#freelancer .box img, #freeProfile .box img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ebebeb;
+}
+#freelancer .header h5, #freeProfile .header h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+#freelancer .box .body, #freeProfile .box .body{
+    margin-top: 20px;
+}
+#freelancer .box .detail-box, #freeProfile .box .detail-box{
+    padding: 3px 0;
+}
+#freelancer .box .footer, #freeProfile .box .footer{
+    padding-top: 30px;
+}
+#freelancer .box .footer a, #freeProfile .box .footer a {
+    background: #f15c2f;
+    color: #fff;
+    padding: 10px 30px;
+    transition: all .3s ease;
+}
+#freelancer .box .footer a:hover,  #freeProfile .box .footer a:hover {
+    background: #007bff;
+}
+#freelancer .view-all{
+    margin-top: 20px;
+}
+#freelancer .view-all a {
+    border: 2px solid #1977cc;
+    padding: 10px 40px;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    color: #1977cc;
+}
+#freelancer .view-all a:hover {
+    background-color: #1977cc;
+    color: #fff;
+}
+/*--------------------------------------------------------------
+# Exploer
+--------------------------------------------------------------*/
+#explore{
+    background: #f1f3f9;
+    padding-top: 90px;
+}
+#explore h1{
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    padding-bottom: 50px;
+}
+#explore .box{
+    margin-bottom: 40px;
+}
+#explore img {
+    width: 60px;
+    max-width: 72px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 15px;
+}
+#explore span {
+    display: block;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+/*--------------------------------------------------------------
+# Freelancer Find
+--------------------------------------------------------------*/
+#freeFind{
+    background: #f15c2f;
+}
+#freeFind h1{
+    color: #fff;
+    font-size: 56px;
+    font-weight: 700;
+}
+#freeFind p {
+    color: #fff;
+    font-size: 18px;
+    padding: 0 300px;
+    margin-top: 15px;
+}
+#freeFind a {
+    color: #fff;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid #fff;
+    padding: 15px 50px;
+    font-size: 18px;
+    transition: all .3s ease;
+}
+#freeFind a:hover {
+    color: #000;
+    background: #fff;
+}
+/*--------------------------------------------------------------
+# Freelancer Profile
+--------------------------------------------------------------*/
+#freeProfile{
+    margin-top: 90px;
+}
+#freeProfile .left-side{
+    border: 1px solid #ebebeb;
+}
+#freeProfile .left-side .border {
+    border: 1px solid #ebebeb;
+}
+#freeProfile .left-side .box {
+    padding: 30px;
+    margin-bottom: 30px;
+}
+#freeProfile .des .border-top{
+    border-top: 1px solid #ebebeb;
+}
+#freeProfile .des .des-box{
+    padding: 30px 20px;
+}
+#freeProfile .des .des-box h5{
+    font-weight: 700;
+    margin: 20px 0;
+}
+#freeProfile .des .des-box p{
+    font-size: 16px;
+}
+#freeProfile .des .des-box .lang p{
+    font-size: 16px;
+    font-weight: 400;
+}
+#freeProfile .des .des-box .skill span a{
+    color: #000;
+    border: 1px solid #ebebeb;
+    padding: 5px 10px;
+    display: inline-block;
+    margin: 4px;
+    border-radius: 25px;
+}
+#freeProfile .right-side-border{
+    border: 1px solid #ebebeb;
+}
+#freeProfile .right-side-border .right-box{
+    padding: 30px 20px;
+}
+#freeProfile .right-side-border .right-box .review{
+    padding-bottom: 10px;
+}
+#freeProfile .right-side-border .right-box .see-more{
+    padding: 10px 0;
+    border-top: 1px solid #ebebeb;
+}
+

@@ -27,29 +27,25 @@
 </section><!-- End Hero -->
 
 --}}
+<section id="pageHero" class="supportHero d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+          <div class="col">
+              <h1>LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
+          </div>
+      </div>
+    </div>
+</section>
 @endsection
 
 @section('content')
 
 
-
-
-
-
-
-
-
-
-<header class="section-header2">
+{{-- <header class="section-header2">
     <!-- <h2>Our Values</h2> -->
     <p class="section--header"> &nbsp; </p>
-</header>
+</header> --}}
 <!-- ======= Seminar table ======= -->
-
-
-
-
-
 
     <!-- ======= Support Section ======= -->
     <section id="featured-services" class="featured-services2">
@@ -63,7 +59,7 @@
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">REFUND REQUEST</h4>
                 </a>
             </div>
@@ -72,7 +68,7 @@
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">PAYMENT RELATED CONCERN</h4>
                 </a>
             </div>
@@ -81,7 +77,7 @@
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">
                     EVS CONCERN</h4>
                 </a>
@@ -91,7 +87,7 @@
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">TRAINING RELATED CONCERN
                   </h4>
                 </a>
@@ -101,17 +97,17 @@
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <a href="" class="support-link">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                 <h4 class="title">CHANGE OF TRAINING REQUEST</h4>
               </a>
           </div>
         </div>
 
-        
+
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">MENTOR RELATED CONCERN</h4>
                 </a>
             </div>
@@ -120,7 +116,7 @@
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">GENERAL COMPLAINT</h4>
                 </a>
             </div>
@@ -129,7 +125,7 @@
         <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                   <h4 class="title">SUGGESTIONS</h4>
                 </a>
             </div>
@@ -138,7 +134,7 @@
       <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
           <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <a href="" class="support-link">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
                 <h4 class="title">EPAS CONCERN</h4>
               </a>
           </div>
