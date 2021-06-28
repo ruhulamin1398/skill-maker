@@ -48,157 +48,24 @@
     </header> --}}
 
     <div class="row">
+        @foreach ($services as $service)
+            <div class="col-lg-4 mb-3">
+                    <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
+                    <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
+                    <h3>{{ $service -> title }}</h3>
 
-    <div class="col-lg-4 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
-          <h3>AMAZON ACCOUNT MANAGEMENT</h3>
-          <p>Whether you’re just getting started or are an experienced seller, the Amazon…</p>
+                    {{-- <p> {!! Str::of($service -> description) -> words(10, '') !!} </p> --}}
+                     {{-- <p> {!! $service -> description !!} </p> --}}
+                     <p>
+                         {{ $service -> excerpt() }}
+                    </p>
 
-
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="400" style="    background: #8876fe;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-2.png" class="img-fluid" alt="">
-          <h3>AMAZON SELLERS
-            DASHBOARD</h3>
-          <p>Currently, a huge problem with Pakistan is that it is not in the list…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #31bcff;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>AMAZON 1:1
-            COACHING</h3>
-          <p>Great mentors procreate and shape brilliant students who, in the long run….</p>
-          <div class="text-center">
-            <a href="{{route('oneToOne')}}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #ff9c47;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>AMAZON PRIVATE LABEL BOOT CAMP</h3>
-          <p>Amazon is one of the largest E-Commerce stores across the globe…</p>
-          <div class="text-center">
-            <a href="{{route('oneToOne')}}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #62cf62;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>VA
-            TRAINING</h3>
-          <p>This training course is designed to provide you with a road-map…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="    background: #31bcff;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>ENABLING
-            VIDEO SERIES</h3>
-          <p>Learn all Amazon Business Models via Enabling Video Series…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="col-lg-4 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
-          <h3>AMAZON ACCOUNT MANAGEMENT</h3>
-          <p>Whether you’re just getting started or are an experienced seller, the Amazon…</p>
-
-
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="400" style="    background: #8876fe;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-2.png" class="img-fluid" alt="">
-          <h3>AMAZON SELLERS
-            DASHBOARD</h3>
-          <p>Currently, a huge problem with Pakistan is that it is not in the list…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #31bcff;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>AMAZON 1:1
-            COACHING</h3>
-          <p>Great mentors procreate and shape brilliant students who, in the long run….</p>
-          <div class="text-center">
-            <a href="{{route('oneToOne')}}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #ff9c47;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>AMAZON PRIVATE LABEL BOOT CAMP</h3>
-          <p>Amazon is one of the largest E-Commerce stores across the globe…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #62cf62;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>VA
-            TRAINING</h3>
-          <p>This training course is designed to provide you with a road-map…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="    background: #31bcff;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>ENABLING
-            VIDEO SERIES</h3>
-          <p>Learn all Amazon Business Models via Enabling Video Series…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-
-
-
+                    <div class="text-center">
+                        <a href="{{ url('single-services/'. $service -> id) }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                    </div>
+                    </div>
+                </div>
+        @endforeach
 
     </div>
 

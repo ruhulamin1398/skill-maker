@@ -959,7 +959,7 @@ h1, h2, h3, h4, h5, h6 {
 #helpYou a:hover{
     background: #258cf5;
     color: #fff;
-} 
+}
 /*--------------------------------------------------------------
 # Make It Ease section
 --------------------------------------------------------------*/
@@ -3106,4 +3106,20 @@ section {
     padding: 10px 0;
     border-top: 1px solid #ebebeb;
 }
-
+/*--------------------------------------------------------------
+# Single Service
+--------------------------------------------------------------*/
+/* .singleServiceHero{
+    background: url("../img/single-service.jpg") top center;
+} */
+#singleService h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 20px;
+}
+#singleService p {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+}
