@@ -93,7 +93,10 @@ class TrainerController extends Controller
     public function show(Trainer $trainer)
     {
         $page_name = "Trainer Details";
-        return view('admin.trainers.show', compact('trainer', 'page_name'));
+        $courses = $trainer->courses;
+
+        // return $courses;
+        return view('admin.trainers.show', compact('trainer', 'page_name', 'courses'));
     }
 
     /**

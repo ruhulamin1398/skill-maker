@@ -51,7 +51,7 @@
                                         </form>
                                     </td>
                                     <td>
-                                        <a href="{{ route('admin.seminar-trainers.seminar', $seminars->id) }}" class="btn btn-success">Add </a> |
+                                        {{-- <a href="{{ route('admin.seminar-trainers.seminar', $seminars->id) }}" class="btn btn-success">Add </a> | --}}
                                         <a href="" class="btn btn-info">View </a>
                                     </td>
                                 </tr>

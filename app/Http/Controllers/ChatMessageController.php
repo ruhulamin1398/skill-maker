@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\seminar;
 use App\Http\Controllers\Controller;
-use App\Models\Chat;
-use App\Models\Trainer;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class UserSeminarController extends Controller
+use App\Models\chatMessage;
+use App\Models\Chat;
+use App\Models\seminar;
+use Illuminate\Http\Request;
+
+class ChatMessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,12 +18,7 @@ class UserSeminarController extends Controller
      */
     public function index()
     {
-        $page_name = 'My Assigned List';
-        $seminars = seminar::all();
-        // $course->perticipates->first()->course;
-        // $trainer = seminar::where('id', '=', 'chat.model_id');
-        // dd($seminars);
-        return view('user.seminars.index', compact('page_name','seminars'));
+        //
     }
 
     /**
@@ -33,9 +28,7 @@ class UserSeminarController extends Controller
      */
     public function create()
     {
-        $page_name = 'Join New Course';
-        $course = seminar::all();
-        return view('user.seminars.join', compact('page_name', 'course'));
+        //
     }
 
     /**
@@ -52,21 +45,21 @@ class UserSeminarController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\chatMessage  $chatMessage
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(chatMessage $chatMessage)
     {
-        //
+        
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\chatMessage  $chatMessage
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(chatMessage $chatMessage)
     {
         //
     }
@@ -75,10 +68,10 @@ class UserSeminarController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\chatMessage  $chatMessage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, chatMessage $chatMessage)
     {
         //
     }
@@ -86,10 +79,10 @@ class UserSeminarController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\chatMessage  $chatMessage
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(chatMessage $chatMessage)
     {
         //
     }
