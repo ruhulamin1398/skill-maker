@@ -24,7 +24,6 @@
                                 <th>Video</th>
                                 <th>Trainer</th>
                                 <th>Action</th>
-                                <th>More</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -52,15 +51,14 @@
                                     </td>
                                     <td>
                                         <form action="{{ route('courses.destroy', $course->id) }}" method="post">
-                                            <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-primary">Edit</a> |
+                                            <a class="btn btn-success" href="{{ route('courses.show', $course->id) }}"><i class="fas fa-eye"></i></a> |
+                                            <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-info"><i class="fas fa-edit fa-1x"></i></a> |
                                             @csrf
                                             @method('DELETE')
-                                            <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete !!');" value="Delete">
+                                            <input type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-danger" value="Delete"> 
                                         </form>
                                     </td>
-                                    <td>
-                                        <a class="btn btn-success" href="{{ route('courses.show', $course->id) }}">View</a>
-                                    </td>
+                                   
                                 </tr>
                             @endforeach
                             </tbody>
