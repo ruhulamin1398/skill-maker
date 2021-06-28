@@ -57,3 +57,6 @@ Route::get('marketplace', function(){
 Route::get('freelancer-profile', function(){
     return view('freelancerProfile');
 }) -> name('freelancer-profile');
+Route::get('single-service', function(){
+    return view('singleService');
+}) -> name('single-service');
