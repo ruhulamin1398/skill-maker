@@ -36,6 +36,14 @@
                                 <th> Address  </th>
                                 <td class="font-weight-bold"> {{ $trainer->address }}</td>
                             </tr>
+                            <tr>
+                                <th> Assign Course List  </th>
+                                <td class="font-weight-bold"> 
+                                    @foreach ($courses as $course)
+                                        <li>{{ $course->course->course_title }}</li>
+                                    @endforeach    
+                                </td>
+                            </tr>
                         </table>
                     </div>
                 </div>

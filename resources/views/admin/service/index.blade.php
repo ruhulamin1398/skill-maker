@@ -19,8 +19,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Title</th>
-                                <th>Sub Title</th>
-                                <th style="width: 30%">Description</th>
+                                <th style="width: 15%">Sub Title</th>
+                                <th style="width: 20%">Description</th>
                                 <th>Image</th>
                                 <th>Action</th>
                             </tr>
@@ -32,9 +32,15 @@
                                     <td>{{ $services->title }}</td>
                                     <td>{{ $services->sub_title }}</td>
                                     <td>
-                                        <?php
-                                        echo $services->description
-                                        ?>
+                                        <p style="font-size: 10px">
+                                            <?php
+                                                $desc = $services->description;
+                                                $strcut = substr($desc,0,100);
+                                                $desc = substr($strcut, 0, strrpos($strcut, ' ')).'....'.'<a href="" class="text-decoration-none">Read More</a>';
+                                                echo $desc;
+                                                ?>
+                                        </p>
+                                       
                                     </td>
                                     <td>
                                         <img src="{{ asset('service/images/'.$services->service_image) }}" class="img-thumbnail" style="height: 70px;width: 70px">

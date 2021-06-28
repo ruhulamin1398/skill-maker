@@ -79,28 +79,28 @@ class SeminerTrainerController extends Controller
      */
     public function edit($id)
     {
-        // $existingTrainers = seminar::find($id)->trainers->first()->trainers;
-        // return $existingTrainers;
-        // $seminars = seminar::all();
-        // $existingTrainerArray = [];
-        // foreach ($existingTrainers as $existingTrainer) {
-        //     $existingTrainerArray[$existingTrainer->id] = 1;
-        // }
+        $existingTrainers = seminar::find($id)->trainers->first()->trainers;
+        return $existingTrainers;
+        $seminars = seminar::all();
+        $existingTrainerArray = [];
+        foreach ($existingTrainers as $existingTrainer) {
+            $existingTrainerArray[$existingTrainer->id] = 1;
+        }
 
 
-        // $trainers = Trainer::all();
-        // foreach ($trainers as $trainer) {
-        //     if (isset($existingTrainerArray[$trainer->id])) {
-        //         // echo($trainer->id);
-        //     }
-        // }
+        $trainers = Trainer::all();
+        foreach ($trainers as $trainer) {
+            if (isset($existingTrainerArray[$trainer->id])) {
+                // echo($trainer->id);
+            }
+        }
 
 
-        // return compact('existingTrainers', 'trainers');
-        // $page_name = "Assign Trainer Into Seminar";
+        return compact('existingTrainers', 'trainers');
+        $page_name = "Assign Trainer Into Seminar";
 
 
-        // return view('admin.seminar_trainer.index', compact('seminar', 'trainer', 'page_name'));
+        return view('admin.seminar_trainer.index', compact('seminar', 'trainer', 'page_name'));
     }
 
     /**
