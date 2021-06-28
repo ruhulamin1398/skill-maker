@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,13 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Serviec Controller
 Route::get('services', [ServiceController::class, 'index']) -> name('services');
 Route::get('single-services/{id}', [ServiceController::class, 'singleService']) -> name('singleService');
 
-// Route::get('single-service', function(){
-//     return view('singleService');
-// }) -> name('single-service');
+// Freelancer Controller
+Route::get('marketplace', [FreelancerController::class, 'index']) -> name('marketplace');
+Route::get('freelancer-profile/{id}', [FreelancerController::class, 'singleFreelancer']) -> name('freelancer-profile');
+
+
+// Route::get('freelancer-profile', function(){
+//     return view('freelancerProfile');
+// }) -> name('freelancer-profile');
 
 
 Route::get('/', function () {
@@ -56,11 +62,3 @@ Route::get('support', function () {
 Route::get('about', function(){
     return view('about');
 }) -> name('about');
-
-Route::get('marketplace', function(){
-    return view('marketplace');
-}) -> name('marketplace');
-
-Route::get('freelancer-profile', function(){
-    return view('freelancerProfile');
-}) -> name('freelancer-profile');

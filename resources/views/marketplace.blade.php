@@ -87,206 +87,33 @@
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
+            @foreach ($freelancer as $freelancer)
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="box">
+                        <div class="header">
+                            <img src="{{ asset('freelancer/images/'. $freelancer -> image) }}" alt="">
+                            <h5>{{ $freelancer -> name }}</h5>
                         </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
+                        <div class="body">
+                            <div class="detail-box d-flex align-items-center justify-content-between">
+                                <span>Form</span>
+                                <strong>{{ $freelancer -> location }}</strong>
+                            </div>
+                            <div class="detail-box d-flex align-items-center justify-content-between">
+                                <span>Member Since</span>
+                                <strong>{{ date('F Y', strtotime($freelancer -> created_at)) }}</strong>
+                            </div>
+                            {{-- <div class="detail-box d-flex align-items-center justify-content-between">
+                                <span>Last Online</span>
+                                <strong>8 months ago</strong>
+                            </div> --}}
                         </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
+                        <div class="footer">
+                            <a href="{{ url('freelancer-profile/'. $freelancer -> id) }}">Contact Me</a>
                         </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-                <div class="box">
-                    <div class="header">
-                        <img src="{{ asset('theme/frontend/assets/img/freelancer.jpg') }}" alt="">
-                        <h5>Muhammad Maaz Iqbal</h5>
-                    </div>
-                    <div class="body">
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Form</span>
-                            <strong>Pakistan</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Member Since</span>
-                            <strong>Nov 2020</strong>
-                        </div>
-                        <div class="detail-box d-flex align-items-center justify-content-between">
-                            <span>Last Online</span>
-                            <strong>8 months ago</strong>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <a href="{{ route('freelancer-profile') }}">Contact Me</a>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="row text-center">
             <div class="col">
