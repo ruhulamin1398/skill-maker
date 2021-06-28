@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,12 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('services', [ServiceController::class, 'index']) -> name('services');
+Route::get('single-services/{id}', [ServiceController::class, 'singleService']) -> name('singleService');
+
+// Route::get('single-service', function(){
+//     return view('singleService');
+// }) -> name('single-service');
+
+
 Route::get('/', function () {
     return view('index');
 });
-Route::get('services', function () {
-    return view('services');
-})->name('services');
 
 Route::get('seminers', function () {
     return view('seminer');
@@ -57,6 +64,3 @@ Route::get('marketplace', function(){
 Route::get('freelancer-profile', function(){
     return view('freelancerProfile');
 }) -> name('freelancer-profile');
-Route::get('single-service', function(){
-    return view('singleService');
-}) -> name('single-service');

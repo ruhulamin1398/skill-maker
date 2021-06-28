@@ -3109,9 +3109,9 @@ section {
 /*--------------------------------------------------------------
 # Single Service
 --------------------------------------------------------------*/
-.singleServiceHero{
+/* .singleServiceHero{
     background: url("../img/single-service.jpg") top center;
-}
+} */
 #singleService h2{
     font-size: 36px;
     font-weight: 700;
@@ -3120,6 +3120,6 @@ section {
 }
 #singleService p {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 400;
     color: #000;
 }

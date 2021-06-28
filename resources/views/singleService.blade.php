@@ -5,6 +5,9 @@
   #hero {
     background: url("https://enablers.org/wp-content/uploads/2020/01/services-1.jpg") center center;
   }
+    .singleServiceHero{
+        background: url("{{ asset('service/images/'.$service -> service_image) }}") top center;
+    }
 </style>
 @endsection
 
@@ -22,7 +25,7 @@
     <div class="container">
       <div class="row">
           <div class="col">
-              <h1>LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
+              <h1>{{ $service -> title }}</h1>
           </div>
       </div>
     </div>
@@ -44,12 +47,8 @@
         <div class="row">
             <div class="col">
                 <div class="content">
-                    <h2>BEST CONTENT WRITING SERVICES</h2>
-                    <p>Whether you are a Small Business or a Large Enterprise, Enablers have got you covered whatever your content needs are. Being one of the best content writing service providers, we excel at delivering unique and compelling content to professionals as well as businesses that help them in boosting their growth and help them to establish a strong online presence. We undertake content development projects of all sizes.
-
-                        Our team of professional and brilliant writers provide proper content writing assistance and help in building brand value. Content writers at Enablers create content by doing complete market research and analysis. Along with writers, our qualified SEO experts provide organic SEO solutions to ensure that your website maintains high ranking, allowing you to generate higher returns on your investment.
-
-                        Get the original, high-quality content crafted with engaging dialect and headlines that pop in the content. With Enablers, you can enjoy the following top-notch content writing services:</p>
+                    <h2>{{ $service -> sub_title }}</h2>
+                    <p>{!! $service -> description !!}</p>
                 </div>
             </div>
         </div>
