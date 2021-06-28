@@ -54,10 +54,10 @@
                     <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
                     <h3>{{ $service -> title }}</h3>
 
-                    {{-- <p> {!! Str::of($service -> description) -> words(10, '') !!} </p> --}}
-                     {{-- <p> {!! $service -> description !!} </p> --}}
                      <p>
-                         {{ $service -> excerpt() }}
+                    @php 
+                    echo (implode(' ', array_slice(explode(' ', strip_tags($service->description)), 0, 13))."\n");
+                    @endphp 
                     </p>
 
                     <div class="text-center">
