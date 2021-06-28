@@ -18,7 +18,9 @@
     <link rel="stylesheet" href="{{ asset('theme/admin/assets/css/libs/fontawesome-icons.css?ver=2.4.0') }}">
     @yield('css')
 </head>
-
+<style>
+    #more {display: none;}
+</style>
 <body class="nk-body bg-lighter npc-general has-sidebar ">
     <div class="nk-app-root">
         <!-- main @s -->

@@ -33,10 +33,10 @@
                                     <td>Paid</td>
                                     <td>
                                         <a href="" class="btn btn-info">View</a> |
-                                        <a href="" class="btn btn-success">Chat Now</a>
+                                        <a href="{{ route('chats.index') }}" class="btn btn-success">Chat Now</a>
                                      </td>
                                 </tr>
-                            
+
                             @endforeach
                             </tbody>
                         </table>
