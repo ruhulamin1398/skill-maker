@@ -3,6 +3,7 @@
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SupportController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,16 +26,16 @@ Route::get('freelancer-profile/{id}', [FreelancerController::class, 'singleFreel
 
 // Seminar Route
 Route::get('seminers', [SeminarController::class, 'index']) -> name('seminer');
+// Support Route
+Route::get('support', [SeminarController::class, 'index']) -> name('support');
 
-
+// Route::get('support', function () {
+//     return view('support');
+// })->name('support');
 
 Route::get('/', function () {
     return view('index');
 });
-
-// Route::get('seminers', function () {
-//     return view('seminer');
-// })->name('seminer');
 
 Route::get('success-stories', function () {
     return view('successStories');
@@ -57,9 +58,6 @@ Route::get('one-one', function () {
 Route::get('officies', function () {
     return view('officies');
 })->name('officies');
-Route::get('support', function () {
-    return view('support');
-})->name('support');
 Route::get('about', function(){
     return view('about');
 }) -> name('about');

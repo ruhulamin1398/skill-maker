@@ -703,13 +703,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .featured-services2 .icon-box:hover::before {
-  background: #f25c2f;
+  background: #1977cc;
   top: 0;
   border-radius: 0px;
 }
 
-.featured-services2 .icon img{
-  width: 60px;
+.featured-services2 .image img{
+  width: 80px;
+  margin-bottom: 20px;
 }
 
 .featured-services2 .title {
