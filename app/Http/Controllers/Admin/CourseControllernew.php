@@ -87,7 +87,7 @@ class CourseControllernew extends Controller
         }
 
         $course->save();
-        return redirect()->route('admin-courses.index')->with('success','New Course Added Successful');
+        return redirect()->route('courses.index')->with('success','New Course Added Successful');
 
     }
 
