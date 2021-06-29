@@ -64,6 +64,21 @@ $sql = "INSERT INTO `supports` (`id`, `title`, `description`, `phone`, `facebook
 (4, 'Payment Related Concern', '<p>Hello World</p><p><br></p>', '00000000000', 'facebook.com/example', 'info@aymansohag.com', '2021-06-29 08:05:52', '2021-06-29 08:05:52'),
 (5, 'Mentor Related Concern', '<p>Hello World</p><p><br></p>', '00000000000', 'facebook.com/example', 'info@example.com', '2021-06-29 08:07:32', '2021-06-29 08:07:32')" ;
     DB::select($sql);
+
+// Office Seeder
+$sql = "INSERT INTO `offices` (`id`, `country`, `location`, `description`, `map_link`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'USA', 'OFFICE: 405 RXR PLAZA, UNIONDALE, NY 11553. Contact: info@skillmaker.org/917 402 1320', '<p>Description Here</p>', 'Null', '1624979661.jpg', '2021-06-29 09:14:21', '2021-06-29 09:14:21'),
+(2, 'Canada', 'East York, Ontatio, Canada. info@skillmaker.org', '<p>Description Here</p>', 'Null', '1624979738.jpg', '2021-06-29 09:15:38', '2021-06-29 09:15:38'),
+(3, 'UK OFFICE', 'Bradford, West Yorkshire, UK. info@skillmaker.org', '<p>Description Here</p>', 'Null', '1624979806.jpg', '2021-06-29 09:16:46', '2021-06-29 09:16:46'),
+(4, 'UK City Office', 'Barkingside High Street, Ilford, London, United Kingdom. info@skillmaker.org', '<p>Description Here</p><p><br></p>', 'Null', '1624979904.jpg', '2021-06-29 09:18:24', '2021-06-29 09:18:24'),
+(5, '- France Office', 'Rue Du Coq Frances, 93260 Les Lilas, France. info@skillmaker.org', '<p>Description Here</p>', 'Null', '1624979968.jpg', '2021-06-29 09:19:28', '2021-06-29 09:19:28'),
+(6, 'Saudi Arabia', 'Abu Al Mu’alla Al Farisi Street, Al Khadiyah District, Al Madina Al Munawwarah, Kingdom of Saudi Arabia. info@skillmaker.org', '<p>Description Here</p>', 'Null', '1624980007.jpg', '2021-06-29 09:20:07', '2021-06-29 09:20:07'),
+(7, 'UAE', 'Khalifa Street, Abu Dhabi, UAE info@skillmaker.org', '<p>Description Here</p>', 'Null', '1624980047.jpg', '2021-06-29 09:20:47', '2021-06-29 09:20:47'),
+(8, 'Pakistan', 'Sindh, Karachi, Pakistan. info@skillmaker.org', '<p>Description Here</p><p><br></p>', 'Null', '1624980093.jpg', '2021-06-29 09:21:33', '2021-06-29 09:21:33'),
+(9, 'Bangladesh', '11 Abash, Jail Road, Sylhet 3100. info@skillmaker.org/', '<p>Description Here</p>', 'Null', '1624980192.jpg', '2021-06-29 09:23:12', '2021-06-29 09:23:12')" ;
+DB::select($sql);
+
     }
 }
+
 
