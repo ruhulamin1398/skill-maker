@@ -14,7 +14,7 @@
                 @endif
                 <div class="card card-preview">
                     <div class="card-inner">
-                        <form action="{{ route('courses.create') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('courses.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Course Title<sup class="text-danger">*</sup></label>
