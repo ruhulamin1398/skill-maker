@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\seminar;
 use Illuminate\Database\Seeder;
 
 class SeminerTrainerSeeder extends Seeder
@@ -13,6 +14,8 @@ class SeminerTrainerSeeder extends Seeder
      */
     public function run()
     {
-        //
+        seminar::create([
+            
+        ]);
     }
 }

@@ -31,7 +31,8 @@
 
   <link href="{{asset('theme/flexor/assets/vendor/aos/aos.css')}}" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('theme/admin/assets/css/libs/fontawesome-icons.css?ver=2.4.0') }}">
- 
+  @yield('css')
+
 
 
 </head>

@@ -59,7 +59,9 @@
           <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
                 <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
+                  <div class="icon">
+                      <img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i>
+                    </div>
                   <h4 class="title">REFUND REQUEST</h4>
                 </a>
             </div>

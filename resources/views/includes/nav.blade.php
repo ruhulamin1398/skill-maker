@@ -8,6 +8,6 @@
         <li class="{{ (request()-> is('success-stories')) ? 'active' : '' }}"><a href="{{route('success-stories')}}">Success Stories</a></li>
         <li class="{{ (request()-> is('support')) ? 'active' : '' }}"><a href="{{route('support')}}">Support</a></li>
         <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href="{{route('officies')}}">Our Offices</a></li>
-        <li class="{{ (request()-> is('marketplace')) ? 'active' : '' }}"><a href="{{route('marketplace')}}">Marketplace</a></li>
+        <li class="{{ (request()-> is('marketplace')) ? 'active' : '' }}"><a href="{{ route('marketplace') }}">Marketplace</a></li>
     </ul>
 </nav><!-- .nav-menu -->

@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 //use App\Http\Controllers\Admin\SeminerTrainerController;
 /*
@@ -14,8 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return Auth::user();
     return view('admin.index');
-});
+})->middleware(['auth']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -33,6 +35,7 @@ Route::resource('supports', SupportController::class);
 Route::resource('courses', CourseControllernew::class);
 Route::resource('coursetrainers', CourseTrainerController::class);
 Route::resource('coursevideos', CourseVideoController::class);
+Route::resource('freelancers', FreelancerController::class);
 
 Route::get('/user', function(){
     return view('user.index');

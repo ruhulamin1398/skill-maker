@@ -167,6 +167,21 @@
 
                                     </ul>
                                 </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Freelancers</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('freelancers.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Freelancer</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('freelancers.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Frrelancer</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
                                 {{-- <li class="nk-menu-item">
                                     <a href="html/index.html" class="nk-menu-link">
                                         <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
