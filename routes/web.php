@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,22 +15,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// Serviec Route
 Route::get('services', [ServiceController::class, 'index']) -> name('services');
 Route::get('single-services/{id}', [ServiceController::class, 'singleService']) -> name('singleService');
 
-// Route::get('single-service', function(){
-//     return view('singleService');
-// }) -> name('single-service');
+// Freelancer Route
+Route::get('marketplace', [FreelancerController::class, 'index']) -> name('marketplace');
+Route::get('freelancer-profile/{id}', [FreelancerController::class, 'singleFreelancer']) -> name('freelancer-profile');
+
+// Seminar Route
+Route::get('seminers', [SeminarController::class, 'index']) -> name('seminer');
+
 
 
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('seminers', function () {
-    return view('seminer');
-})->name('seminer');
+// Route::get('seminers', function () {
+//     return view('seminer');
+// })->name('seminer');
+
 Route::get('success-stories', function () {
     return view('successStories');
 })->name('success-stories');
@@ -56,11 +63,3 @@ Route::get('support', function () {
 Route::get('about', function(){
     return view('about');
 }) -> name('about');
-
-Route::get('marketplace', function(){
-    return view('marketplace');
-}) -> name('marketplace');
-
-Route::get('freelancer-profile', function(){
-    return view('freelancerProfile');
-}) -> name('freelancer-profile');

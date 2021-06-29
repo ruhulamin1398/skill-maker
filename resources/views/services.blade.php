@@ -55,9 +55,9 @@
                     <h3>{{ $service -> title }}</h3>
 
                      <p>
-                    @php 
-                    echo (implode(' ', array_slice(explode(' ', strip_tags($service->description)), 0, 13))."\n");
-                    @endphp 
+                        @php
+                        echo (implode(' ', array_slice(explode(' ', strip_tags($service->description)), 0, 13))."\n");
+                        @endphp
                     </p>
 
                     <div class="text-center">

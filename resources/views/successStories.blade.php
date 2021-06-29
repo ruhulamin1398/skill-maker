@@ -39,15 +39,6 @@
 
 @section('content')
 
-
-
-
-
-
-
-
-
-
 {{-- <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
       <p class="section--header"> &nbsp; </p>

@@ -63,37 +63,21 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col" style="width: 20%;">Date</th>
-                  <th scope="col" style="width: 20%;">Locations</th>
-                  <th scope="col" style="width: 40%;">Venue</th>
+                  <th scope="col" style="width: 25%;">Date</th>
+                  <th scope="col" style="width: 25%;">Locations</th>
+                  <th scope="col" style="width: 30%;">Venue</th>
                   <th scope="col" style="width: 20%;">Registration</th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">11 July</th>
-                  <td>Lahore</td>
-                  <td>Pearl Continental Hotel</td>
-                  <td><a href="">Open</a></td>
-                </tr>
+                @foreach ($seminar as $seminar)
+                    <tr>
+                        <th scope="row">{{ date('F Y', strtotime($seminar -> date)) }}</th>
+                        <td>{{ $seminar -> location }}</td>
+                        <td>{{ $seminar -> venue  }}</td>
+                        <td><a href="#">Open</a></td>
+                    </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
