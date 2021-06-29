@@ -16,7 +16,6 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        $this->call(CoursesSeeder::class);
         $this->call(FreelancerSeeder::class);
         $this->call(RoleSeeder::class);
 
@@ -76,6 +75,28 @@ $sql = "INSERT INTO `offices` (`id`, `country`, `location`, `description`, `map_
 (7, 'UAE', 'Khalifa Street, Abu Dhabi, UAE info@skillmaker.org', '<p>Description Here</p>', 'Null', '1624980047.jpg', '2021-06-29 09:20:47', '2021-06-29 09:20:47'),
 (8, 'Pakistan', 'Sindh, Karachi, Pakistan. info@skillmaker.org', '<p>Description Here</p><p><br></p>', 'Null', '1624980093.jpg', '2021-06-29 09:21:33', '2021-06-29 09:21:33'),
 (9, 'Bangladesh', '11 Abash, Jail Road, Sylhet 3100. info@skillmaker.org/', '<p>Description Here</p>', 'Null', '1624980192.jpg', '2021-06-29 09:23:12', '2021-06-29 09:23:12')" ;
+DB::select($sql);
+
+// Course Seeder
+$sql = "INSERT INTO `courses` (`id`, `course_title`, `image`, `introduction_video`, `description`, `price`, `created_at`, `updated_at`) VALUES
+(1, 'Amazon FBA Private Label', '1624981475.jpg', '1624981475.mp4', 'Description', 1200.00, '2021-06-29 09:28:31', '2021-06-29 09:44:35'),
+(2, 'Amazon FBA Wholesale', '1624982669.jpg', '1624982669.mp4', '<p>Description</p>', 500.00, '2021-06-29 10:04:29', '2021-06-29 10:04:29'),
+(3, 'Amazon FBM', '1624982774.jpg', '1624982774.mp4', '<p>Description</p>', 1000.00, '2021-06-29 10:06:14', '2021-06-29 10:06:14'),
+(4, 'Amazon Affiliate Marketing', '1624982854.jpg', '1624982854.mp4', '<p>Description</p>', 5555.00, '2021-06-29 10:07:35', '2021-06-29 10:07:35'),
+(5, 'Become a Virtual Assistant', '1624982934.jpg', '1624982934.mp4', '<p>Description</p>', 1000.00, '2021-06-29 10:08:54', '2021-06-29 10:08:54'),
+(6, 'Sourcing from China', '1624983003.jpg', '1624983003.mp4', '<p>Description</p>', 1000.00, '2021-06-29 10:10:03', '2021-06-29 10:10:03'),
+(7, 'AWS', '1624983111.jpg', '1624983111.mp4', '<p>Description</p>', 300.00, '2021-06-29 10:11:51', '2021-06-29 10:11:51'),
+(8, 'Microsoft Cloud', '1624983165.jpg', '1624983165.mp4', 'Description', 500.00, '2021-06-29 10:12:45', '2021-06-29 10:12:45'),
+(9, 'SEO', '1624983226.jpg', '1624983226.mp4', '<p>Description</p>', 1000.00, '2021-06-29 10:13:46', '2021-06-29 10:13:46'),
+(10, 'Digital Marketing', '1624983260.jpg', '1624983260.mp4', '<p>Description</p>', 5000.00, '2021-06-29 10:14:20', '2021-06-29 10:14:20'),
+(11, 'Graphic Design (Video Editing, Cinematography)', '1624983297.jpg', '1624983297.mp4', '<p>Description</p><p><br></p>', 2345.00, '2021-06-29 10:14:57', '2021-06-29 10:14:57'),
+(12, 'Graphic Design (Logo Design, T shirt Design)', '1624983341.jpg', '1624983341.mp4', '<p>Description</p>', 5000.00, '2021-06-29 10:15:41', '2021-06-29 10:15:41'),
+(13, 'Advance Level Photography', '1624983386.jpg', '1624983386.mp4', '<p>Description</p>', 5000.00, '2021-06-29 10:16:26', '2021-06-29 10:16:26'),
+(14, 'Sell On Daraz', '1624983418.jpg', '1624983418.mp4', '<p>Description</p>', 500.00, '2021-06-29 10:16:58', '2021-06-29 10:16:58'),
+(15, 'Web Design & Development', '1624983452.jpg', '1624983452.mp4', '<p>Description</p>', 500.00, '2021-06-29 10:17:32', '2021-06-29 10:17:32'),
+(16, 'ECL (English as a Vocational Language)', '1624983483.jpg', '1624983483.mp4', '<p>Description</p>', 5000.00, '2021-06-29 10:18:03', '2021-06-29 10:18:03'),
+(17, 'Sell in KSA', '1624983520.jpg', '1624983520.mp4', '<p>Description</p>', 5000.00, '2021-06-29 10:18:40', '2021-06-29 10:18:40'),
+(18, 'Sell in Amazon UAE', '1624983571.jpg', '1624983571.mp4', '<p>Description</p>', 6000.00, '2021-06-29 10:19:31', '2021-06-29 10:19:31')";
 DB::select($sql);
 
     }
