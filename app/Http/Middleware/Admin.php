@@ -19,7 +19,6 @@ class Admin
     {
         return Auth::user();
         if(Auth::user()->hasRole('admin')){
-
             return $next($request);
         }
         return Abort(403);

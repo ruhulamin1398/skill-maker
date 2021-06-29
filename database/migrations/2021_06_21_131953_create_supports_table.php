@@ -16,10 +16,10 @@ class CreateSupportsTable extends Migration
         Schema::create('supports', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
             $table->string('phone');
             $table->string('facebook');
             $table->string('email');
+            $table->text('description');
             $table->timestamps();
         });
     }
