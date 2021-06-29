@@ -3096,8 +3096,11 @@ section {
 #freeProfile .right-side-border{
     border: 1px solid #ebebeb;
 }
+#freeProfile .right-side .des-box{
+    padding: 0px 20px;
+}
 #freeProfile .right-side-border .right-box{
-    padding: 30px 20px;
+    padding: 10px 20px;
 }
 #freeProfile .right-side-border .right-box .review{
     padding-bottom: 10px;
