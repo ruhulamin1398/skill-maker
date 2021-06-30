@@ -52,14 +52,14 @@
       @foreach ($course as $course)
         <div class="col-lg-4 col-md-6">
             <div class="icon-box">
-            <div class="icon"><i class="icofont-heart-beat"></i></div>
-            <h4><a href="">{{ $course -> course_title }}</a></h4>
-            <p>
-                @php
-                     echo (implode(' ', array_slice(explode(' ', strip_tags($course -> description)), 0, 13))."\n");
-                @endphp
-            </p>
-            <button type="button" class="btn btn-primary">Join</button>
+                <div class="icon"><i class="icofont-heart-beat"></i></div>
+                <h4><a href="">{{ $course -> course_title }}</a></h4>
+                <p>
+                    @php
+                        echo (implode(' ', array_slice(explode(' ', strip_tags($course -> description)), 0, 13))."\n");
+                    @endphp
+                </p>
+                <button type="button" class="btn btn-primary">Join</button>
             </div>
         </div>
       @endforeach
