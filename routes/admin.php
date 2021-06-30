@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\Admin\SeminerTrainerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,6 +35,7 @@ Route::resource('courses', CourseControllernew::class);
 Route::resource('coursetrainers', CourseTrainerController::class);
 Route::resource('coursevideos', CourseVideoController::class);
 Route::resource('freelancers', FreelancerController::class);
+Route::resource('seminar-trainers', SeminarTrainerController::class);
 
 Route::get('/user', function(){
     return view('user.index');
@@ -49,7 +49,6 @@ Route::resource('training', TrainingController::class);
 Route::resource('seminars', UserSeminarController::class);
 Route::resource('trainer_seminar', TrainerSeminarController::class);
 Route::resource('trainer_course', TrainerCourseController::class);
-Route::resource('seminar-trainers', SeminerTrainerController::class);
 Route::resource('chats', ChatController::class);
 Route::resource('chat-messages', ChatMessageController::class);
 

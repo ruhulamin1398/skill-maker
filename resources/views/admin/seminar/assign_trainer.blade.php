@@ -14,24 +14,22 @@
                 @endif
                 <div class="card card-preview">
                     <div class="card-inner">
-                        <form action="{{ route('seminar-trainers.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('seminar-trainers.update', $seminars->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
+                            @method('PUT')
                             <div class="form-group">
-                                <label class="form-label">Select Seminar<sup class="text-danger">*</sup></label>
-                                <select name="course_id" class="form-control">
-                                    @foreach ($seminar as $seminars)
-                                        <option value="{{ $seminars->id }}">{{ $seminars->title }}</option>
-                                    @endforeach
-                                </select>
+                                <label class="form-label">Course Name<sup class="text-danger">*</sup></label>
+                                <input type="text" disabled  class="form-control" value="{{ $seminars->title }}">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Assign Trainer<sup class="text-danger">*</sup></label>
-                                @foreach ($trainer as $trainers)
+                                <label class="form-label">Select Trainer<sup class="text-danger">*</sup></label>
+                                @foreach ($trainers as $trainer)
                                     <li style="list-style: none">
-                                        <input type="checkbox" name="trainer_id[]" value="{{ $trainers->id }}"> {{ $trainers->name }}
+                                        <input type="checkbox" name="trainer_id[]" value="{{ $trainer->id }}"> {{ $trainer->name }}
                                     </li>
                                 @endforeach
                             </div>
+
                             <div class="form-group">
                                 <input type="submit" name="btn"  class="btn btn-primary col-6 btn-block" value="Submit">
                             </div>

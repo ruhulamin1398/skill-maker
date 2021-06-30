@@ -51,8 +51,9 @@
                                         </form>
                                     </td>
                                     <td>
-                                        {{-- <a href="{{ route('admin.seminar-trainers.seminar', $seminars->id) }}" class="btn btn-success">Add </a> | --}}
-                                        <a href="" class="btn btn-info">View </a>
+                                        <a href="{{ route('seminar-trainers.edit', $seminars->id) }}" class="btn btn-primary">
+                                            {{ $seminars->trainers->count()}}
+                                        </a>
                                     </td>
                                 </tr>
                             @endforeach

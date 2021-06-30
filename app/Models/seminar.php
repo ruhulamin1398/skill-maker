@@ -14,9 +14,10 @@ class seminar extends Model
     ];
     public function perticaptes(){
         return $this->hasMany(buycourse::class,'course_id','id');
-    } 
+    }
+
     public function trainers(){
-        return $this->hasMany(seminerTrainer::class,'seminer_id','id');
+        return $this->hasMany(SeminarTrainer::class,'seminer_id','id');
     }
     public function chat(){
         return chat::where('model',seminar::class)->where('model_id',$this->id)->first();
