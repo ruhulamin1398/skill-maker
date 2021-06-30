@@ -56,92 +56,25 @@
 
         <div class="row">
 
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
+            @foreach ($stories as $story)
+            <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                <div class="member" data-aos="fade-up" data-aos-delay="100">
+                  <div class="member-img">
+                    <img src="{{asset('success_story/images/'. $story -> image)}}" class="img-fluid" alt="">
+                  </div>
+                  <div class="member-info">
+                    <h4>{{ $story -> name }}</h4>
+                    <strong>{{ $story -> location }}</strong>
+                    <span>
+                        @php
+                        echo (implode(' ', array_slice(explode(' ', strip_tags($story -> long_description)), 0, 13))."\n");
+                        @endphp
+                    </span>
+                    <a href="">Read More</a>
+                  </div>
+                </div>
               </div>
-              <div class="member-info">
-                <h4>Abdul Muqeet</h4>
-                <strong>Karachi</strong>
-                <span>My 1st Success Story....</span>
-                <a href="">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Abdul Muqeet</h4>
-                <strong>Karachi</strong>
-                <span>My 1st Success Story....</span>
-                <a href="">Read More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Abdul Muqeet</h4>
-                <strong>Karachi</strong>
-                <span>My 1st Success Story....</span>
-                <a href="">Read More</a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Abdul Muqeet</h4>
-                <strong>Karachi</strong>
-                <span>My 1st Success Story....</span>
-                <a href="">Read More</a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Abdul Muqeet</h4>
-                <strong>Karachi</strong>
-                <span>My 1st Success Story....</span>
-                <a href="">Read More</a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/ava2.png')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Abdul Muqeet</h4>
-                <strong>Karachi</strong>
-                <span>My 1st Success Story....</span>
-                <a href="">Read More</a>
-              </div>
-            </div>
-          </div>
+            @endforeach
 
         </div>
 
