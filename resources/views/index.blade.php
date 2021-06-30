@@ -4,9 +4,25 @@
 <style>
   /* #hero{
     background: url("{{asset('images/website-Slider-Cover.jpg')}}") center center ;
-  
-    
   } */
+  .allService a{
+        border-radius: 50px;
+        border: 2px solid #ebe3dc;
+        color: #fff;
+        text-transform: uppercase;
+        padding: 10px 30px;
+        font-weight: 600;
+        background: #337ab7;
+        font-size: 16px;
+        margin-top: 30px;
+        display: inline-block
+    }
+    .allService a:hover{
+        background-color: #ff9c49;
+        color: #fff;
+        border-color: #ff9c49;
+    }
+  }
 </style>
 @endsection
 
@@ -72,24 +88,6 @@
   </div>
 </section><!-- End Why Us Section -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- ======= Values Section ======= -->
 <section id="values" class="values2">
 
@@ -102,78 +100,32 @@
 
     <div class="row">
 
-      <div class="col-lg-4 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
-          <h3>AMAZON ACCOUNT MANAGEMENT</h3>
-          <p>Whether you’re just getting started or are an experienced seller, the Amazon…</p>
+      @foreach ($service as $service)
+        <div class="col-lg-4 mb-3">
+            <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
+            <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
+            <h3>{{ $service -> title }}</h3>
+            <p>
+                @php
+                 echo (implode(' ', array_slice(explode(' ', strip_tags($service->description)), 0, 13))."\n");
+                @endphp
+            </p>
 
-
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
+            <div class="text-center">
+                <a href="{{ url('single-services/'. $service -> id) }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            </div>
+            </div>
         </div>
-      </div>
+      @endforeach
 
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="400" style="    background: #8876fe;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-2.png" class="img-fluid" alt="">
-          <h3>AMAZON SELLERS
-            DASHBOARD</h3>
-          <p>Currently, a huge problem with Pakistan is that it is not in the list…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="allService text-center">
+                <a href="{{ route('services') }}">ALl Service</a>
+            </div>
         </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #31bcff;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>AMAZON 1:1
-            COACHING</h3>
-          <p>Great mentors procreate and shape brilliant students who, in the long run….</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #ff9c47;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>AMAZON PRIVATE LABEL BOOT CAMP</h3>
-          <p>Amazon is one of the largest E-Commerce stores across the globe…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="background: #62cf62;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>VA
-            TRAINING</h3>
-          <p>This training course is designed to provide you with a road-map…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 mt-4 mt-lg-0 mb-3">
-        <div class="box" data-aos="fade-up" data-aos-delay="600" style="    background: #31bcff;">
-          <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-3.png" class="img-fluid" alt="">
-          <h3>ENABLING
-            VIDEO SERIES</h3>
-          <p>Learn all Amazon Business Models via Enabling Video Series…</p>
-          <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
-          </div>
-        </div>
-      </div>
-
     </div>
 
   </div>
@@ -298,33 +250,20 @@
   <div class="container ">
 
     <div class="row p-2">
-    
+
 
       <div class="col-xl-7 col-lg-6 icon-boxes p-4    ">
         <h3>UPCOMING SEMINAR SCHEDULE</h3>
         <p>All seminars will be scheduled as per government regulations. Keep visiting the site for the latest updates.</p>
 
-        <div class="icon-box">
-          <div class="icon"><i class="bx bx-fingerprint"></i></div>
-         
-          <h4 class="title"><a href="">Lahore</a></h4> 
-          <h4 class=" " style="margin-left: 85px !important;" >12.02.2022</h4>
-          <div class="" style="margin-left: 85px !important;">Pearl Continental Hote</div>
-        </div>
-
-        <div class="icon-box">
-          <div class="icon"><i class="bx bx-gift"></i></div>
-          <h4 class="title"><a href="">  Islamabad</a></h4>
-          <h4 class=" "  style="margin-left: 85px !important;">12.02.2022</h4>
-          <div class="" style="margin-left: 85px !important;">AURA GRANDE Event Complex</div>
-        </div>
-
-        <div class="icon-box">
-          <div class="icon"><i class="bx bx-atom"></i></div>
-          <h4 class="title"><a href=""> Sialkot </a></h4>
-          <h4 class=" "  style="margin-left: 85px !important;">12.02.2022</h4>
-          <div class="" style="margin-left: 85px !important;">The Heritage Club </div>
-        </div>
+        @foreach ($seminar as $seminar)
+            <div class="icon-box">
+                <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                <h4 class="title"><a href="">{{ $seminar -> location }}</a></h4>
+                <h4 class=" " style="margin-left: 85px !important;" >{{ date('F, d Y', strtotime($seminar -> date)) }}</h4>
+                <div class="" style="margin-left: 85px !important;">{{ $seminar -> venue }}</div>
+          </div>
+        @endforeach
 
       </div>
 
@@ -339,18 +278,18 @@
   </div>
 </section><!-- End About Section -->
 
- 
 
 
 
 
 
- 
 
 
 
 
-  
+
+
+
 
 
 @endsection

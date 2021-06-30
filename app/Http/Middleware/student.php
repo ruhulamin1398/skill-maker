@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 
-class student
+class Student
 {
     /**
      * Handle an incoming request.
@@ -16,7 +16,6 @@ class student
      */
     public function handle(Request $request, Closure $next)
     {
-        return "asdfsaf";
         return $next($request);
     }
 }
