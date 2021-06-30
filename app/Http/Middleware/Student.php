@@ -1,11 +1,11 @@
 <?php
+
 namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
-class Admin
+class Student
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,6 @@ class Admin
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->hasRole('admin')){
-            return $next($request);
-        }
-        return Abort(403);
+        return $next($request);
     }
 }
