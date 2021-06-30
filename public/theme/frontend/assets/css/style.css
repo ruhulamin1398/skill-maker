@@ -1665,9 +1665,9 @@ section {
   text-align: center;
   border: 1px solid #d5e1ed;
   padding: 80px 20px;
+  margin-bottom: 30px;
   transition: all ease-in-out 0.3s;
 }
-
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;

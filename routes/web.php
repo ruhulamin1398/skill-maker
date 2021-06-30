@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SupportController;
+use App\Http\Controllers\TrainingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,11 +29,11 @@ Route::get('freelancer-profile/{id}', [FreelancerController::class, 'singleFreel
 // Seminar Route
 Route::get('seminers', [SeminarController::class, 'index']) -> name('seminer');
 // Support Route
-Route::get('support', [SeminarController::class, 'index']) -> name('support');
-
-// Route::get('support', function () {
-//     return view('support');
-// })->name('support');
+Route::get('support', [SupportController::class, 'index']) -> name('support');
+// Training Route
+Route::get('tranings', [TrainingController::class, 'index']) -> name('traning');
+// Office Route
+Route::get('officies', [OfficeController::class, 'index']) -> name('officies');
 
 Route::get('/', function () {
     return view('index');
@@ -44,10 +46,6 @@ Route::get('form', function () {
     return view('form');
 })->name('form');
 
-Route::get('tranings', function () {
-    return view('traning');
-})->name('traning');
-
 // Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //     return view('dashboard');
 // })->name('dashboard');
@@ -55,9 +53,6 @@ Route::get('tranings', function () {
 Route::get('one-one', function () {
     return view('oneToOne');
 })->name('oneToOne');
-Route::get('officies', function () {
-    return view('officies');
-})->name('officies');
 Route::get('about', function(){
     return view('about');
 }) -> name('about');
