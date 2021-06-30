@@ -55,92 +55,20 @@
             <strong>Please select the relevant option to get quick support from Enablers.</strong>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon">
-                      <img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i>
+        <div class="row text-center">
+
+            @foreach ($support as $support)
+                <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <a href="" class="support-link">
+                            <div class="image">
+                                <img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i>
+                            </div>
+                            <h4 class="title">{{ $support -> title }}</h4>
+                        </a>
                     </div>
-                  <h4 class="title">REFUND REQUEST</h4>
-                </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                  <h4 class="title">PAYMENT RELATED CONCERN</h4>
-                </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                  <h4 class="title">
-                    EVS CONCERN</h4>
-                </a>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                  <h4 class="title">TRAINING RELATED CONCERN
-                  </h4>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <a href="" class="support-link">
-                <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                <h4 class="title">CHANGE OF TRAINING REQUEST</h4>
-              </a>
-          </div>
-        </div>
-
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                  <h4 class="title">MENTOR RELATED CONCERN</h4>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                  <h4 class="title">GENERAL COMPLAINT</h4>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <a href="" class="support-link">
-                  <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                  <h4 class="title">SUGGESTIONS</h4>
-                </a>
-            </div>
-        </div>
-
-      <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
-          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <a href="" class="support-link">
-                <div class="icon"><img src="{{ asset('theme/frontend/assets/img/support-icon-image.png') }}" alt=""></i></div>
-                <h4 class="title">EPAS CONCERN</h4>
-              </a>
-          </div>
-      </div>
+                </div>
+            @endforeach
 
         </div>
 

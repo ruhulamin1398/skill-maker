@@ -4,9 +4,6 @@
 <style>
     #hero {
         background: url("https://enablers.org/wp-content/uploads/2020/01/services-1.jpg") center center;
-
-
-
     }
 
     .icon {
@@ -56,90 +53,21 @@
 
         <div class="row">
 
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>PAKISTAN</h4>
-                <h5>HEAD OFFICE (LHR)</h5>
-                <p>Office# 501, Al-Hafeez Heights Gulberg, Lahore</p>
-                <a href="">View On More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>PAKISTAN</h4>
-                <h5>HEAD OFFICE (LHR)</h5>
-                <p>Office# 501, Al-Hafeez Heights Gulberg, Lahore</p>
-                <a href="">View On More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>PAKISTAN</h4>
-                <h5>HEAD OFFICE (LHR)</h5>
-                <p>Office# 501, Al-Hafeez Heights Gulberg, Lahore</p>
-                <a href="">View On More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>PAKISTAN</h4>
-                <h5>HEAD OFFICE (LHR)</h5>
-                <p>Office# 501, Al-Hafeez Heights Gulberg, Lahore</p>
-                <a href="">View On More</a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>PAKISTAN</h4>
-                <h5>HEAD OFFICE (LHR)</h5>
-                <p>Office# 501, Al-Hafeez Heights Gulberg, Lahore</p>
-                <a href="">View On More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>PAKISTAN</h4>
-                <h5>HEAD OFFICE (LHR)</h5>
-                <p>Office# 501, Al-Hafeez Heights Gulberg, Lahore</p>
-                <a href="">View On More</a>
-              </div>
-            </div>
-          </div>
+            @foreach ($office as $office)
+                <div class="col-md-6 d-flex align-items-stretch">
+                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-img">
+                            <img src="{{asset('images/enablers-lahore-office.jpg')}}" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                            <h4>{{ $office -> country }}</h4>
+                            <h5>HEAD OFFICE (LHR)</h5>
+                            <p>{{ $office -> location }}</p>
+                            <a href="">View On More</a>
+                        </div>
+                    </div>
+                </div>
+            @endforeach
 
         </div>
 

@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Role;
 
 class RoleSeeder extends Seeder
@@ -15,6 +16,29 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
+        DB::table('users')->insert([
+
+            [
+                'name' => 'Super Admin',
+                'email' => 'superadmin@abasas.tech',
+                'password' => Hash::make(1234),
+            ],
+            [
+                'name' => 'SuperAdmin',
+                'email' => 'superadmin@gmail.com',
+                'password' => Hash::make(1234),
+            ],
+            [
+                'name' => 'Admin',
+                'email' => 'admin@abasas.tech',
+                'password' => Hash::make(1234),
+            ],
+            [
+                'name' => 'Staff',
+                'email' => 'staff@abasas.tech',
+                'password' => Hash::make(1234),
+            ]
+        ]);
         DB::table('roles')->insert(
             [
                 [
