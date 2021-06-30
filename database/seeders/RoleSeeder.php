@@ -19,23 +19,28 @@ class RoleSeeder extends Seeder
         DB::table('users')->insert([
 
             [
-                'name' => 'Super Admin',
-                'email' => 'superadmin@abasas.tech',
-                'password' => Hash::make(1234),
-            ],
-            [
-                'name' => 'SuperAdmin',
-                'email' => 'superadmin@gmail.com',
-                'password' => Hash::make(1234),
-            ],
-            [
                 'name' => 'Admin',
                 'email' => 'admin@abasas.tech',
                 'password' => Hash::make(1234),
             ],
             [
-                'name' => 'Staff',
-                'email' => 'staff@abasas.tech',
+                'name' => 'branch Admin',
+                'email' => 'branchadmin@gmail.com',
+                'password' => Hash::make(1234),
+            ],
+            [
+                'name' => 'student',
+                'email' => 'student@abasas.tech',
+                'password' => Hash::make(1234),
+            ],
+            [
+                'name' => 'trainer',
+                'email' => 'trainer@abasas.tech',
+                'password' => Hash::make(1234),
+            ],
+            [
+                'name' => 'freelancer',
+                'email' => 'freelancer@abasas.tech',
                 'password' => Hash::make(1234),
             ]
         ]);

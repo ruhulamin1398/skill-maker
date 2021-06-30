@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class student
 {
@@ -16,7 +17,10 @@ class student
      */
     public function handle(Request $request, Closure $next)
     {
-        return "asdfsaf";
-        return $next($request);
+        return Auth::user();
+        if(Auth::user()->hasRole('student')){
+            return $next($request);
+        }
+        return Abort(403);
     }
 }
