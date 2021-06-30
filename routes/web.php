@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OfficeController;
 use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SuccessStoriesController;
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\TrainingController;
 use Illuminate\Support\Facades\Route;
@@ -34,14 +37,13 @@ Route::get('support', [SupportController::class, 'index']) -> name('support');
 Route::get('tranings', [TrainingController::class, 'index']) -> name('traning');
 // Office Route
 Route::get('officies', [OfficeController::class, 'index']) -> name('officies');
+// About Route
+Route::get('about', [AboutController::class, 'index']) -> name('about');
+// Sucess Stories
+Route::get('success-stories', [SuccessStoriesController::class, 'index']) -> name('success-stories');
+Route::get('/', [HomeController::class, 'index']) -> name('home');
+Route::get('single-services/{id}', [HomeController::class, 'singleService']);
 
-Route::get('/', function () {
-    return view('index');
-});
-
-Route::get('success-stories', function () {
-    return view('successStories');
-})->name('success-stories');
 Route::get('form', function () {
     return view('form');
 })->name('form');
@@ -53,6 +55,3 @@ Route::get('form', function () {
 Route::get('one-one', function () {
     return view('oneToOne');
 })->name('oneToOne');
-Route::get('about', function(){
-    return view('about');
-}) -> name('about');

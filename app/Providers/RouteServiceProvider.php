@@ -51,6 +51,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->middleware('web')
                 ->namespace("{$this->namespace}\App\Http\Controllers\Admin")
                 ->group(base_path('routes/admin.php'));
+
         });
     }
 
