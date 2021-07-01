@@ -47,7 +47,7 @@
     <div class="row">
       <div class="col-lg-4 d-flex align-items-stretch">
         <div class="content">
-          <h3>Why Choose US ?</h3>
+          <h3>About Us</h3>
           <p>
             Imagine you don’t need a degree, you don’t need an office, you don’t need a team, you don’t need prior experience and yet you can learn, earn, achieve and accomplish far beyond your hopes and expectations. If that’s what you aim for, you have come to the right place – Enablers.
           </p>
@@ -61,23 +61,29 @@
           <div class="row">
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
-                <i class="bx bx-receipt"></i>
-                <h4>AMZ Sellers</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <a href="{{ route('marketplace') }}">
+                    <i class="bx bx-receipt"></i>
+                    <h4>Marketplace</h4>
+                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                </a>
               </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
-                <i class="bx bx-cube-alt"></i>
-                <h4>Seller Deshboard</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <a href="">
+                    <i class="bx bx-cube-alt"></i>
+                    <h4>Seller Deshboard</h4>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    </a>
               </div>
             </div>
             <div class="col-xl-4 d-flex align-items-stretch">
               <div class="icon-box mt-4 mt-xl-0">
+               <a href="">
                 <i class="bx bx-images"></i>
                 <h4>Investment Group</h4>
                 <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+               </a>
               </div>
             </div>
           </div>
@@ -118,14 +124,6 @@
         </div>
       @endforeach
 
-    </div>
-
-    <div class="row">
-        <div class="col">
-            <div class="allService text-center">
-                <a href="{{ route('services') }}">ALl Service</a>
-            </div>
-        </div>
     </div>
 
   </div>
