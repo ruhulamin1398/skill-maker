@@ -30,7 +30,7 @@ Route::group(['middleware' => ['auth','role_or_permission:admin|test']], functio
         //     return " Error He is already a trainer";
         // }
         // else{
-            
+
         // $user ->assignRole('trainer');
         // return $user->getRoleNames();
         // }
@@ -40,19 +40,19 @@ Route::group(['middleware' => ['auth','role_or_permission:admin|test']], functio
         //     if( $user->hasRole('trainer')){
         //         $user ->removeRole('trainer');
         //         return $user->getRoleNames();
-       
+
         // }
         // else{
         //     return " Error He is not a trainer";
 
         // }
 
-return  User::with('roles')->get();;
+// return  User::with('roles')->get();;
 
 
         return view('admin.index');
     });
-});                                  
+});
 
 
 

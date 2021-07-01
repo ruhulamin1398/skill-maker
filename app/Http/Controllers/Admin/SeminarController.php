@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Chat;
 use App\Models\seminar;
+use App\Models\Batch;
 use Illuminate\Http\Request;
 
 class SeminarController extends Controller
@@ -39,7 +40,7 @@ class SeminarController extends Controller
      */
     public function store(Request $request)
     {
-        
+
         $this->validate($request, [
             'title'    => 'required',
             'location' => 'required',
@@ -67,7 +68,7 @@ class SeminarController extends Controller
         $seminar->save();
 
         $chat = Chat::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
-        
+        $cbatch = Batch::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
         return redirect()->route('seminar.index')->with('success','New Seminar Added Successful');
     }
 
@@ -109,7 +110,7 @@ class SeminarController extends Controller
             'venue'    => 'required',
             'date'     => 'required',
             'price'    => 'required',
-        
+
         ]);
 
         $seminar->update($request->all());
