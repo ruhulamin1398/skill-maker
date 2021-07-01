@@ -25,10 +25,12 @@
                                 <div class="form-group">
                                     <label class="form-label">Select Trainer<sup class="text-danger">*</sup></label>
                                     
-                                    @foreach ($trainer as $trainers)
+                                    @foreach ($trainers as $trainer)
+                                    @if(!isset($assignedTrainerArray[$trainer->id]))
                                         <li style="list-style: none">
-                                            <input type="checkbox" name="trainer_id[]" value="{{ $trainers->id }}"> {{ $trainers->name }}
+                                            <input type="checkbox" name="trainer_id[]" value="{{ $trainer->id }}"> {{ $trainer->name }}
                                         </li>
+                                        @endif
                                     @endforeach
                                 </div>
 
@@ -39,11 +41,12 @@
                         </div>
                         <div class="col-md-6 col-sm-12 float-left">
                             <h6 class="text-center">Asssigned List</h6>
-                            @foreach ($assigned_trainer as $trainer)
+                       @foreach ($assignedTrainers as $trainer)
                                 <li class="ml-3" style="list-style: none">
                                     <input  checked type="checkbox"> <span class="ml-1" style="font-size: 15px">{{ $trainer->trainer->name }}</span>
                                 </li>
                             @endforeach
+                         
                         </div>
 
                     </div>
