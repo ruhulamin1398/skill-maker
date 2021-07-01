@@ -16,6 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call(RoleSeeder::class);
+        $this->call(ChatSeeder::class);
+        $this->call(ChatMessageSeeder::class);
 
 
 //add trainer
@@ -52,10 +54,10 @@ DB::select($sql);
 // Seminar table
 
 $sql = "INSERT INTO `seminars` (`id`, `title`, `location`, `venue`, `date`, `price`, `status`, `created_at`, `updated_at`) VALUES
-(2, 'New protal', 'Sylhet', 'Sylhet', '2021-08-28', 5000.00, 0, '2021-06-23 09:07:42', '2021-06-28 22:16:34'),
-(3, 'Agile seminar', 'Sunamgonj', 'Sunamgonj', '2021-09-18', 5500.00, 0, '2021-06-23 09:10:08', '2021-06-28 22:18:21'),
-(4, 'Hobigonj', 'Hobigonj', 'Hobigonj', '2021-10-02', 5000.00, 0, '2021-06-28 22:25:36', '2021-06-28 22:25:36'),
-(5, 'Moulvibazar', 'Moulvibazar', 'Moulvibazar', '2021-10-16', 5000.00, 0, '2021-06-28 22:26:18', '2021-06-28 22:26:18') ";
+(1, 'New protal', 'Sylhet', 'Sylhet', '2021-08-28', 5000.00, 0, '2021-06-23 09:07:42', '2021-06-28 22:16:34'),
+(2, 'Agile seminar', 'Sunamgonj', 'Sunamgonj', '2021-09-18', 5500.00, 0, '2021-06-23 09:10:08', '2021-06-28 22:18:21'),
+(3, 'Hobigonj', 'Hobigonj', 'Hobigonj', '2021-10-02', 5000.00, 0, '2021-06-28 22:25:36', '2021-06-28 22:25:36'),
+(4, 'Moulvibazar', 'Moulvibazar', 'Moulvibazar', '2021-10-16', 5000.00, 0, '2021-06-28 22:26:18', '2021-06-28 22:26:18') ";
 
 DB::select($sql);
 

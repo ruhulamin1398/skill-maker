@@ -8,6 +8,7 @@ use App\Models\Chat;
 use App\Models\chatMessage;
 use App\Models\seminar;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ChatController extends Controller
 {
@@ -18,8 +19,9 @@ class ChatController extends Controller
      */
     public function index()
     {
-        // $page_name = 'Chat Now';
-        // return  view('user.chats.index', compact('page_name'));
+         $seminarChat= seminar::find(1)->chat();
+       
+        return  view('user.chats.index', compact('seminarChat'));
     }
 
     /**
@@ -46,7 +48,7 @@ class ChatController extends Controller
 
         $chat_now = new chatMessage();
         $chat_now->chat_id    = $request->chat_id;
-        $chat_now->user_id    = 1;
+        $chat_now->user_id    = Auth::user()->id;
         $chat_now->message    = $request->message;
 
         $chat_now->save();
@@ -61,9 +63,16 @@ class ChatController extends Controller
      */
     public function show(Chat $chat)
     {
-        $messages = chatMessage::all();
+
+        //// checking he is eligiable or not 
+
+        ////
+        // return $chat
+
+        $messages = $chat->messages;
         $page_name = "Chat Now";
-        $chat->messages;
+
+    
         return view('chat.messages', compact('page_name','chat', 'messages'));
     }
 
