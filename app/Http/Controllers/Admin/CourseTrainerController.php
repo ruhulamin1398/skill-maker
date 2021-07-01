@@ -78,11 +78,16 @@ class CourseTrainerController extends Controller
     {
         $page_name = 'Assign Trainer';
         $course = course::find($id);
-        $trainer = Trainer::all();
-        $assigned_trainer = $course->trainers;
+        $trainers = Trainer::all();
+        $assignedTrainers = $course->trainers;
 
-        // return $select;
-        return view('admin.course-trainer.assign', compact('page_name', 'course','trainer', 'assigned_trainer'));
+        $assignedTrainerArray= array();
+
+foreach($assignedTrainers as $trainer){
+    $assignedTrainerArray[$trainer->trainer_id] =1;
+}
+// return $assignedTrainerArray;
+        return view('admin.course-trainer.assign', compact('page_name', 'course','trainers', 'assignedTrainers','assignedTrainerArray'));
     }
 
     /**

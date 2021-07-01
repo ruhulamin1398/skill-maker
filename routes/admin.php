@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -13,10 +14,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return Auth::user();
-    return view('admin.index');
-})->middleware(['auth']);
+
+
+Route::group(['middleware' => ['auth','role_or_permission:admin|test']], function () {
+    Route::get('/', function () {
+        // return "sadfasdf";
+        $user= User::find(5);
+
+
+
+
+        //////////////// adding role if not exist
+
+        // if( $user->hasRole('trainer')){
+        //     return " Error He is already a trainer";
+        // }
+        // else{
+            
+        // $user ->assignRole('trainer');
+        // return $user->getRoleNames();
+        // }
+
+
+        ////////////////// remove role if exist
+        //     if( $user->hasRole('trainer')){
+        //         $user ->removeRole('trainer');
+        //         return $user->getRoleNames();
+       
+        // }
+        // else{
+        //     return " Error He is not a trainer";
+
+        // }
+
+return  User::with('roles')->get();;
+
+
+        return view('admin.index');
+    });
+});                                  
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -49,7 +87,17 @@ Route::resource('training', TrainingController::class);
 Route::resource('seminars', UserSeminarController::class);
 Route::resource('trainer_seminar', TrainerSeminarController::class);
 Route::resource('trainer_course', TrainerCourseController::class);
+
+
+//Route::get('seminar-trainers/index/{id}', [SeminerTrainerController::class, 'seminar'])->name('admin.seminar-trainers.seminar');
+
+
+
+
+
+Route::group(['middleware' => ['auth']], function () {
+
 Route::resource('chats', ChatController::class);
 Route::resource('chat-messages', ChatMessageController::class);
 
-//Route::get('seminar-trainers/index/{id}', [SeminerTrainerController::class, 'seminar'])->name('admin.seminar-trainers.seminar');
+});
