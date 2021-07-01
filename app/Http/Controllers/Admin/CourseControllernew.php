@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
+use App\Models\Batch;
 use App\Models\course;
 use App\Models\courseTrainer;
 use Illuminate\Http\Request;
@@ -87,6 +88,8 @@ class CourseControllernew extends Controller
         }
 
         $course->save();
+        $cbatch = Batch::create(['model'=>course::class,'model_id'=>$course->id]);
+
         return redirect()->route('courses.index')->with('success','New Course Added Successful');
 
     }
@@ -182,7 +185,7 @@ class CourseControllernew extends Controller
                 return $request;
                 $course->introduction_video = '';
             }
-        }        
+        }
         $course->save();
         return redirect()->route('courses.index')->with('success','Course Data Update Successfull');
 

@@ -5,13 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Chat extends Model
+class Batch extends Model
 {
     use HasFactory;
-
     protected $guarded = [];
-    
-    public function  messages(){
-        return $this->hasMany(chatMessage::class)->orderBy('id','desc');
-    }
 }
