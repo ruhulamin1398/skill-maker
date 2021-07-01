@@ -52,7 +52,7 @@
                                     </td>
                                     <td>
                                         <a href="{{ route('batches.edit', $course->id) }}" class="btn btn-primary">
-                                            {{-- {{ $course->batches->count()}} --}}
+                                            {{ $course->batches->count()}}
                                          </a>
                                     </td>
                                     <td>
