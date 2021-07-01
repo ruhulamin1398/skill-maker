@@ -11,6 +11,6 @@ class Chat extends Model
 
     protected $guarded = [];
     public function  messages(){
-        return $this->hasMany(chatMessage::class);
+        return $this->hasMany(chatMessage::class)->orderBy('id','desc');
     }
 }

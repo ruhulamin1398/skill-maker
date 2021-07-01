@@ -14,26 +14,41 @@
                 @endif
                 <div class="card card-preview">
                     <div class="card-inner">
-                        <form action="{{ route('coursetrainers.update', $course->id) }}" method="post" enctype="multipart/form-data">
-                            @csrf
-                            @method('PUT')
-                            <div class="form-group">
-                                <label class="form-label">Course Name<sup class="text-danger">*</sup></label>
-                                <input type="text" disabled  class="form-control" value="{{ $course->course_title }}">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Select Trainer<sup class="text-danger">*</sup></label>
-                                @foreach ($trainer as $trainers)
-                                    <li style="list-style: none">
-                                        <input type="checkbox" name="trainer_id[]" value="{{ $trainers->id }}"> {{ $trainers->name }}
-                                    </li>
-                                @endforeach
-                            </div>
-                           
-                            <div class="form-group">
-                                <input type="submit" name="btn"  class="btn btn-primary col-6 btn-block" value="Submit">
-                            </div>
-                        </form>
+                       <h6 class="text-center">Course Name: {{ $course->course_title }}</h6>
+                       <hr/>
+                        <div class="col-md-6 col-sm-12 float-left" style="border-right: 1px solid black">
+                            <h6 class="text-center">Asssigne Trainer</h6>
+                            <form action="{{ route('coursetrainers.update', $course->id) }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                @method('PUT')
+
+                                <div class="form-group">
+                                    <label class="form-label">Select Trainer<sup class="text-danger">*</sup></label>
+                                    
+                                    @foreach ($trainers as $trainer)
+                                    @if(!isset($assignedTrainerArray[$trainer->id]))
+                                        <li style="list-style: none">
+                                            <input type="checkbox" name="trainer_id[]" value="{{ $trainer->id }}"> {{ $trainer->name }}
+                                        </li>
+                                        @endif
+                                    @endforeach
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="submit" name="btn"  class="btn btn-primary col-6 btn-block" value="Submit">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-6 col-sm-12 float-left">
+                            <h6 class="text-center">Asssigned List</h6>
+                       @foreach ($assignedTrainers as $trainer)
+                                <li class="ml-3" style="list-style: none">
+                                    <input  checked type="checkbox"> <span class="ml-1" style="font-size: 15px">{{ $trainer->trainer->name }}</span>
+                                </li>
+                            @endforeach
+                         
+                        </div>
+
                     </div>
                 </div>
             </div>

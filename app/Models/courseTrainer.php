@@ -9,7 +9,6 @@ class courseTrainer extends Model
 {
     use HasFactory;
 
-    
     public function trainer(){
         return $this->belongsTo(Trainer::class);
     }
