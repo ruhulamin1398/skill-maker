@@ -23,6 +23,7 @@
                                 <th>Image</th>
                                 <th>Video</th>
                                 <th>Trainer</th>
+                                <th>Batch</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -50,15 +51,20 @@
                                          </a>
                                     </td>
                                     <td>
+                                        <a href="{{ route('batches.edit', $course->id) }}" class="btn btn-primary">
+                                            {{-- {{ $course->batches->count()}} --}}
+                                         </a>
+                                    </td>
+                                    <td>
                                         <form action="{{ route('courses.destroy', $course->id) }}" method="post">
                                             <a class="btn btn-success" href="{{ route('courses.show', $course->id) }}"><i class="fas fa-eye"></i></a> |
                                             <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-info"><i class="fas fa-edit fa-1x"></i></a> |
                                             @csrf
                                             @method('DELETE')
-                                            <input type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-danger" value="Delete"> 
+                                            <input type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-danger" value="Delete">
                                         </form>
                                     </td>
-                                   
+
                                 </tr>
                             @endforeach
                             </tbody>

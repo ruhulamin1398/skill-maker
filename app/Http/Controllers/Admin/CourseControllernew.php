@@ -88,7 +88,7 @@ class CourseControllernew extends Controller
         }
 
         $course->save();
-        $cbatch = Batch::create(['model'=>course::class,'model_id'=>$course->id]);
+        // $cbatch = Batch::create(['model'=>course::class,'model_id'=>$course->id]);
 
         return redirect()->route('courses.index')->with('success','New Course Added Successful');
 

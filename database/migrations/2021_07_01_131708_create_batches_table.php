@@ -17,6 +17,8 @@ class CreateBatchesTable extends Migration
             $table->id();
             $table->string('model');
             $table->string('model_id');
+            $table->string('batch_name');
+            $table->longText('description');
             $table->timestamps();
         });
     }
