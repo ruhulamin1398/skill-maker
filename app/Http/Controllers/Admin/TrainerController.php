@@ -94,9 +94,9 @@ class TrainerController extends Controller
     {
         $page_name = "Trainer Details";
         $courses = $trainer->courses;
-
-        // return $courses;
-        return view('admin.trainers.show', compact('trainer', 'page_name', 'courses'));
+        $seminars = $trainer->seminars;
+        // return $seminars;
+        return view('admin.trainers.show', compact('trainer', 'page_name', 'courses','seminars'));
     }
 
     /**
@@ -137,7 +137,7 @@ class TrainerController extends Controller
         $trainer->address        = $request->address;
 
         if($request->image == ''){
-           
+
         }else{
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
@@ -149,7 +149,7 @@ class TrainerController extends Controller
                 return $request;
                 $trainer->image = '';
             }
-          
+
         }
         $trainer->save();
         return redirect()->route('trainers.index')->with('success',' Trainer Data Update Successful');

@@ -38,10 +38,18 @@
                             </tr>
                             <tr>
                                 <th> Assign Course List  </th>
-                                <td class="font-weight-bold"> 
+                                <td class="font-weight-bold">
                                     @foreach ($courses as $course)
                                         <li>{{ $course->course->course_title }}</li>
-                                    @endforeach    
+                                    @endforeach
+                                </td>
+                            </tr>
+                            <tr>
+                                <th> Assign Seminar List  </th>
+                                <td class="font-weight-bold">
+                                    @foreach ($seminars as $seminar)
+                                        <li>{{ $seminar->id }}</li>
+                                    @endforeach
                                 </td>
                             </tr>
                         </table>

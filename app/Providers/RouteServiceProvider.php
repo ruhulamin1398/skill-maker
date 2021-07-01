@@ -52,25 +52,6 @@ class RouteServiceProvider extends ServiceProvider
                 ->namespace("{$this->namespace}\App\Http\Controllers\Admin")
                 ->group(base_path('routes/admin.php'));
 
-            Route::prefix('branchAdmin')
-            ->middleware('web')
-            ->namespace("{$this->namespace}\App\Http\Controllers\Admin")
-            ->group(base_path('routes/admin.php'));
-
-            Route::prefix('student')
-            ->middleware('web')
-            ->namespace("{$this->namespace}\App\Http\Controllers\Admin")
-            ->group(base_path('routes/admin.php'));
-
-            Route::prefix('trainer')
-            ->middleware('web')
-            ->namespace("{$this->namespace}\App\Http\Controllers\Admin")
-            ->group(base_path('routes/admin.php'));
-
-            Route::prefix('frrelancer')
-            ->middleware('web')
-            ->namespace("{$this->namespace}\App\Http\Controllers\Admin")
-            ->group(base_path('routes/admin.php'));
         });
     }
 

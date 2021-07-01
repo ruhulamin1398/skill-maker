@@ -13,9 +13,13 @@ class Trainer extends Model
         'name', 'email','phone','last_education', 'current_work', 'address', 'image'
     ];
 
-
+   
     public function courses(){
         return $this->hasMany(courseTrainer::class);
     }
-   
+
+    public function seminars(){
+        return $this->hasMany(SeminarTrainer::class);
+    }
+
 }
