@@ -79,7 +79,10 @@ class CourseTrainerController extends Controller
         $page_name = 'Assign Trainer';
         $course = course::find($id);
         $trainer = Trainer::all();
-        return view('admin.course-trainer.assign', compact('page_name', 'course','trainer'));
+        $assigned_trainer = $course->trainers;
+
+        // return $select;
+        return view('admin.course-trainer.assign', compact('page_name', 'course','trainer', 'assigned_trainer'));
     }
 
     /**
@@ -89,27 +92,17 @@ class CourseTrainerController extends Controller
      * @param  \App\Models\courseTrainer  $courseTrainer
      * @return \Illuminate\Http\Response
      */
-    // public function update(Request $request, courseTrainer $courseTrainer)
-    // {
-    //     //
-    // }
 
     public function update(Request $request, $id)
-    {        
+    {
 
         foreach ($request->trainer_id as $i => $as) {
             $trainer = new courseTrainer();
             $trainer->course_id = $id;
             $trainer->trainer_id  = $request->trainer_id[$i];
             $trainer->save();
-        } 
+        }
 
-
-        // $trainer = new courseTrainer();
-        // $trainer->course_id  = $id;
-        // $trainer->trainer_id = $request->trainer_id;
-
-        // $trainer->save();
         return back()->with('success','New Trainer Added Successful');
     }
 
