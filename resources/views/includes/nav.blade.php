@@ -152,6 +152,8 @@
                 <li class="{{ (request()-> is('success-stories')) ? 'active' : '' }}"><a href="{{route('success-stories')}}">Success Stories</a></li>
                 <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href="{{route('officies')}}">Our Offices</a></li>
                 <li class="{{ (request()-> is('seminers')) ? 'active' : '' }}"><a href="{{route('seminer')}}">Seminer</a></li>
+                <li class=""><a href="#">Terms And Condition</a></li>
+                <li class=""><a href="#">Privacy Policy</a></li>
             </ul>
         </li>
     </ul>

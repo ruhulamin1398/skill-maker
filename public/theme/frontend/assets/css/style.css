@@ -221,12 +221,14 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu a {
   display: block;
   position: relative;
+  font-weight: 700;
   color: #2c4964;
   transition: 0.3s;
   font-size: 14px;
   font-family: "Open Sans", sans-serif;
   padding: 5px 2px;
   border-bottom: 2px solid #fff;
+  text-transform: uppercase;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
@@ -1697,6 +1699,7 @@ section {
   padding: 80px 20px;
   margin-bottom: 30px;
   transition: all ease-in-out 0.3s;
+  height: 340px;
 }
 .services .icon-box .icon {
   margin: 0 auto;
@@ -2454,18 +2457,15 @@ section {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #ff7b0a;
 }
 
-#footer .footer-contact2 {
-}
 #footer .footer-contact2 h4{
     font-size: 22px !important;
     font-weight: 700 !important;
     margin-bottom: 10px !important;
 }
 #footer .footer-contact2 .phone{
-    color: red !important;
     font-family: cursive !important;
 }
 #footer .footer-contact2 p{
