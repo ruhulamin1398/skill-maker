@@ -14,7 +14,7 @@ class Batch extends Model
         return $this->belongsTo(course::class);
     }
     public function trainers(){
-        return $this->belongsTo(Trainer::class);
+        return $this->hasMany(batchTrainer::class);
     }
 
     public function batches(){
