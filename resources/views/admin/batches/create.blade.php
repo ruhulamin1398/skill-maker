@@ -56,7 +56,7 @@
 
                             @foreach ($batches as $i=>$batch)
                                 <li style="list-style: none">
-                                    {{ ++$i }}. <a href="{{ route('batches.show',$batch->id) }}">{{ $batch->batch_name }}</a>
+                                    {{ ++$i }}. <a href="{{ route('batches.show', $batch->id) }}">{{ $batch->batch_name }}</a>
                                 </li>
                             @endforeach
                         </div>

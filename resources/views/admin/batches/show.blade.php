@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td>Total Trainers</td>
-                            <td>{{ $batch->batch_name }}</td>
+                            <td>{{ $batch->trainers->count() }}</td>
                         </tr>
                         <tr>
                             <td>Total Students</td>
@@ -59,21 +59,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($trainers as $i=>$trainer)
+                            @foreach ($assignedTrainers as $i=>$trainers)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td class="text-capitalize">{{ $trainer->trainer->name }}</td>
-                                    <td>{{ $trainer->trainer->phone }}</td>
-                                    <td>{{ $trainer->trainer->email }}</td>
+                                    <td class="text-capitalize">{{ $trainers->trainer->name }}</td>
+                                    <td>{{ $trainers->trainer->phone }}</td>
+                                    <td>{{ $trainers->trainer->email }}</td>
                                     <td>
-                                        <form action="{{ route('batch-trainers.destroy', $trainer->id) }}" method="post">
+                                        <form action="{{ route('batch-trainers.destroy', $trainers->id) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to Remove !!');" value="X">
                                         </form>
                                     </td>
                                 </tr>
-                            @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
 

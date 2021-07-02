@@ -49,11 +49,10 @@ class BatchController extends Controller
     public function show(Batch $batch)
     {
         $page_name = "Batch Details";
-        $trainers  = Trainer::all();
         $assignedTrainers = $batch->trainers;
+        // return $assignedTrainers;
 
-        return $assignedTrainers;
-        return view('admin.batches.show', compact('page_name','trainers','batch'));
+        return view('admin.batches.show', compact('page_name','assignedTrainers','batch'));
     }
 
     /**
@@ -66,9 +65,9 @@ class BatchController extends Controller
     {
         $page_name = 'Add New Batch';
         $course   = course::find($id);
-        $batches  = Batch::all();
+        $batches  = Batch::find($id)->batches;
 
-        // return $count;
+        // return $batches;
         return view('admin.batches.create',compact('page_name','course','batches'));
     }
 
