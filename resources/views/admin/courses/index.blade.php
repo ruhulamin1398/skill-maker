@@ -22,7 +22,7 @@
                                 <th>Price</th>
                                 <th>Image</th>
                                 <th>Video</th>
-                                <th>Trainer</th>
+                                {{-- <th>Trainer</th> --}}
                                 <th>Batch</th>
                                 <th>Action</th>
                             </tr>
@@ -41,7 +41,7 @@
                                             {{ $course->courseVideo->count()}}
                                         </a>
                                     </td>
-                                    <td>
+                                    {{-- <td>
                                         <a href="{{ route('coursetrainers.edit', $course->id) }}" class="btn btn-primary">
                                             @if ($course->trainers->count() == '0')
                                                 0
@@ -49,7 +49,7 @@
                                                 {{ $course->trainers->count()}}
                                             @endif
                                          </a>
-                                    </td>
+                                    </td> --}}
                                     <td>
                                         <a href="{{ route('batches.edit', $course->id) }}" class="btn btn-primary">
                                             {{ $course->batches->count()}}

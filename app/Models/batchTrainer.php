@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class courseTrainer extends Model
+class batchTrainer extends Model
 {
     use HasFactory;
 
@@ -17,4 +17,8 @@ class courseTrainer extends Model
         return $this->belongsTo(course::class);
     }
 
+
+     public function batches(){
+        return $this->hasMany(Batch::class, 'model_id','id');
+    }
 }

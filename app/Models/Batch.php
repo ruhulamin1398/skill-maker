@@ -9,8 +9,17 @@ class Batch extends Model
 {
     use HasFactory;
     protected $guarded = [];
-    
+
     public function course(){
         return $this->belongsTo(course::class);
     }
+    public function trainers(){
+        return $this->belongsTo(Trainer::class);
+    }
+
+    public function batches(){
+        return $this->hasMany(Batch::class, 'model_id','id');
+    }
+
+
 }

@@ -1,15 +1,14 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-
 use App\Http\Controllers\Controller;
 
 use App\Models\Trainer;
 use App\Models\course;
-use App\Models\courseTrainer;
+use App\Models\batchTrainer;
 use Illuminate\Http\Request;
 
-class CourseTrainerController extends Controller
+class BatchTrainerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -37,33 +36,18 @@ class CourseTrainerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request)
     {
-        // return $id;
-        // // $course_id = course::find($id);
-
-        // $this->validate($request,[
-        //     'course_id' => 'required',
-        //     'trainer_id' => 'required',
-        // ]);
-
-        // $trainer = new courseTrainer();
-        // // $trainer->course_id  = course::find($id);
-        // $trainer->trainer_id = $request->trainer_id;
-
-        // $trainer->save();
-
-        // return $trainer;
-        // return back()->with('success','New Trainer Added Successful');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\courseTrainer  $courseTrainer
+     * @param  \App\Models\batchTrainer  $batchTrainer
      * @return \Illuminate\Http\Response
      */
-    public function show(courseTrainer $courseTrainer)
+    public function show(batchTrainer $batchTrainer)
     {
         //
     }
@@ -71,7 +55,7 @@ class CourseTrainerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\courseTrainer  $courseTrainer
+     * @param  \App\Models\batchTrainer  $batchTrainer
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -83,27 +67,27 @@ class CourseTrainerController extends Controller
 
         $assignedTrainerArray= array();
 
-foreach($assignedTrainers as $trainer){
-    $assignedTrainerArray[$trainer->trainer_id] =1;
-}
-// return $assignedTrainerArray;
-        return view('admin.course-trainer.assign', compact('page_name', 'course','trainers', 'assignedTrainers','assignedTrainerArray'));
+        foreach($assignedTrainers as $trainer){
+            $assignedTrainerArray[$trainer->trainer_id] = 1;
+        }
+        // return $assignedTrainers;
+
+        return view('admin.batch-trainer.assign', compact('page_name', 'course','trainers', 'assignedTrainers','assignedTrainerArray'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\courseTrainer  $courseTrainer
+     * @param  \App\Models\batchTrainer  $batchTrainer
      * @return \Illuminate\Http\Response
      */
-
     public function update(Request $request, $id)
     {
 
         foreach ($request->trainer_id as $i => $as) {
-            $trainer = new courseTrainer();
-            $trainer->course_id = $id;
+            $trainer = new batchTrainer();
+            $trainer->batch_id    = $id;
             $trainer->trainer_id  = $request->trainer_id[$i];
             $trainer->save();
         }
@@ -114,12 +98,12 @@ foreach($assignedTrainers as $trainer){
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\courseTrainer  $courseTrainer
+     * @param  \App\Models\batchTrainer  $batchTrainer
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        $removeTrainer = courseTrainer::find($id);
+        $removeTrainer = batchTrainer::find($id);
         $removeTrainer->delete();
         return back()->with('success','Trainer Remove Successful');
     }

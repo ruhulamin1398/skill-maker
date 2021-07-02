@@ -10,7 +10,7 @@ class course extends Model
     use HasFactory;
 
     public function trainers(){
-     return $this->hasMany(courseTrainer::class);
+     return $this->hasMany(batchTrainer::class, 'batch_id','id');
     }
     public function courseVideo(){
         return $this->hasMany(courseVideo::class);

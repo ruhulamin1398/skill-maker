@@ -26,9 +26,17 @@
                                     <label class="form-label">Batch Name<sup class="text-danger">*</sup></label>
                                     <input type="text" name="batch_name" class="form-control" placeholder="Enter Batch Name" value="{{ old('batch_name') }}">
                                     @if($errors->has('batch_name'))
-                                    <span class="text-danger ">{{ $errors->first('batch_name') }}</span>
-                                @endif
+                                         <span class="text-danger ">{{ $errors->first('batch_name') }}</span>
+                                    @endif
                                 </div>
+                                <div class="form-group">
+                                    <label class="form-label">Price<sup class="text-danger">*</sup></label>
+                                    <input type="number" min="1" name="price" class="form-control" placeholder="Enter Price" value="{{ old('prrice') }}">
+                                    @if($errors->has('price'))
+                                         <span class="text-danger ">{{ $errors->first('price') }}</span>
+                                    @endif
+                                </div>
+
                                 <div class="form-group">
                                     <label class="form-label">Description<sup class="text-danger">*</sup></label>
                                     <textarea name="description" class="summernote-basic"></textarea>
@@ -48,7 +56,7 @@
 
                             @foreach ($batches as $i=>$batch)
                                 <li style="list-style: none">
-                                    {{ ++$i }}. {{ $batch->batch_name }}
+                                    {{ ++$i }}. <a href="{{ route('batches.show',$batch->id) }}">{{ $batch->batch_name }}</a>
                                 </li>
                             @endforeach
                         </div>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCourseTrainersTable extends Migration
+class CreateBatchTrainersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateCourseTrainersTable extends Migration
      */
     public function up()
     {
-        Schema::create('course_trainers', function (Blueprint $table) {
+        Schema::create('batch_trainers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('batch_id');
             $table->unsignedBigInteger('trainer_id');
             $table->timestamps();
         });
@@ -28,6 +28,6 @@ class CreateCourseTrainersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('course_trainers');
+        Schema::dropIfExists('batch_trainers');
     }
 }

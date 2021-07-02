@@ -14,14 +14,18 @@ class Trainer extends Model
     ];
 
 
-    public function courses(){
-        return $this->hasMany(courseTrainer::class);
+    public function batches(){
+        return $this->hasMany(batchTrainer::class);
     }
 
     public function seminars(){
         return $this->hasMany(SeminarTrainer::class);
     }
 
-    
+    // public function courseTrianers(){
+    //     return $this->hasMany(courseTrainer::class);
+    // }
+
+
 
 }
