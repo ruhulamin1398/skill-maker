@@ -45,7 +45,7 @@ class CourseControllernew extends Controller
         $this->validate($request, [
             'course_title'       => 'required',
             'image'              => 'required | mimes:jpg,png,jpeg|max:7048',
-            'introduction_video' => 'required|mimes:mp4,3gp,mkv |max:20048',
+            'introduction_video' => 'required|mimes:mp4,3gp,mkv |max:1073741824',
             'description'        => 'required',
             'price'              => 'required'
         ],[
@@ -55,7 +55,7 @@ class CourseControllernew extends Controller
             'image.max'                   => 'Please Select Image Less Then 8 Mb',
             'introduction_video.required' => 'Please Select A Video',
             'introduction_video.mimes'    => 'Please Select mp4,3gp,mkv file',
-            'introduction_video.max'      => 'Please Select Image Less Then 20 Mb',
+            'introduction_video.max'      => 'Please Select Video Less Then 1 Gb',
             'description.required'        => 'Please Enter Description',
             'price.required'              => 'Please Enter Price'
         ]);
