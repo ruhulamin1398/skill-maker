@@ -52,7 +52,10 @@ class BatchController extends Controller
         $assignedTrainers = $batch->trainers;
         // return $assignedTrainers;
 
-        return view('admin.batches.show', compact('page_name','assignedTrainers','batch'));
+        $batches = Batch::all();
+        
+
+        return view('admin.batches.show', compact('page_name','assignedTrainers','batch', 'batches'));
     }
 
     /**
