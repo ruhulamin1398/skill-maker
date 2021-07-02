@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Batch;
 use App\Models\course;
+use App\Models\Trainer;
 use Illuminate\Http\Request;
 
 class BatchController extends Controller
@@ -47,7 +48,12 @@ class BatchController extends Controller
      */
     public function show(Batch $batch)
     {
-        //
+        $page_name = "Batch Details";
+        $trainers  = Trainer::all();
+        $assignedTrainers = $batch->trainers;
+
+        return $assignedTrainers;
+        return view('admin.batches.show', compact('page_name','trainers','batch'));
     }
 
     /**
@@ -77,15 +83,19 @@ class BatchController extends Controller
     {
         $this->validate($request,[
             'batch_name'  => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'price'       => 'required'
         ],[
             'batch_name.required'   => 'Please Enter Batch Name',
-            'description.required'  => 'Please Enter Description'
+            'description.required'  => 'Please Enter Description',
+            'price.required'        => 'Please Enter price'
         ]);
 
         $batch = new Batch();
         $batch->model_id    = $id;
         $batch->model       = course::class;
+        $batch->price       = $request->price;
+        $batch->branch_id   = 1;
         $batch->batch_name  = $request->batch_name;
         $batch->description = $request->description;
         // $batch = Batch::create(['model'=>course::class,'model_id'=>$id]);

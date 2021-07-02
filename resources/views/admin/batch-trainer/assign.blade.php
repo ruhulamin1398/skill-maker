@@ -3,7 +3,7 @@
     <div class="nk-content-body">
         <div class="card">
             <div class="card-header">
-                <h5>{{ $page_name }} <a href="{{ route('courses.index') }}" class="float-right btn btn-primary text-white"> <i class="fas fa-edit"></i> <span class="ml-2">Manage Courses</span></a></h5>
+                <h5>{{ $page_name }} <a href="{{ route('batches.show', $course->id) }}" class="float-right btn btn-primary text-white"> <i class="fas fas-back"></i> <span class="ml-2">Back</span></a></h5>
             </div>
             <div class="card-body">
                 @if($message = Session::get('success'))
@@ -18,7 +18,7 @@
                        <hr/>
                         <div class="col-md-6 col-sm-12 float-left" style="border-right: 1px solid black">
                             <h6 class="text-center">Asssigne Trainer</h6>
-                            <form action="{{ route('coursetrainers.update', $course->id) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('batch-trainers.update', $course->id) }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
 
