@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\chatMessage;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ChatMessageFactory extends Factory
+class chatMessageFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.

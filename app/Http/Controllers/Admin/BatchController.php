@@ -68,7 +68,7 @@ class BatchController extends Controller
     {
         $page_name = 'Add New Batch';
         $course   = course::find($id);
-        $batches  = Batch::find($id)->batches;
+        $batches  = course::find($id)->batches;
 
         // return $batches;
         return view('admin.batches.create',compact('page_name','course','batches'));
