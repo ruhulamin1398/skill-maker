@@ -2,9 +2,11 @@
 
 @section('css')
 <style>
-  /* #hero{
-    background: url("{{asset('images/website-Slider-Cover.jpg')}}") center center ;
-  } */
+  #hero{
+    background: url("{{asset('theme/frontend/assets/img/skill-e-3.jpg')}}") center center ;
+    margin-top:100px;
+    background-repeat: no-repeat;
+  }
   .allService a{
         border-radius: 50px;
         border: 2px solid #ebe3dc;
@@ -22,7 +24,7 @@
         color: #fff;
         border-color: #ff9c49;
     }
-  }
+
 </style>
 @endsection
 
