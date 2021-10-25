@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
           <div class="col">
-              <h1>LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
+              <h1 style="color: white;">LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
           </div>
       </div>
     </div>
@@ -51,8 +51,8 @@
         @foreach ($services as $service)
             <div class="col-lg-4 mb-3">
                     <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-                    <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
-                    <h3>{{ $service -> title }}</h3>
+                    <img src="{{ asset('service/images/'.$service -> service_image) }}" class="img-fluid" alt="">
+                    <h3 >{{ $service -> title }}</h3>
 
                      <p>
                         @php

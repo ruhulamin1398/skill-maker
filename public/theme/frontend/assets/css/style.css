@@ -668,7 +668,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .values2 .box img {
-  padding: 30px 50px;
+  padding: 10px 10px;
   transition: 0.5s;
   transform: scale(1.1);
 }
@@ -1253,7 +1253,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .values2 .box img {
-  padding: 30px 50px;
+  padding: 10px 20px;
   transition: 0.5s;
   transform: scale(1.1);
 }
@@ -1263,6 +1263,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   font-weight: 700;
   margin-bottom: 18px;
+  padding-top: 20px;
 }
 .values2 p {
   font-size: 15px;
@@ -2532,7 +2533,7 @@ section {
 #pageHero h1{
     font-size: 45px;
     line-height: 1.2;
-    color: #fff;
+    color: #1977cc;
     font-weight: 800;
 }
 @media (max-width: 992px) {
@@ -2927,7 +2928,7 @@ section {
 }
 .marketplaceHero span {
     font-size: 18px;
-    color: #fff;
+    color: #1977cc;
     font-weight: 600px;
 }
 /*--------------------------------------------------------------

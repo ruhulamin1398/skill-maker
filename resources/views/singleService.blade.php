@@ -6,13 +6,13 @@
     background: url("https://enablers.org/wp-content/uploads/2020/01/services-1.jpg") center center;
   }
     .singleServiceHero{
-        background: url("{{ asset('service/images/'.$service -> service_image) }}") top center;
+        background: url("{{ asset('theme/frontend/assets/img/single_service_header.jpg') }}") top right;
     }
 </style>
 @endsection
 
 @section('hero')
--
+
 <!-- ======= Hero Section ======= -->
 {{-- <section id="hero" class="d-flex align-items-center">
   <div class="container">
@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row">
           <div class="col">
-              <h1>{{ $service -> title }}</h1>
+              <h1 style="color: white;">{{ $service -> title }} </h1>
           </div>
       </div>
     </div>
