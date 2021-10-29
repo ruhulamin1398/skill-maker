@@ -51,10 +51,10 @@
         <div class="content">
           <h3>About Us</h3>
           <p>
-            Imagine you don’t need a degree, you don’t need an office, you don’t need a team, you don’t need prior experience and yet you can learn, earn, achieve and accomplish far beyond your hopes and expectations. If that’s what you aim for, you have come to the right place – Enablers.
+          Skillmaker is an e-learning and services platform established in 2020. We offer a wide variety of e-learning and services through e-learning courses and services based on current market trend particularly in the US-UK-EU-Canada-UAE markets.
           </p>
           <div class="text-center">
-            <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+            <a href="{{ route('about') }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
           </div>
         </div>
       </div>
