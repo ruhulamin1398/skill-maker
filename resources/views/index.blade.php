@@ -111,7 +111,7 @@
       @foreach ($service as $service)
         <div class="col-lg-4 mb-3">
             <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-            <img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/values-1.png" class="img-fluid" alt="">
+            <img src="{{ asset('service/images/'.$service -> service_image) }}" class="img-fluid" alt="">
             <h3>{{ $service -> title }}</h3>
             <p>
                 @php
