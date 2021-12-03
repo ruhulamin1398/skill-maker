@@ -5,6 +5,7 @@
                 <li class="{{ (request()-> is('about')) ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
                 <li class="{{ (request()-> is('success-stories')) ? 'active' : '' }}"><a href="{{route('success-stories')}}">Success Stories</a></li>
 
+                <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href=" ">Our Team</a></li>
                 <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href="{{route('officies')}}">Our Offices</a></li>
                 <li class=""><a href="#">Terms And Condition</a></li>
                 <li class=""><a href="#">Privacy Policy</a></li>
@@ -21,12 +22,12 @@
                         Services
                     </a>
                     <div class="megha-item">
-                        <a href="#">Skillmaker Investment Opportunities</a>
-                        <a href="#">Skillmaker Learn & Earn Program</a>
-                        <a href="#">Product Hunting</a>
-                        <a href="#">Content Writing</a>
-                        <a href="#">Product Launching</a>
-                        <a href="#">Product Photography</a>
+                        <a href="{{ url('single-services/'. 1) }}">Skillmaker Investment Opportunities</a>
+                        <a href="{{ url('single-services/'. 2) }}">Skillmaker Learn & Earn Program</a>
+                        <a href="{{ url('single-services/'. 3) }}">Product Hunting</a>
+                        <a href="{{ url('single-services/'. 4) }}">Content Writing</a>
+                        <a href="{{ url('single-services/'. 5) }}">Product Launching</a>
+                        <a href="{{ url('single-services/'. 6) }}">Product Photography</a>
                         <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
                     </div>
                 </div>
@@ -37,12 +38,12 @@
                         Tranings
                     </a>
                     <div class="megha-item">
-                        <a href="#">Amazon Mastery</a>
-                        <a href="#">Become a Virtual Assistant</a>
-                        <a href="#">Amazon FBA Private Label</a>
-                        <a href="#">Amazon FBA Wholesale</a>
-                        <a href="#">AWS/Devops</a>
-                        <a href="#">Advance Level Photography</a>
+                        <a href="{{route('singleTraining',1)}}">Amazon Mastery</a>
+                        <a href="{{route('singleTraining',2)}}">Become a Virtual Assistant</a>
+                        <a href="{{route('singleTraining',3)}}">Amazon FBA Private Label</a>
+                        <a href="{{route('singleTraining',4)}}">Amazon FBA Wholesale</a>
+                        <a href="{{route('singleTraining',5)}}">AWS/Devops</a>
+                        <a href="{{route('singleTraining',6)}}">Advance Level Photography</a>
 
                         <a href="{{route('traning')}}"" class=" font-weight-bold font-italic">More >> </a>
                     </div>
