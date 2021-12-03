@@ -18,7 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('course_title');
             $table->string('image');
             $table->string('introduction_video');
-            $table->text('description');
+            $table->longText('description');
             $table->float('price','10','2');
             $table->timestamps();
         });

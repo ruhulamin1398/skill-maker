@@ -17,7 +17,7 @@ class CreateOfficesTable extends Migration
             $table->id();
             $table->string('country');
             $table->string('location');
-            $table->text('description');
+            $table->longText('description');
             $table->string('map_link');
             $table->string('image');
             $table->timestamps();

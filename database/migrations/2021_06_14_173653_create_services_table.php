@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('sub_title');
-            $table->text('description');
+            $table->longText('description');
             $table->string('service_image');
             $table->timestamps();
         });
