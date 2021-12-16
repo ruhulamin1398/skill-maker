@@ -20,6 +20,7 @@
                                 <th>#</th>
                                 <th>Title</th>
                                 <th style="width: 15%">Sub Title</th>
+                                <th style="width: 20%">Price</th>
                                 <th style="width: 20%">Description</th>
                                 <th>Image</th>
                                 <th>Action</th>
@@ -31,6 +32,7 @@
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $services->title }}</td>
                                     <td>{{ $services->sub_title }}</td>
+                                    <td>{{ $services->price }}</td>
                                     <td>
                                         <p style="font-size: 10px">
                                             <?php

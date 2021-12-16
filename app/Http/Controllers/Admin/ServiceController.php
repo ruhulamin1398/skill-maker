@@ -41,13 +41,11 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'title'         => 'required',
-            'sub_title'     => 'required',
+            'title'         => 'required', 
             'description'   => 'required',
             'service_image' => 'required | mimes:jpg,png,jpeg|max:7048'
         ],[
-            'title.required'            => 'Please Enter Title',
-            'sub_title.required'        => 'Please Enter Sub Title',
+            'title.required'            => 'Please Enter Title', 
             'description.required'      => 'Please Enter Description',
             'service_image.required'    => 'Please Select Image',
             'service_image.mimes'       => 'Please Select Jpg,png,jpeg Type',
@@ -57,6 +55,7 @@ class ServiceController extends Controller
         $service = new Service();
         $service->title = $request->title;
         $service->sub_title = $request->sub_title;
+        $service->price = $request->price;
         $service->description = $request->description;
 
         if ($request->hasFile('service_image')) {
@@ -107,8 +106,7 @@ class ServiceController extends Controller
     public function update(Request $request, service $service)
     {
         $this->validate($request,[
-            'title'         => 'required',
-            'sub_title'     => 'required',
+            'title'         => 'required', 
             'description'   => 'required',
         ]);
 
@@ -117,6 +115,8 @@ class ServiceController extends Controller
         $service->title = $request->title;
         $service->sub_title = $request->sub_title;
         $service->description = $request->description;
+        
+        $service->price = $request->price;
 
         if($request->service_image == ''){
             // $office->update($request->all());

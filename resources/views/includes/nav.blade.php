@@ -22,12 +22,16 @@
                         Services
                     </a>
                     <div class="megha-item">
-                        <a href="{{ url('single-services/'. 1) }}">Skillmaker Investment Opportunities</a>
-                        <a href="{{ url('single-services/'. 2) }}">Skillmaker Learn & Earn Program</a>
-                        <a href="{{ url('single-services/'. 3) }}">Product Hunting</a>
-                        <a href="{{ url('single-services/'. 4) }}">Content Writing</a>
-                        <a href="{{ url('single-services/'. 5) }}">Product Launching</a>
-                        <a href="{{ url('single-services/'. 6) }}">Product Photography</a>
+                         
+
+
+                        <a href="{{url('single-services',1)}}">Amazon A to Z VA Services</a>
+                        <a href="{{url('single-services',2)}}">UK LTD Formation</a>
+                        <a href="{{url('single-services',3)}}">UK Physical Address</a>
+                        <a href="{{url('single-services',4)}}"> 	VPS</a>
+                        <a href="{{url('single-services',5)}}">UK VAT Registration</a>
+                        <a href="{{url('single-services',6)}}">UK Trademark</a>
+                        
                         <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
                     </div>
                 </div>

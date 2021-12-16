@@ -24,14 +24,21 @@
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Sub Title<sup class="text-danger">*</sup></label>
+                                <label class="form-label">Sub Title </label>
                                 <input type="text" name="sub_title" placeholder="Enter Sub Title"  class="form-control" value="{{ old('sub_title') }}">
                                 @if($errors->has('sub_title'))
                                     <span class="text-danger ">{{ $errors->first('sub_title') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Sub Title<sup class="text-danger">*</sup></label>
+                                <label class="form-label">Price </label>
+                                <input type="text" name="price" placeholder="0.00"  class="form-control" value="{{ old('price') }}">
+                                @if($errors->has('price'))
+                                    <span class="text-danger ">{{ $errors->first('price') }}</span>
+                                @endif
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Image<sup class="text-danger">*</sup></label>
                                 <input type="file" name="service_image"  class="form-control">
                                 @if($errors->has('service_image'))
                                     <span class="text-danger ">{{ $errors->first('service_image') }}</span>

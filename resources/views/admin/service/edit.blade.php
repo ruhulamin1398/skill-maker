@@ -22,8 +22,15 @@
                                 <input type="text" name="title" placeholder="Enter Service Title"  class="form-control" value="{{ $service->title }}">
                             </div>
                             <div class="form-group">
-                                <label class="form-label">Sub Title<sup class="text-danger">*</sup></label>
+                                <label class="form-label">Sub Title </label>
                                 <input type="text" name="sub_title" placeholder="Enter Sub Title"  class="form-control" value="{{ $service->sub_title }}">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Price </label>
+                                <input type="text" name="price"    class="form-control" value="{{ $service->price }}">
+                                @if($errors->has('price'))
+                                    <span class="text-danger ">{{ $errors->first('price') }}</span>
+                                @endif
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Image<sup class="text-danger">*</sup></label><br/>
