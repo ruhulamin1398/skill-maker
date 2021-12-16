@@ -19,7 +19,7 @@ class CreateSupportsTable extends Migration
             $table->string('phone');
             $table->string('facebook');
             $table->string('email');
-            $table->text('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }

@@ -18,9 +18,9 @@ class CreateTrainersTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('phone');
-            $table->string('last_education');
-            $table->string('current_work');
-            $table->string('address');
+            $table->longText('last_education');
+            $table->longText('current_work');
+            $table->longText('address');
             $table->string('image');
             $table->timestamps();
         });

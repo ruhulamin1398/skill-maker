@@ -20,7 +20,7 @@ class CreateFreelancersTable extends Migration
             $table->string('image');
             $table->string('language');
             $table->string('skills');
-            $table->text('description');
+            $table->longText('description');
             $table->timestamps();
         });
     }

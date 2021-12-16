@@ -17,8 +17,8 @@ class CreateSuccessStoriesTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('location');
-            $table->string('short_desctiption');
-            $table->text('long_description');
+            $table->longText('short_desctiption');
+            $table->longText('long_description' );
             $table->string('image');
             $table->timestamps();
         });

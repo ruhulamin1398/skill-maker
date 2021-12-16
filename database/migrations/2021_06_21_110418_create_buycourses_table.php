@@ -20,7 +20,7 @@ class CreateBuycoursesTable extends Migration
             $table->bigInteger('assign_id');
             $table->float('price','10','2');
             $table->bigInteger('status');
-            $table->string('comment');
+            $table->longText('comment');
             $table->timestamps();
         });
     }
