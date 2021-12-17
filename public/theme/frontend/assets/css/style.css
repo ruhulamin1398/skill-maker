@@ -2543,6 +2543,8 @@ section {
 }
 #footer .appointment-btn {
   padding: 1.5rem 2.5rem !important;
+  width: 220px;
+text-align: center;
 }
 .copyright p{
     color: black;
