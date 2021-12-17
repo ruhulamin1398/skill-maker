@@ -2719,12 +2719,12 @@ section {
     padding-bottom: 50px;
   }
 .about2 h2 {
-    font-weight: 700;
-    font-size: 36px;
+    /* font-weight: 700; */
+    /* font-size: 36px; */
   }
   .about2 p {
-    font-weight: 700;
-    font-size: 18px;
+    /* font-weight: 700; */
+    font-size: 16px;
   }
   .about2 img {
     width: 100%;
@@ -2744,11 +2744,11 @@ section {
 # Our Vision
 --------------------------------------------------------------*/
 .vission1 .icon-box {
-    margin-bottom: 20px;
-    padding: 30px;
+    margin-bottom: 10px;
+    padding: 20px;
     border-radius: 25px 0 25px 0;
     background: #258cf5;
-    min-height: 280px;
+    /* min-height: 280px; */
   }
   .vission1 .icon-box2 {
     background: #62cf62;
