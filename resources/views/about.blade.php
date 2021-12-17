@@ -50,7 +50,7 @@
         </p>
 
         <p class="font-weight-bold font-italic text-center">
-        '' We are here for Empowering Societies in Digital means. ''
+        “ We are here for Empowering Societies in Digital means. ”
         </p>
 
         <p>
