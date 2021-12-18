@@ -3,9 +3,8 @@
         <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="{{ route('marketplace') }}">Company Profile</a>
             <ul>
                 <li class="{{ (request()-> is('about')) ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
-                <li class="{{ (request()-> is('success-stories')) ? 'active' : '' }}"><a href="{{route('success-stories')}}">Success Stories</a></li>
-
-                <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href=" ">Our Team</a></li>
+                <li class="{{ (request()-> is('ourTeam')) ? 'active' : '' }}"><a href="{{route('ourTeam')}}">Our Team</a></li>
+ 
                 <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href="{{route('officies')}}">Our Offices</a></li>
                 <li class=""><a href="#">Terms And Condition</a></li>
                 <li class=""><a href="#">Privacy Policy</a></li>

@@ -41,7 +41,7 @@ Route::get('officies', [OfficeController::class, 'index']) -> name('officies');
 // About Route
 Route::get('about', [AboutController::class, 'index']) -> name('about');
 // Sucess Stories
-Route::get('success-stories', [SuccessStoriesController::class, 'index']) -> name('success-stories');
+Route::get('out-team', [SuccessStoriesController::class, 'index']) -> name('ourTeam');
 Route::get('/', [HomeController::class, 'index']) -> name('home');
 Route::get('single-services/{id}', [HomeController::class, 'singleService']);
 

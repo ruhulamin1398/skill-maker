@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -62,6 +63,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::resource('service', ServiceController::class);
 Route::resource('office', OfficeController::class);
 Route::resource('success_story', SuccessStoryController::class);
+Route::resource('our-teams', OurTeamController::class);
 Route::resource('seminar', SeminarController::class);
 Route::resource('faq', FaqController::class);
 Route::resource('perticipators', PerticipatorController::class);
