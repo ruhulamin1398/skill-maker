@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -100,5 +99,9 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::resource('chats', ChatController::class);
 Route::resource('chat-messages', ChatMessageController::class);
+
+
+
+Route::resource('file-manager', FileManagerController::class);
 
 });

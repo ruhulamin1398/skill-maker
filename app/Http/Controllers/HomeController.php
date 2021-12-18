@@ -10,6 +10,7 @@ class HomeController extends Controller
 {
     // home Page show
     public function index(){
+        // return urlencode("dfasf sadfasdfasdf");
         $service = service::all() -> take(6);
         $seminar = seminar::all() -> take(3);
         return view('index', [
