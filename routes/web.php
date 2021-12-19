@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OfficeController;
+use App\Http\Controllers\OurTeamController;
 use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SuccessStoriesController;
@@ -41,7 +42,7 @@ Route::get('officies', [OfficeController::class, 'index']) -> name('officies');
 // About Route
 Route::get('about', [AboutController::class, 'index']) -> name('about');
 // Sucess Stories
-Route::get('out-team', [SuccessStoriesController::class, 'index']) -> name('ourTeam');
+Route::get('out-team', [OurTeamController::class, 'index']) -> name('ourTeam');
 Route::get('/', [HomeController::class, 'index']) -> name('home');
 Route::get('single-services/{id}', [HomeController::class, 'singleService']);
 

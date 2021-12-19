@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\course;
 use App\Models\Trainer;
 use Illuminate\Http\Request;
 
@@ -41,25 +41,25 @@ class TrainerController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'name'           => 'required',
-            'email'          => 'required',
-            'phone'          => 'required',
-            'last_education' => 'required',
-            'current_work'   => 'required',
-            'address'        => 'required',
-            'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
-        ],[
-            'name.required'           => 'Please Enter Name',
-            'email.required'          => 'Please Enter Email',
-            'phone.required'          => 'Please Enter Phone Number',
-            'last_education.required' => 'Please Enter Last Educcation',
-            'current_work.required'   => 'Please Enter Current Work',
-            'address.required'        => 'Please Enter Address',
-            'image.required'         => 'Please Select Image',
-            'image.mimes'            => 'Please Select Jpg,png,jpeg Type',
-            'image.max'              => 'Please Select Image Less Then 8 Mb'
-        ]);
+        // $this->validate($request,[
+        //     'name'           => 'required',
+        //     'email'          => 'required',
+        //     'phone'          => 'required',
+        //     'last_education' => 'required',
+        //     'current_work'   => 'required',
+        //     'address'        => 'required',
+        //     'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
+        // ],[
+        //     'name.required'           => 'Please Enter Name',
+        //     'email.required'          => 'Please Enter Email',
+        //     'phone.required'          => 'Please Enter Phone Number',
+        //     'last_education.required' => 'Please Enter Last Educcation',
+        //     'current_work.required'   => 'Please Enter Current Work',
+        //     'address.required'        => 'Please Enter Address',
+        //     'image.required'         => 'Please Select Image',
+        //     'image.mimes'            => 'Please Select Jpg,png,jpeg Type',
+        //     'image.max'              => 'Please Select Image Less Then 8 Mb'
+        // ]);
 
         $trainer = new Trainer();
         $trainer->name           = $request->name;
@@ -68,6 +68,9 @@ class TrainerController extends Controller
         $trainer->last_education = $request->last_education;
         $trainer->current_work   = $request->current_work;
         $trainer->address        = $request->address;
+        
+        $trainer->short_desctiption = $request->short_desctiption;
+        $trainer->long_description  = $request->long_description;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -76,8 +79,8 @@ class TrainerController extends Controller
             $file->move('trainer/images/', $fileName);
             $trainer->image = $fileName;
         } else {
-            return $request;
-            $trainer->image = '';
+            return "select Image";
+             
         }
 
         $trainer->save();
@@ -93,9 +96,9 @@ class TrainerController extends Controller
     public function show(Trainer $trainer)
     {
         $page_name = "Trainer Details";
-        $courses = $trainer->courses;
+        $courses = course::all();
         $seminars = $trainer->seminars;
-        // return $seminars;
+          
         return view('admin.trainers.show', compact('trainer', 'page_name', 'courses','seminars'));
     }
 
@@ -120,21 +123,24 @@ class TrainerController extends Controller
      */
     public function update(Request $request, Trainer $trainer)
     {
-        $this->validate($request,[
-            'name'           => 'required',
-            'email'          => 'required',
-            'phone'          => 'required',
-            'last_education' => 'required',
-            'current_work'   => 'required',
-            'address'        => 'required',
-            'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
-        ]);
+        // $this->validate($request,[
+        //     'name'           => 'required',
+        //     'email'          => 'required',
+        //     'phone'          => 'required',
+        //     'last_education' => 'required',
+        //     'current_work'   => 'required',
+        //     'address'        => 'required',
+        //     'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
+        // ]);
         $trainer->name           = $request->name;
         $trainer->email          = $request->email;
         $trainer->phone          = $request->phone;
         $trainer->last_education = $request->last_education;
         $trainer->current_work   = $request->current_work;
         $trainer->address        = $request->address;
+        
+        $trainer->short_desctiption = $request->short_desctiption;
+        $trainer->long_description  = $request->long_description;
 
         if($request->image == ''){
 
@@ -145,10 +151,8 @@ class TrainerController extends Controller
                 $fileName = time() . '.' . $extension;
                 $file->move('trainer/images/', $fileName);
                 $trainer->image = $fileName;
-            } else {
-                return $request;
-                $trainer->image = '';
-            }
+            }  
+            return back();
 
         }
         $trainer->save();

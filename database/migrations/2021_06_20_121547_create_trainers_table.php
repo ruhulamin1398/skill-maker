@@ -15,18 +15,20 @@ class CreateTrainersTable extends Migration
     {
         Schema::create('trainers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email');
-            $table->string('phone');
-            $table->longText('last_education');
-            $table->longText('current_work');
-            $table->longText('address');
-            $table->string('image');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone')->nullable();
+            $table->longText('last_education')->nullable();
+            $table->longText('current_work')->nullable();
+            $table->longText('address')->nullable();
+            $table->longText('short_desctiption')->nullable();
+            $table->longText('long_description' )->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
 
-    /**
+    /**v
      * Reverse the migrations.
      *
      * @return void
