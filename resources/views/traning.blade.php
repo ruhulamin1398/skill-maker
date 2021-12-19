@@ -59,7 +59,7 @@
                         echo (implode(' ', array_slice(explode(' ', strip_tags($course -> description)), 0, 13))."\n");
                     @endphp
                 </p>
-                <button type="button" class="btn btn-primary">Join</button>
+                <button type="button" class="btn btn-primary "><a class="text-light" href="{{route('singleTraining',$course ->id)}}">Join</a></button>
             </div>
         </div>
       @endforeach
