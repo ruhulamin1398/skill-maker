@@ -20,6 +20,7 @@ class CreateOurTeamsTable extends Migration
             $table->longText('short_desctiption');
             $table->longText('long_description' );
             $table->string('image');
+            $table->string('type')->default(' ');
             $table->integer('serial')->default(999);
             
             $table->timestamps();

@@ -20,12 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(ChatMessageSeeder::class);
 
 
-//add trainer
-$sql = "INSERT INTO `trainers` (`id`, `name`, `email`, `phone`, `last_education`, `current_work`, `address`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'rahim', 'karim@gmail.com', '01941697253', 'BSC', 'Dhaka', 'Panthpath', '1625048849.jpg', '2021-06-29 07:59:10', '2021-06-29 07:59:10'),
-(2, 'jon', 'jon@gmail.com', '01941697253', 'BSC', 'Dhaka', 'Panthpath', '1625048849.jpg', '2021-06-29 07:59:10', '2021-06-29 07:59:10')
-";
-DB::select($sql);
+
 
 // Service Seeder
 $sql="
