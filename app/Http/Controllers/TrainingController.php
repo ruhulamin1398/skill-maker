@@ -13,4 +13,16 @@ class TrainingController extends Controller
             'course' => $course,
         ]);
     }
+
+
+
+
+    public function singleTraining($id){
+        $single_training = course::find($id);
+        return view('singleService',[
+            'service' => $single_training,
+        ]);
+    }
+
+
 }

@@ -32,7 +32,7 @@ Route::get('freelancer-profile/{id}', [FreelancerController::class, 'singleFreel
 
 // Seminar Route
 Route::get('seminers', [SeminarController::class, 'index']) -> name('seminer');
-Route::get('single-training/{id}', [ServiceController::class, 'singleService']) -> name('singleTraining');
+Route::get('single-training/{id}', [TrainingController::class, 'singleTraining']) -> name('singleTraining');
 // Support Route
 Route::get('support', [SupportController::class, 'index']) -> name('support');
 // Training Route
