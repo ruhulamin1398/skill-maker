@@ -22,7 +22,7 @@ class TrainingController extends Controller
     public function singleTraining($id){
         $single_training = course::find($id);
         return view('singleCourses',[
-            'service' => $single_training,
+            'training' => $single_training,
         ]);
     }
 
