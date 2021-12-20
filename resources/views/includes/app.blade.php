@@ -124,7 +124,7 @@
       "position":"right"
   },
   "brandSetting":{
-      "brandName":"Skill Maker",
+      "brandName":"Skillmaker",
       "brandSubTitle":"Typically replies within a Hours",
       "brandImg":"https://demos.abasas.tech/website/other/skillmaker/public/images/skillmaker.png",
       "welcomeText":"Hi there!\nHow can I help you?",
@@ -133,7 +133,7 @@
       "ctaText":"Start Chat",
       "borderRadius":"25",
       "autoShow":false,
-      "phoneNumber":"+8801840000408"
+      "phoneNumber":"+8801974775455"
   }
 };
     s.onload = function() {

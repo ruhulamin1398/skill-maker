@@ -41,12 +41,12 @@
                         Tranings
                     </a>
                     <div class="megha-item">
-                        <a href="{{route('singleTraining',1)}}">Amazon Mastery</a>
-                        <a href="{{route('singleTraining',2)}}">Become a Virtual Assistant</a>
-                        <a href="{{route('singleTraining',3)}}">Amazon FBA Private Label</a>
-                        <a href="{{route('singleTraining',4)}}">Amazon FBA Wholesale</a>
-                        <a href="{{route('singleTraining',5)}}">AWS/Devops</a>
-                        <a href="{{route('singleTraining',6)}}">Advance Level Photography</a>
+                        <a href="{{route('singleTrainings',1)}}">Amazon Mastery</a>
+                        <a href="{{route('singleTrainings',2)}}">Become a Virtual Assistant</a>
+                        <a href="{{route('singleTrainings',3)}}">Amazon FBA Private Label</a>
+                        <a href="{{route('singleTrainings',4)}}">Amazon FBA Wholesale</a>
+                        <a href="{{route('singleTrainings',5)}}">AWS/Devops</a>
+                        <a href="{{route('singleTrainings',6)}}">Advance Level Photography</a>
 
                         <a href="{{route('traning')}}"" class=" font-weight-bold font-italic">More >> </a>
                     </div>

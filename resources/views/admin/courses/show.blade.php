@@ -48,7 +48,8 @@
                                     <td>{{ $trainers->trainer->phone }}</td>
                                     <td>{{ $trainers->trainer->email }}</td>
                                     <td>
-                                        <form action="{{ route('coursetrainers.destroy', $trainers->id) }}" method="post">
+                                       {{--<form action="{{ route('coursetrainers.destroy', $trainers->id) }}" method="post">--}}
+                                        <form action=" " method="post">
                                            @csrf
                                            @method('DELETE')
                                            <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to Remove !!');" value="X">

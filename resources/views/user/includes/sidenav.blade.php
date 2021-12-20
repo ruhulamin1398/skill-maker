@@ -25,9 +25,7 @@
                                     <li class="nk-menu-item">
                                         <a href="{{ route('courses.index') }}" class="nk-menu-link"><span class="nk-menu-text"> My Courses List</span></a>
                                     </li>
-                                    <li class="nk-menu-item">
-                                        {{-- <a href="{{ route('courses.create') }}" class="nk-menu-link"><span class="nk-menu-text">Join Course</span></a> --}}
-                                    </li>
+                                    
                                 </ul>
                             </li>
                             <li class="nk-menu-item has-sub">
