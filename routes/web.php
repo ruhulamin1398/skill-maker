@@ -44,7 +44,6 @@ Route::get('about', [AboutController::class, 'index']) -> name('about');
 // Sucess Stories
 Route::get('out-team', [OurTeamController::class, 'index']) -> name('ourTeam');
 Route::get('/', [HomeController::class, 'index']) -> name('home');
-Route::get('single-services/{id}', [HomeController::class, 'singleService']);
 
 Route::get('form', function () {
     return view('form');

@@ -16,10 +16,11 @@ class CreateCoursesTable extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('course_title');
-            $table->string('image');
-            $table->string('introduction_video');
-            $table->longText('description');
-            $table->float('price','10','2');
+            $table->string('image')->nullable();
+            $table->string('breadcrumb_image')->nullable();
+            $table->string('introduction_video')->nullable();
+            $table->longText('description')->nullable();
+            $table->float('price','10','2')->default(0);
             $table->string('type')->default('training'); // service, training, seminar
             $table->timestamps();
         });

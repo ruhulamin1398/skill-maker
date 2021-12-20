@@ -16,7 +16,7 @@
                     <div class="card-inner">
                         <form action="{{ route('courses.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group col-md-6 float-left">
+                            <div class="form-group col-md-12 float-left">
                                 <label class="form-label">Course Title<sup class="text-danger">*</sup></label>
                                 <input type="text" name="course_title" placeholder="Enter Course Title"  class="form-control" value="{{ old('course_title') }}">
                                 @if($errors->has('course_title'))
@@ -26,10 +26,21 @@
                         
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Course Price<sup class="text-danger">*</sup></label>
-                                <input type="number" min="1" name="price" placeholder="Enter Course Price"  class="form-control" value="{{ old('price') }}">
+                                <input type="number" min="1" name="price" placeholder="Enter Course Price"  class="form-control" value="{{ old('price')??0 }}">
                                 @if($errors->has('price'))
                                     <span class="text-danger ">{{ $errors->first('price') }}</span>
                                 @endif
+                            </div>
+
+                            
+                            <div class="form-group col-md-6 float-left">
+                                <label class="form-label"> Course Type<sup class="text-danger">*</sup></label>
+                                <select class="form-select form-select-sm" name="type" data-search="off" data-placeholder="Training"> 
+                                                                    <option value="training">Training</option>
+                                                                    <option value="service">Service </option>
+                                                                    <option value="seminar">Seminar</option>
+                               </select>
+                                
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Course Image<sup class="text-danger">*</sup></label>
@@ -39,10 +50,10 @@
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
-                                <label class="form-label"> Introduction Video<sup class="text-danger">*</sup></label>
-                                <input type="file"  name="introduction_video" accept="mp4,3gp,mkv" class="form-control">
-                                @if($errors->has('introduction_video'))
-                                    <span class="text-danger ">{{ $errors->first('introduction_video') }}</span>
+                                <label class="form-label">Breadcrumb Image<sup class="text-danger">*</sup></label>
+                                <input type="file"  name="breadcrumb_image" class="form-control">
+                                @if($errors->has('breadcrumb_image'))
+                                    <span class="text-danger ">{{ $errors->first('breadcrumb_image') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-md-12 float-left">

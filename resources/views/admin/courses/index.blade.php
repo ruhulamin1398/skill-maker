@@ -19,10 +19,10 @@
                             <tr>
                                 <th>#</th>
                                 <th>Course Title</th>
+                               <th>Type</th>  
                                 <th>Price</th>
                                 <th>Image</th>
                                 <th>Video</th>
-                                {{-- <th>Trainer</th> --}}
                                 <th>Batch</th>
                                 <th>Action</th>
                             </tr>
@@ -32,6 +32,7 @@
                                 <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $course->course_title }}</td>
+                                    <td>{{ $course->type }}</td>
                                     <td>{{ $course->price }}</td>
                                     <td>
                                         <img src="{{ asset('course/images/'.$course->image) }}" class="img-thumbnail" style="height: 70px;width: 70px">

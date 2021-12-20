@@ -19,7 +19,7 @@ class CourseControllernew extends Controller
     public function index()
     {
         $page_name = "All Course List";
-        $courses = course::all();
+        $courses = course::latest()->get(); 
         return view('admin.courses.index', compact('page_name', 'courses'));
     }
 
@@ -44,15 +44,17 @@ class CourseControllernew extends Controller
     {
         $this->validate($request, [
             'course_title'       => 'required',
-            'image'              => 'required | mimes:jpg,png,jpeg|max:7048',
-            'introduction_video' => 'required|mimes:mp4,3gp,mkv |max:1073741824',
-            'description'        => 'required',
+            'image'              => 'required | mimes:jpg,png,jpeg|max:7048', 
+            'breadcrumb_image'    => 'required | mimes:jpg,png,jpeg|max:7048', 
             'price'              => 'required'
         ],[
             'course_title.requires'       => 'Please Enter Course Title',
             'image.required'              => 'Please Select Image',
             'image.mimes'                 => 'Please Select Jpg,png,jpeg Type',
             'image.max'                   => 'Please Select Image Less Then 8 Mb',
+            'image.breadcrumb_image'      => 'Please Select Image',
+            'image.breadcrumb_image'      => 'Please Select Jpg,png,jpeg Type',
+            'image.breadcrumb_image'      => 'Please Select Image Less Then 8 Mb',
             'introduction_video.required' => 'Please Select A Video',
             'introduction_video.mimes'    => 'Please Select mp4,3gp,mkv file',
             'introduction_video.max'      => 'Please Select Video Less Then 1 Gb',
@@ -63,29 +65,29 @@ class CourseControllernew extends Controller
         $course = new course();
         $course->course_title   = $request->course_title;
         $course->price          = $request->price;
+        $course->type    = $request->type;
         $course->description    = $request->description;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
-            $fileName = time() . '.' . $extension;
+            $fileName = str_replace(' ', '_', $request->course_title).time() . 'image.' . $extension;
             $file->move('course/images/', $fileName);
             $course->image = $fileName;
         } else {
-            return $request;
-            $course->image = '';
+            return "Please select image";
+        }
+        if ($request->hasFile('breadcrumb_image')) {
+            $file = $request->file('breadcrumb_image');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = str_replace(' ', '_', $request->course_title).time() . 'breadcrumb_image.' . $extension;
+            $file->move('course/images/', $fileName);
+            $course->breadcrumb_image = $fileName;
+        } else {
+            return "Please select image";
         }
 
-        if ($request->hasFile('introduction_video')) {
-            $file = $request->file('introduction_video');
-            $extension = $file->getClientOriginalExtension();
-            $fileName = time() . '.' . $extension;
-            $file->move('course/video/', $fileName);
-            $course->introduction_video = $fileName;
-        } else {
-            return $request;
-            $course->introduction_video = '';
-        }
+         
 
         $course->save();
         // $cbatch = Batch::create(['model'=>course::class,'model_id'=>$course->id]);
@@ -135,9 +137,7 @@ class CourseControllernew extends Controller
     {
         $this->validate($request, [
             'course_title'       => 'required',
-            'image'              => 'mimes:jpg,png,jpeg|max:7048',
-            'introduction_video' => 'mimes:mp4,3gp,mkv |max:20048',
-            'description'        => 'required',
+            'image'              => 'mimes:jpg,png,jpeg|max:7048',  
             'price'              => 'required'
         ],[
             'course_title.requires'       => 'Please Enter Course Title',
@@ -162,30 +162,32 @@ class CourseControllernew extends Controller
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
-                $fileName = time() . '.' . $extension;
+                $fileName = str_replace(' ', '_', $request->course_title).time() . 'image.' . $extension;
                 $file->move('course/images/', $fileName);
                 $course->image = $fileName;
             } else {
-                return $request;
-                $course->image = '';
+                return "Please select image";
             }
         }
 
-        if($request->introduction_video == ''){
+        if($request->breadcrumb_image == ''){
             // $office->update($request->all());
             // $office->save();
         }else{
-            if ($request->hasFile('introduction_video')) {
-                $file = $request->file('introduction_video');
+            if ($request->hasFile('breadcrumb_image')) {
+                $file = $request->file('breadcrumb_image');
                 $extension = $file->getClientOriginalExtension();
-                $fileName = time() . '.' . $extension;
-                $file->move('course/video/', $fileName);
-                $course->introduction_video = $fileName;
+                $fileName = str_replace(' ', '_', $request->course_title).time() . 'breadcrumb_image.' . $extension;
+                $file->move('course/images/', $fileName);
+                $course->breadcrumb_image = $fileName;
             } else {
-                return $request;
-                $course->introduction_video = '';
+                return "Please select image";
             }
         }
+
+
+
+        
         $course->save();
         return redirect()->route('courses.index')->with('success','Course Data Update Successfull');
 

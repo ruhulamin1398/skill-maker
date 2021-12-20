@@ -12,7 +12,7 @@
                         <form action="{{ route('courses.update', $course->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                            <div class="form-group col-md-6 float-left">
+                            <div class="form-group col-md-12 float-left">
                                 <label class="form-label">Course Title<sup class="text-danger">*</sup></label>
                                 <input type="text" name="course_title" placeholder="Enter Course Title"  class="form-control" value="{{ $course->course_title }}">
                                 @if($errors->has('course_title'))
@@ -28,6 +28,32 @@
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
+                                <label class="form-label"> Course Type<sup class="text-danger">*</sup></label>
+                                <select class="form-select form-select-sm" value="{{$course->type}}" name="type" data-search="off" > 
+                              
+                                @if($course->type == 'service')
+                                <option value="service" selected="selected">Service </option>
+                                @else  
+                                <option value="service">Service </option>
+                                @endif
+                                
+                                
+                                @if($course->type == 'training')
+                                <option value="training" selected="selected">Training </option>
+                                @else  
+                                <option value="training">Training </option>
+                                @endif
+                                
+                                
+                                @if($course->type == 'seminar')
+                                <option value="seminar" selected="selected">Seminar </option>
+                                @else  
+                                <option value="seminar">Seminar </option>
+                                @endif 
+                               </select>
+                                
+                            </div>
+                            <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Image<sup class="text-danger">*</sup></label><br/>
                                 <img src="{{ asset('course/images/'.$course->image) }}" style="height: 120px; width: 120px"><br/>
                                 <div class="mt-1">
@@ -35,12 +61,13 @@
                                 </div>
                             </div>
                             <div class="form-group col-md-6 float-left">
-                                <label class="form-label">Course Video<sup class="text-danger">*</sup></label><br/>
-                                <a target="_blank" href="{{ asset('course/video/'.$course->introduction_video) }}" style="height: 120px; width: 120px">{{ $course->introduction_video }}</a>
+                                <label class="form-label">Breadcrumb Image {{ asset('course/images/'.$course->breadcrumb_image) }}<sup class="text-danger">*</sup></label><br/>
+                                <img src="{{ asset('course/images/'.$course->breadcrumb_image) }}" style="height: 120px; width: 120px"><br/>
                                 <div class="mt-1">
-                                    <input type="file" name="introduction_video" class="form-control" >
+                                    <input type="file" name="breadcrumb_image" class="form-control" >
                                 </div>
                             </div>
+                  
                             <div class="form-group col-md-12 float-left">
                                 <label class="form-label">Description<sup class="text-danger">*</sup></label>
                                 <textarea name="description" class="summernote-basic">{{ $course->description }}</textarea>

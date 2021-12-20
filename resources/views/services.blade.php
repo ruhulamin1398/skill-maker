@@ -9,15 +9,8 @@
 @endsection
 
 @section('hero')
--
-<!-- ======= Hero Section ======= -->
-{{-- <section id="hero" class="d-flex align-items-center">
-  <div class="container">
-    <h1>Welcome to Medilab</h1>
-    <h2>We are team of talented designers making websites with Bootstrap</h2>
-    <a href="#about" class="btn-get-started scrollto">Get Started</a>
-  </div>
-</section> --}}
+ 
+ 
 <section id="pageHero" class="servicesHero d-flex align-items-center">
     <div class="container">
       <div class="row">
@@ -51,8 +44,8 @@
         @foreach ($services as $service)
             <div class="col-lg-4 mb-3">
                     <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-                    <img src="{{ asset('service/images/'.$service -> service_image) }}" class="img-fluid" alt="">
-                    <h3 >{{ $service -> title }}</h3>
+                    <img src="{{ asset('course/images/'.$service -> image) }}" class="img-fluid" alt="">
+                    <h3 >{{ $service -> course_title }}</h3>
 
                      <p>
                         @php

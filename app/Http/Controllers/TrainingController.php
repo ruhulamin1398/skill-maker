@@ -8,7 +8,9 @@ use Illuminate\Http\Request;
 class TrainingController extends Controller
 {
     public function index(){
-        $course = course::all();
+      
+
+        $course = course::where('type','training')->get();
         return view('traning', [
             'course' => $course,
         ]);
@@ -19,7 +21,7 @@ class TrainingController extends Controller
 
     public function singleTraining($id){
         $single_training = course::find($id);
-        return view('singleService',[
+        return view('singleCourses',[
             'service' => $single_training,
         ]);
     }

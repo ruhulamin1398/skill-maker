@@ -18,11 +18,5 @@ class HomeController extends Controller
             'seminar' => $seminar,
         ]);
     }
-    // home page single service
-    public function singleService($id){
-        $single_service = service::find($id);
-        return view('singleService',[
-            'service' => $single_service,
-        ]);
-    }
+ 
 }
