@@ -105,6 +105,8 @@ class CourseControllernew extends Controller
      */
     public function show(course $course)
     {
+
+
         $page_name = "Course Details";
         $trainer = $course->trainers;
         $videos = $course->courseVideo;

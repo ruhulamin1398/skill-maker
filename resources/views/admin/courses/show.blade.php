@@ -61,7 +61,7 @@
                     </table>
                 </div>
                 <div class="col-md-6 col-sm-12 float-left" style="border-top: 1px solid blue">
-                    <h3 class="text-center p-2">Course Video</h3>
+                    <h3 class="text-center p-2">Course Videos <a href="{{route('chapters.index')}}?course_id={{$course->id}}"> <div class="btn btn-sm btn-outline-primary">Chapters</div></a></h3>
 
                     @foreach ($videos as $video)
                         <div id="accordion">

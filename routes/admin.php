@@ -1,5 +1,5 @@
 <?php
-
+ 
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -51,7 +51,7 @@ Route::group(['middleware' => ['auth','role_or_permission:admin|test']], functio
 
 
         return view('admin.index');
-    });
+    })->name('admin.index');
 });
 
 
@@ -71,6 +71,7 @@ Route::resource('trainers', TrainerController::class);
 Route::resource('buycourses', BuycourseController::class);
 Route::resource('supports', SupportController::class);
 Route::resource('courses', CourseControllernew::class);
+Route::resource('chapters', ChapterController::class);
 Route::resource('batch-trainers', BatchTrainerController::class);
 Route::resource('coursevideos', CourseVideoController::class);
 Route::resource('freelancers', FreelancerController::class);
