@@ -10,8 +10,8 @@ class TrainingController extends Controller
     public function index(){
       
 
-        $course = course::where('type','training')->get();
-        return view('traning', [
+        $course = course::where('type','training')->orderBy('serial')->get();
+        return view('training', [
             'course' => $course,
         ]);
     }

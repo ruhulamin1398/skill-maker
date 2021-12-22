@@ -21,6 +21,7 @@ class CreateCoursesTable extends Migration
             $table->string('introduction_video')->nullable();
             $table->longText('description')->nullable();
             $table->float('price','10','2')->default(0);
+            $table->integer('serial')->default(999);
             $table->string('type')->default('training'); // service, training, seminar
             $table->timestamps();
         });

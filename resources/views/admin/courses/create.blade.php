@@ -16,7 +16,7 @@
                     <div class="card-inner">
                         <form action="{{ route('courses.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group col-md-12 float-left">
+                            <div class="form-group col-md-10 float-left">
                                 <label class="form-label">Course Title<sup class="text-danger">*</sup></label>
                                 <input type="text" name="course_title" placeholder="Enter Course Title"  class="form-control" value="{{ old('course_title') }}">
                                 @if($errors->has('course_title'))
@@ -24,6 +24,16 @@
                                 @endif
                             </div>
                         
+
+
+                            <div class="form-group col-md-2 float-left">
+                                <label class="form-label"> Serial<sup class="text-danger">*</sup></label>
+                                <input type="number" name="serial"  class="form-control" value="999">
+                                @if($errors->has('name'))
+                                    <span class="text-danger ">{{ $errors->first('serial') }}</span>
+                                @endif
+                            </div>
+
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Course Price<sup class="text-danger">*</sup></label>
                                 <input type="number" min="1" name="price" placeholder="Enter Course Price"  class="form-control" value="{{ old('price')??0 }}">
@@ -63,6 +73,7 @@
                                     <span class="text-danger ">{{ $errors->first('description') }}</span>
                                 @endif
                             </div>
+                           
                             <div class="form-group col-md-6 float-left">
                                 <input type="submit" name="btn"  class="btn btn-primary col-6 btn-block" value="Submit">
                             </div>

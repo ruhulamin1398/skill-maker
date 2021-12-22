@@ -21,34 +21,31 @@
                         Services
                     </a>
                     <div class="megha-item">
-                         
+   
+                        @foreach($navServices as $navService)
 
-
-                        <a href="{{url('single-services',1)}}">Amazon A to Z VA Services</a>
-                        <a href="{{url('single-services',2)}}">UK LTD Formation</a>
-                        <a href="{{url('single-services',3)}}">UK Physical Address</a>
-                        <a href="{{url('single-services',4)}}"> 	VPS</a>
-                        <a href="{{url('single-services',5)}}">UK VAT Registration</a>
-                        <a href="{{url('single-services',6)}}">UK Trademark</a>
-                        
+                        <a href="{{url('single-services',$navService->id)}}">{{$navService->course_title}}--</a> 
+                        @endforeach
                         <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
                     </div>
                 </div>
 
                 <div class="col-md-4">
-                    <a href="{{route('traning')}}"" style=" font-weight: bold; text-transform: uppercase">
+                    <a href="{{route('trainings')}}"" style=" font-weight: bold; text-transform: uppercase">
                         <i class="fas fa-link" style="margin-right: 5px;"></i>
-                        Tranings
+                        Trainings
                     </a>
                     <div class="megha-item">
-                        <a href="{{route('singleTrainings',1)}}">Amazon Mastery</a>
-                        <a href="{{route('singleTrainings',2)}}">Become a Virtual Assistant</a>
-                        <a href="{{route('singleTrainings',3)}}">Amazon FBA Private Label</a>
-                        <a href="{{route('singleTrainings',4)}}">Amazon FBA Wholesale</a>
-                        <a href="{{route('singleTrainings',5)}}">AWS/Devops</a>
-                        <a href="{{route('singleTrainings',6)}}">Advance Level Photography</a>
+                    
+                    @foreach($navCourses as $navCourse)
+                    
+                   {{$navCourse}}
+                  
+                        <a href="{{route('singleTrainings',$navCourse->id)}}">{{$navCourse->course_title}} --</a>
 
-                        <a href="{{route('traning')}}"" class=" font-weight-bold font-italic">More >> </a>
+                    @endforeach
+
+                        <a href="{{route('trainings')}}"" class=" font-weight-bold font-italic">More >> </a>
                     </div>
                 </div>
 
@@ -59,7 +56,7 @@
     </ul>
     </li>
     {{-- 
-    <li class="drop-down {{ (request()-> is('tranings')) ? 'active' : '' }}"><a href="{{route('traning')}}">Training</a>
+    <li class="drop-down {{ (request()-> is('trainings')) ? 'active' : '' }}"><a href="{{route('trainings')}}">Training</a>
         <ul class="megha-menu-ul"">
                     <li>
                         <div class=" row megha-menu">

@@ -19,7 +19,7 @@ class CourseControllernew extends Controller
     public function index()
     {
         $page_name = "All Course List";
-        $courses = course::latest()->get(); 
+        $courses = course::orderBy('serial')->get(); 
         return view('admin.courses.index', compact('page_name', 'courses'));
     }
 
@@ -66,6 +66,7 @@ class CourseControllernew extends Controller
         $course->course_title   = $request->course_title;
         $course->price          = $request->price;
         $course->type    = $request->type;
+        $course->serial    = $request->serial;
         $course->description    = $request->description;
 
         if ($request->hasFile('image')) {
@@ -153,6 +154,8 @@ class CourseControllernew extends Controller
         $course->course_title   = $request->course_title;
         $course->description    = $request->description;
         $course->price          = $request->price;
+        
+        $course->serial    = $request->serial;
 
 
         if($request->image == ''){

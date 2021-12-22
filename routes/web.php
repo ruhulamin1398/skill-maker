@@ -36,7 +36,7 @@ Route::get('single-training/{id}', [TrainingController::class, 'singleTraining']
 // Support Route
 Route::get('support', [SupportController::class, 'index']) -> name('support');
 // Training Route
-Route::get('tranings', [TrainingController::class, 'index']) -> name('traning');
+Route::get('trainings', [TrainingController::class, 'index']) -> name('trainings');
 // Office Route
 Route::get('officies', [OfficeController::class, 'index']) -> name('officies');
 // About Route

@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ServiceController extends Controller
 {
     public function index(){
-        $services = course::where('type','service')->get();
+        $services = course::where('type','service')->orderBy('serial')->get();;
         return view('services',[
             'services' => $services,
         ]);

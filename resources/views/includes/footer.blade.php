@@ -26,7 +26,7 @@
           <div class="row mt-4">
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">ABOUT US</a></div>
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CAREER</a></div>
-            <div class="col-6"><a href="{{route('traning')}}" class="appointment-btn m-2">COURSES</a></div>
+            <div class="col-6"><a href="{{route('trainings')}}" class="appointment-btn m-2">COURSES</a></div>
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">FIND US ON MAP</a></div>
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">SERVICES</a></div>
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CONTACT DETAILS</a></div>

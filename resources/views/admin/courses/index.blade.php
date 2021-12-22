@@ -21,7 +21,8 @@
                                 <th>Course Title</th>
                                <th>Type</th>  
                                 <th>Price</th>
-                                <th>Image</th>
+                                <th>Serial</th>
+                                <!-- <th>Image</th> -->
                                 <th>Video</th>
                                 <th>Batch</th>
                                 <th>Action</th>
@@ -34,9 +35,12 @@
                                     <td>{{ $course->course_title }}</td>
                                     <td>{{ $course->type }}</td>
                                     <td>{{ $course->price }}</td>
-                                    <td>
+                                    <td>{{ $course->serial }}</td>
+                                    {{--
+                                        <td>
                                         <img src="{{ asset('course/images/'.$course->image) }}" class="img-thumbnail" style="height: 70px;width: 70px">
                                     </td>
+                                    --}}
                                     <td>
                                         <a href="{{ route('coursevideos.edit', $course->id) }}" class="btn btn-primary">
                                             {{ $course->courseVideo->count()}}
