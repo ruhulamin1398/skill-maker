@@ -17,9 +17,11 @@ class CreateSeminarsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('location');
+            $table->string('breadcrumb_image')->nullable();
             $table->longText('venue');
             $table->string('date');
             $table->float('price','10', '2');
+            $table->longText('description' )->nullable();;
             $table->integer('status');
             $table->timestamps();
         });

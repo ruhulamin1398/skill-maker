@@ -121,7 +121,7 @@
     </li>
     --}}
 
-    <li class="{{ (request()-> is('seminers')) ? 'active' : '' }}"><a href="{{route('seminer')}}">Seminer</a></li>
+    <li class="{{ (request()-> is('seminar')) ? 'active' : '' }}"><a href="{{route('seminar')}}">Seminar</a></li>
     <li class="{{ (request()-> is('support')) ? 'active' : '' }}"><a href="{{route('support')}}">Support</a></li>
     <li class="{{ (request()-> is('marketplace')) ? 'active' : '' }}"><a href="{{ route('marketplace') }}">Marketplace</a></li>
 

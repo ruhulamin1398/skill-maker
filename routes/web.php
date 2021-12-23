@@ -31,12 +31,13 @@ Route::get('marketplace', [FreelancerController::class, 'index']) -> name('marke
 Route::get('freelancer-profile/{id}', [FreelancerController::class, 'singleFreelancer']) -> name('freelancer-profile');
 
 // Seminar Route
-Route::get('seminers', [SeminarController::class, 'index']) -> name('seminer');
-Route::get('single-training/{id}', [TrainingController::class, 'singleTraining']) -> name('singleTrainings');
+Route::get('seminars', [SeminarController::class, 'index']) -> name('seminar');
+Route::get('single-seminar/{id}', [SeminarController::class, 'singleSeminar']) -> name('singleSeminar');
 // Support Route
 Route::get('support', [SupportController::class, 'index']) -> name('support');
 // Training Route
 Route::get('trainings', [TrainingController::class, 'index']) -> name('trainings');
+Route::get('single-training/{id}', [TrainingController::class, 'singleTraining']) -> name('singleTrainings');
 // Office Route
 Route::get('officies', [OfficeController::class, 'index']) -> name('officies');
 // About Route

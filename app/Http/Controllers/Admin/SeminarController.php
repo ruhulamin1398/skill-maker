@@ -17,7 +17,7 @@ class SeminarController extends Controller
     public function index()
     {
         $page_name = "All Seminer List";
-        $seminar = seminar::all();
+        $seminar = seminar::orderByDesc('date')->get();
         return view('admin.seminar.index', compact('page_name','seminar'));
     }
 
@@ -64,11 +64,28 @@ class SeminarController extends Controller
         $seminar->date      = $request->date;
         $seminar->price     = $request->price;
         $seminar->status    = $request->status;
+        $seminar->description    = $request->description;
 
-        $seminar->save();
 
-        $chat = Chat::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
-        $cbatch = Batch::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
+
+        if ($request->hasFile('breadcrumb_image')) {
+            $file = $request->file('breadcrumb_image');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = str_replace(' ', '_', $request->title).time() . 'breadcrumb_image.' . $extension;
+            $file->move('seminar/images/', $fileName);
+            $seminar->breadcrumb_image = $fileName;
+        } else {
+            return "Please select image";
+        }
+
+
+
+
+
+        $seminar->save(); 
+
+        // $chat = Chat::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
+        // $cbatch = Batch::create(['model'=>seminar::class,'model_id'=>$seminar->id]);
         return redirect()->route('seminar.index')->with('success','New Seminar Added Successful');
     }
 
@@ -114,6 +131,24 @@ class SeminarController extends Controller
         ]);
 
         $seminar->update($request->all());
+
+        
+        if($request->breadcrumb_image == ''){
+            ////
+         }else{
+             if ($request->hasFile('breadcrumb_image')) {
+                 $file = $request->file('breadcrumb_image');
+                 $extension = $file->getClientOriginalExtension();
+                 $fileName = str_replace(' ', '_', $request->title).time() . 'breadcrumb_image.' . $extension;
+                 $file->move('seminar/images/', $fileName);
+                 $seminar->breadcrumb_image = $fileName;
+             } else {
+                 return "Please select image";
+             }
+         }
+ 
+ 
+         
         $seminar->save();
         return redirect()->route('seminar.index')->with('success','Seminar Data Update Successfull');
     }

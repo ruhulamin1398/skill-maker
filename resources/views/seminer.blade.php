@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row">
           <div class="col">
-              <h1>LEADING ECOMMERCE & DIGITAL <br> MARKETING AGENCY</h1>
+              <h1>Seminars</h1>
           </div>
       </div>
     </div>
@@ -50,10 +50,10 @@
       <div class="container">
         <div class="row text-center">
           <div class="col h-100">
-            <h2>UPCOMING ENABLERS SEMINARS</h2>
+            <h2>UPCOMING SKILLMAKER SEMINARS</h2>
             <div class="seminar-rs d-flex justify-content-center align-items-center">
-              <h2>PARTICIPATION COST:</h2>
-              <span>Rs.800</span>
+              <!-- <h2>PARTICIPATION COST:</h2>
+              <span>Rs.800</span> -->
             </div>
           </div>
         </div>
@@ -63,33 +63,37 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col" style="width: 25%;">Date</th>
-                  <th scope="col" style="width: 25%;">Locations</th>
-                  <th scope="col" style="width: 30%;">Venue</th>
-                  <th scope="col" style="width: 20%;">Registration</th>
+                  <th >Date</th> 
+                  <th >Title</th>
+                  <th >Locations</th>
+                  <th >Venue</th>
+                  <th >Registration</th>
                 </tr>
               </thead>
               <tbody>
                 @foreach ($seminar as $seminar)
                     <tr>
-                        <th scope="row">{{ date('F Y', strtotime($seminar -> date)) }}</th>
+                        <th scope="row">{{ date('F Y', strtotime($seminar -> date)) }}</th> 
+                        <td>{{ $seminar -> title }}</td>
                         <td>{{ $seminar -> location }}</td>
                         <td>{{ $seminar -> venue  }}</td>
-                        <td><a href="#">Open</a></td>
+                        <td><a href="{{route('singleSeminar',$seminar -> id)}}"  >View</a></td>
                     </tr>
                 @endforeach
               </tbody>
             </table>
           </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <div class="col text-center pt-4">
             <a href="" class="table-btn">RESERVE MY SEAT</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
+   {{--
+    
     <!-- ======= seminar Blog  ======= -->
     <section id="seminarBlog">
       <div class="container">
@@ -166,6 +170,6 @@
     </section>
     <!-- ======= Seminar Blog  ======= -->
 
-
+    --}}
 
 @endsection

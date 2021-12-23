@@ -16,36 +16,25 @@
                     <div class="nk-sidebar-content">
                         <div class="nk-sidebar-menu" data-simplebar>
                             <ul class="nk-menu">
+
+
                             <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Services</span>
+                                        <span class="nk-menu-text">  Courses</span>
                                     </a>
                                     <ul class="nk-menu-sub">
                                         <li class="nk-menu-item">
-                                            <a href="{{route('service.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Service</span></a>
+                                            <a href="{{ route('courses.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Course</span></a>
                                         </li>
                                         <li class="nk-menu-item">
-                                            <a href="{{ route('service.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Service</span></a>
+                                            <a href="{{  route('courses.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Course</span></a>
                                         </li>
 
                                     </ul>
                                 </li>
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text"> Offices</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="{{ route('office.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Office</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="{{  route('office.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Offices</span></a>
-                                        </li>
 
-                                    </ul>
-                                </li>
+                            
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
@@ -171,21 +160,7 @@
 
                                     </ul>
                                 </li>
-                                <li class="nk-menu-item has-sub">
-                                    <a href="#" class="nk-menu-link nk-menu-toggle">
-                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                        <span class="nk-menu-text">  Courses</span>
-                                    </a>
-                                    <ul class="nk-menu-sub">
-                                        <li class="nk-menu-item">
-                                            <a href="{{ route('courses.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add New Course</span></a>
-                                        </li>
-                                        <li class="nk-menu-item">
-                                            <a href="{{  route('courses.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Course</span></a>
-                                        </li>
-
-                                    </ul>
-                                </li>
+                               
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
@@ -201,6 +176,40 @@
 
                                     </ul>
                                 </li>
+
+
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Services</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{route('service.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add Service</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('service.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Service</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li class="nk-menu-item has-sub">
+                                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                                        <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                                        <span class="nk-menu-text"> Offices</span>
+                                    </a>
+                                    <ul class="nk-menu-sub">
+                                        <li class="nk-menu-item">
+                                            <a href="{{ route('office.create') }}" class="nk-menu-link"><span class="nk-menu-text">Add Office</span></a>
+                                        </li>
+                                        <li class="nk-menu-item">
+                                            <a href="{{  route('office.index') }}" class="nk-menu-link"><span class="nk-menu-text">Manage Offices</span></a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                
 
                                 
                                 <li class="nk-menu-item has-sub">

@@ -39,25 +39,43 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Date<sup class="text-danger">*</sup></label>
-                                <input type="date" name="date" class="form-control" value="{{ old('date') }}">
+                                <input type="date" name="date" class="form-control" value="{{ old('date')?? today()->format('m/d/Y') }}">
                                 @if($errors->has('date'))
                                     <span class="text-danger ">{{ $errors->first('date') }}</span>
                                 @endif
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Price<sup class="text-danger">*</sup></label>
-                                <input type="number" min="1" name="price" placeholder="Enter Price"  class="form-control" value="{{ old('price') }}">
+                                <input type="number" min="1" name="price" placeholder="Enter Price"  class="form-control" value="{{ old('price')??0 }}">
                                 @if($errors->has('price'))
                                     <span class="text-danger ">{{ $errors->first('price') }}</span>
                                 @endif
                             </div>
-                            <div class="form-group">
-                                <label class="form-label">Status<sup class="text-danger">*</sup></label>
-                                <input type="radio" name="status" value="0"> Publish
-                                <input type="radio" name="status" value="1"> Un-Publish
-                                @if($errors->has('price'))
-                                    <span class="text-danger ">{{ $errors->first('price') }}</span>
+
+                            <div class="form-group ">
+                                <label class="form-label">Breadcrumb Image<sup class="text-danger">*</sup></label>
+                                <input type="file"  name="breadcrumb_image" class="form-control">
+                                @if($errors->has('breadcrumb_image'))
+                                    <span class="text-danger ">{{ $errors->first('breadcrumb_image') }}</span>
                                 @endif
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Description<sup class="text-danger">*</sup></label>
+                                <textarea name="description" class="summernote-basic"></textarea>  
+                                @if($errors->has('description'))
+                                    <span class="text-danger ">{{ $errors->first('description') }}</span>
+                                @endif
+                            </div>
+                            
+
+                          
+
+                            <div class="form-group">
+                                <label class="form-label">Status<sup class="text-danger mr-4">*</sup></label>
+                                <input type="radio" name="status" class="ml-4" value="0" checked> Publish
+                                <input type="radio" name="status" class="ml-4" value="1"> Un-Publish
+                                
                             </div>
                            
                             <div class="form-group">

@@ -10,7 +10,7 @@ class seminar extends Model
     use HasFactory;
     protected $table = 'seminars';
     protected $fillable = [
-     'title', 'location', 'venue', 'date', 'price','status'
+     'title', 'location', 'venue', 'date', 'price','status','description'
     ];
     public function perticaptes(){
         return $this->hasMany(buycourse::class,'course_id','id');
