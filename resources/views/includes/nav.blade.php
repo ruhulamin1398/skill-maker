@@ -1,3 +1,11 @@
+@php 
+$navTrainngs = App\Models\course::where('type','training')->orderBy('serial')->get()->take(6);
+$navServices = App\Models\course::where('type','service')->orderBy('serial')->get()->take(6);
+
+@endphp
+ 
+
+
 <nav class="nav-menu d-none d-lg-block">
     <ul>
         <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="{{ route('marketplace') }}">Company Profile</a>
@@ -24,7 +32,7 @@
    
                         @foreach($navServices as $navService)
 
-                        <a href="{{url('single-services',$navService->id)}}">{{$navService->course_title}}--</a> 
+                        <a href="{{url('single-services',$navService->id)}}">{{$navService->course_title}}</a> 
                         @endforeach
                         <a href="{{route('services')}}" class="font-weight-bold font-italic">More >> </a>
                     </div>
@@ -37,11 +45,11 @@
                     </a>
                     <div class="megha-item">
                     
-                    @foreach($navCourses as $navCourse)
+                    @foreach($navTrainngs as $navTrainng)
                     
-                   {{$navCourse}}
                   
-                        <a href="{{route('singleTrainings',$navCourse->id)}}">{{$navCourse->course_title}} --</a>
+                  
+                        <a href="{{route('singleTrainings',$navTrainng->id)}}">{{$navTrainng->course_title}}  </a>
 
                     @endforeach
 
