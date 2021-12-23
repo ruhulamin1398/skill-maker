@@ -63,20 +63,25 @@
                 <div class="col-md-6 col-sm-12 float-left" style="border-top: 1px solid blue">
                     <h3 class="text-center p-2">Course Videos <a href="{{route('chapters.index')}}?course_id={{$course->id}}"> <div class="btn btn-sm btn-outline-primary">Chapters</div></a></h3>
 
-                    @foreach ($videos as $video)
+                    @foreach ($course->chapters as $chapter)
                         <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="headingOne">
                                     <h5 class="mb-0">
-                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ $video->id }}" aria-expanded="true" aria-controls="collapseOne">
-                                        Chapter {{ $video->chapter }}
+                                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{ $chapter->id }}" aria-expanded="true" aria-controls="collapseOne">
+                                        Chapter {{  $chapter->title}}
                                     </button>
                                     </h5>
                                 </div>
                             
-                                <div id="collapse{{ $video->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div id="collapse{{ $chapter->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
-                                        <a href="{{ asset('course/video/'.$video->video_link) }}">{{ $video->video_link }}</a>
+
+                                    @foreach ($chapter->videos as $videos)
+                                       <div class="mb-2"> 
+                                       <a href="{{ asset('course/video/'.$videos->video_link) }}">{{ $videos->video_title }}</a>
+                                       </div>
+                                    @endforeach
                                     </div>
                                 </div>
                             </div>

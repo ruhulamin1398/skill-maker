@@ -16,10 +16,11 @@ class CreateCourseVideosTable extends Migration
         Schema::create('course_videos', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('chapter_id');
             $table->string('video_title');
             $table->string('video_link');
-            $table->string('chapter');
-            $table->string('position');
+            $table->string('chapter')->nullable();
+            $table->integer('position')->default(999);
             $table->timestamps();
         });
     }

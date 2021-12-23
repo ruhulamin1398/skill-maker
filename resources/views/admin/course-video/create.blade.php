@@ -37,7 +37,11 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-label">Chapter<sup class="text-danger">*</sup></label>
-                                <input type="text" name="chapter" class="form-control" placeholder="Enter Chapter" value="{{ old('chapter') }}">
+                                <select class="form-control" name="chapter_id"  value="{{$course->chapters->first()->id }}">
+                                @foreach ($course->chapters as $chapter)
+                                <option value="{{ $chapter->id }}">{{ $chapter->title }}</option>
+                                @endforeach
+                          </select>
                                 @if($errors->has('chapter'))
                                     <span class="text-danger ">{{ $errors->first('chapter') }}</span>
                                 @endif

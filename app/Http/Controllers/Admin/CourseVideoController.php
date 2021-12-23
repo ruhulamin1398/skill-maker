@@ -93,7 +93,8 @@ class CourseVideoController extends Controller
     public function edit($id)
     {
         $page_name = "Add New Course Video";
-        $course = course::find($id);
+        $course = course::find($id); 
+    
         return view('admin.course-video.create', compact('page_name', 'course'));
     }
 
@@ -114,7 +115,7 @@ class CourseVideoController extends Controller
         $this->validate($request,[
             'video_title' => 'required',
             'video_link' => 'required|mimes:mp4,3gp,mkv |max:20048',
-            'chapter'    => 'required',
+            'chapter_id'    => 'required',
             'position'   => 'required'
         ],[
             'video_title.required'=> 'Please Enter Video Title',
@@ -128,7 +129,7 @@ class CourseVideoController extends Controller
         $video = new courseVideo();
         $video->course_id    = $id;
         $video->video_title  = $request->video_title;
-        $video->chapter      = $request->chapter;
+        $video->chapter_id      = $request->chapter_id;
         $video->position     = $request->position;
 
         if ($request->hasFile('video_link')) {
