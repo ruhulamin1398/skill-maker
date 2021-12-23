@@ -98,6 +98,7 @@ class TrainerController extends Controller
         $page_name = "Trainer Details";
         $courses = course::all();
         $seminars = $trainer->seminars;
+         
           
         return view('admin.trainers.show', compact('trainer', 'page_name', 'courses','seminars'));
     }

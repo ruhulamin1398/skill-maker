@@ -20,7 +20,10 @@ class Trainer extends Model
 
     public function seminars(){
         return $this->hasMany(SeminarTrainer::class);
-    }
+    }    
+    
+   
+   
 
     // public function courseTrianers(){
     //     return $this->hasMany(courseTrainer::class);

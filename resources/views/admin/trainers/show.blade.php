@@ -39,16 +39,16 @@
                             <tr>
                                 <th> Assign Course List  </th>
                                 <td class="font-weight-bold">
-                                    @foreach ($courses as $course)
-                                        <li>{{ $course->course->course_title }}</li>
+                                    @foreach ($trainer->batches as $batch)
+                                        <li> <a href="{{route('courses.show',$batch->course->id)}}"> {{ $batch->course->course_title }}</a></li>
                                     @endforeach
                                 </td>
                             </tr>
                             <tr>
                                 <th> Assign Seminar List  </th>
                                 <td class="font-weight-bold">
-                                    @foreach ($seminars as $seminar)
-                                        <li>{{ $seminar->id }}</li>
+                                    @foreach ($trainer->seminars as $seminar)
+                                        <li><a href="{{route('seminar.show',$seminar->id)}}"> {{ $seminar->title }}</a></li>
                                     @endforeach
                                 </td>
                             </tr>

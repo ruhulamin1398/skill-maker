@@ -66,7 +66,7 @@
                                             <a href="{{ route('courses.edit', $course->id) }}" class="btn btn-info"><i class="fas fa-edit fa-1x"></i></a> |
                                             @csrf
                                             @method('DELETE')
-                                            <input type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-danger" value="Delete">
+                                            <button type="submit" onclick="return confirm('Are you sure to delete !!');" class="btn btn-danger"  > <i class="fas fa-trash"></i></button>
                                         </form>
                                     </td>
 
