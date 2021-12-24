@@ -19,7 +19,7 @@ class CourseControllernew extends Controller
     public function index()
     {
         $page_name = "All Course List";
-        $courses = course::orderBy('serial')->get(); 
+        $courses = course::orderBy('serial')->get();
         return view('admin.courses.index', compact('page_name', 'courses'));
     }
 
@@ -44,10 +44,10 @@ class CourseControllernew extends Controller
     {
         $this->validate($request, [
             'course_title'       => 'required',
-            'image'              => 'required | mimes:jpg,png,jpeg|max:7048', 
-            'breadcrumb_image'    => 'required | mimes:jpg,png,jpeg|max:7048', 
+            'image'              => 'required | mimes:jpg,png,jpeg|max:7048',
+            'breadcrumb_image'    => 'required | mimes:jpg,png,jpeg|max:7048',
             'price'              => 'required'
-        ],[
+        ], [
             'course_title.requires'       => 'Please Enter Course Title',
             'image.required'              => 'Please Select Image',
             'image.mimes'                 => 'Please Select Jpg,png,jpeg Type',
@@ -72,7 +72,7 @@ class CourseControllernew extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
-            $fileName = str_replace(' ', '_', $request->course_title).time() . 'image.' . $extension;
+            $fileName = str_replace(' ', '_', $request->course_title) . time() . 'image.' . $extension;
             $file->move('course/images/', $fileName);
             $course->image = $fileName;
         } else {
@@ -81,20 +81,19 @@ class CourseControllernew extends Controller
         if ($request->hasFile('breadcrumb_image')) {
             $file = $request->file('breadcrumb_image');
             $extension = $file->getClientOriginalExtension();
-            $fileName = str_replace(' ', '_', $request->course_title).time() . 'breadcrumb_image.' . $extension;
+            $fileName = str_replace(' ', '_', $request->course_title) . time() . 'breadcrumb_image.' . $extension;
             $file->move('course/images/', $fileName);
             $course->breadcrumb_image = $fileName;
         } else {
             return "Please select image";
         }
 
-         
+
 
         $course->save();
         // $cbatch = Batch::create(['model'=>course::class,'model_id'=>$course->id]);
 
-        return redirect()->route('courses.index')->with('success','New Course Added Successful');
-
+        return redirect()->route('courses.index')->with('success', 'New Course Added Successful');
     }
 
     /**
@@ -108,12 +107,11 @@ class CourseControllernew extends Controller
 
 
         $page_name = "Course Details";
-        $trainer = $course->trainers;
+        $trainers = $course->trainers;
         $videos = $course->courseVideo;
         // $chapterVideo = $videos->groupby('chapter');
-
         // return $chapterVideo;
-        return view('admin.courses.show', compact('page_name','course', 'trainer', 'videos'));
+        return view('admin.courses.show', compact('page_name', 'course', 'trainers', 'videos'));
     }
 
     /**
@@ -126,7 +124,7 @@ class CourseControllernew extends Controller
     {
         $page_name = "Update Course Data";
 
-        return view('admin.courses.edit', compact('page_name','course'));
+        return view('admin.courses.edit', compact('page_name', 'course'));
     }
 
     /**
@@ -140,9 +138,9 @@ class CourseControllernew extends Controller
     {
         $this->validate($request, [
             'course_title'       => 'required',
-            'image'              => 'mimes:jpg,png,jpeg|max:7048',  
+            'image'              => 'mimes:jpg,png,jpeg|max:7048',
             'price'              => 'required'
-        ],[
+        ], [
             'course_title.requires'       => 'Please Enter Course Title',
             'image.mimes'                 => 'Please Select Jpg,png,jpeg Type',
             'image.max'                   => 'Please Select Image Less Then 8 Mb',
@@ -156,18 +154,18 @@ class CourseControllernew extends Controller
         $course->course_title   = $request->course_title;
         $course->description    = $request->description;
         $course->price          = $request->price;
-        
+
         $course->serial    = $request->serial;
 
 
-        if($request->image == ''){
+        if ($request->image == '') {
             // $office->update($request->all());
             // $office->save();
-        }else{
+        } else {
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
-                $fileName = str_replace(' ', '_', $request->course_title).time() . 'image.' . $extension;
+                $fileName = str_replace(' ', '_', $request->course_title) . time() . 'image.' . $extension;
                 $file->move('course/images/', $fileName);
                 $course->image = $fileName;
             } else {
@@ -175,14 +173,14 @@ class CourseControllernew extends Controller
             }
         }
 
-        if($request->breadcrumb_image == ''){
+        if ($request->breadcrumb_image == '') {
             // $office->update($request->all());
             // $office->save();
-        }else{
+        } else {
             if ($request->hasFile('breadcrumb_image')) {
                 $file = $request->file('breadcrumb_image');
                 $extension = $file->getClientOriginalExtension();
-                $fileName = str_replace(' ', '_', $request->course_title).time() . 'breadcrumb_image.' . $extension;
+                $fileName = str_replace(' ', '_', $request->course_title) . time() . 'breadcrumb_image.' . $extension;
                 $file->move('course/images/', $fileName);
                 $course->breadcrumb_image = $fileName;
             } else {
@@ -192,10 +190,9 @@ class CourseControllernew extends Controller
 
 
 
-        
-        $course->save();
-        return redirect()->route('courses.index')->with('success','Course Data Update Successfull');
 
+        $course->save();
+        return redirect()->route('courses.index')->with('success', 'Course Data Update Successfull');
     }
 
     /**
@@ -207,7 +204,6 @@ class CourseControllernew extends Controller
     public function destroy(course $course)
     {
         $course->delete();
-        return redirect()->route('courses.index')->with('success','Course Data Delete Successfull');
-
+        return redirect()->route('courses.index')->with('success', 'Course Data Delete Successfull');
     }
 }

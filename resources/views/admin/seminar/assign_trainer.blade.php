@@ -41,13 +41,13 @@
                         <div class="col-12 col-md-6">
 
 
-                            <div class="font-weight-bold"> Assingned Trainers</div>
+                            <div class="font-weight-bold text-center"> Assingned Trainers</div>
 
 
                            
                                 <ul class="list-group">
                                     @foreach ($seminar->trainers as $trainer)
-                                    <li class="list-group-item"> <a href="{{route('trainers.show',$trainer->trainer->id)}}"> {{$trainer->trainer->name}}</a>   <a href="{{ route('seminar-trainers.destroy', $trainer->id) }}"  class="close btn btn-sm  pl-3 pr-3 " >x</a>  </li>
+                                    <li > <a href="{{route('trainers.show',$trainer->trainer->id)}}"> {{$trainer->trainer->name}}</a>   <a href="{{ route('seminar-trainers.destroy', $trainer->id) }}"  class="close btn btn-sm  pl-3 pr-3 " >x</a>  </li>
                                     
                                     @endforeach
                                 </ul>

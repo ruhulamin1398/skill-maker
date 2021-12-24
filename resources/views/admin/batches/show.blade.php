@@ -47,8 +47,8 @@
                     <div class="col-xs-6">
                         <select class="form-control" name="select1" id="select1">
                           <option>Select one</option>
-                          @foreach ($batches as $batch)
-                            <option value="{{ $batch->id }}">{{ $batch->batch_name }}</option>
+                          @foreach ($batches as $delete)
+                            <option value="{{ $delete->id }}">{{ $delete->batch_name }}</option>
                           @endforeach
                           {{-- <option value="1">Fruit</option>
                           <option value="2">Animal</option>
@@ -62,21 +62,13 @@
                                <option value="{{ $trainers2->id }}">{{ $trainers2->trainer->name }}</option>
                             @endforeach
 
-                          {{-- <option value="1">Banana</option>
-                          <option value="1">Apple</option>
-                          <option value="1">Orange</option>
-                          <option value="2">Wolf</option>
-                          <option value="2">Fox</option>
-                          <option value="2">Bear</option>
-                          <option value="3">Eagle</option>
-                          <option value="3">Hawk</option>
-                          <option value="4">BWM<option> --}}
+                      
                       </select>
                       </div>
 
                 </div>
                 <div class="col-md-6 col-sm-12 float-left" style="border-top: 1px solid blue">
-                    <h6 class="p-1"> Assigned Trainer List   <a class="btn btn-info float-right" href="{{ route('batch-trainers.edit', $batch->id) }}">Add New</a></h6>
+                    <h6 class="p-1"> Assigned Trainer List   <a class="btn btn-info float-right" href="{{ route('batch-trainers.edit', $batch->id ) }}">Manage Batch Trainers </a></h6>
                    <hr/>
                     <table class="datatable-init table mt-2">
                         <thead>
@@ -96,11 +88,9 @@
                                     <td>{{ $trainers->trainer->phone }}</td>
                                     <td>{{ $trainers->trainer->email }}</td>
                                     <td>
-                                        <form action="{{ route('batch-trainers.destroy', $trainers->id) }}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to Remove !!');" value="X">
-                                        </form>
+                                        
+                                            <a href="{{route('trainers.show',$trainers->trainer->id)}}" class="btn btn-success text-light fas fa-eye"    >  </a>
+                                       
                                     </td>
                                 </tr>
                             @endforeach

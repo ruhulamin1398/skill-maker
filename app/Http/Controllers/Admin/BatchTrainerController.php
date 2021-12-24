@@ -49,7 +49,8 @@ class BatchTrainerController extends Controller
      */
     public function show(batchTrainer $batchTrainer)
     {
-        //
+        $batchTrainer->delete();
+        return  back();
     }
 
     /**
