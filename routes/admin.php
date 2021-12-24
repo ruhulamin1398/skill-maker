@@ -18,21 +18,35 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware' => ['auth','role_or_permission:admin|test']], function () {
     Route::get('/', function () {
-        // return "sadfasdf";
-        $user= User::find(5);
+        // return "hahahah";
+        
+        // $user= Auth::user();
 
 
 
 
-        //////////////// adding role if not exist
+        // //////////////// adding role if not exist
 
-        // if( $user->hasRole('trainer')){
-        //     return " Error He is already a trainer";
+        // if( $user->hasRole('admin')){
+        //     return redirect(route('admin.index'));
         // }
-        // else{
+        // else if( $user->hasRole('branch_admin')){
+        //     return redirect(route('branchAdmin.index'));
+        // }
 
-        // $user ->assignRole('trainer');
-        // return $user->getRoleNames();
+        // else if( $user->hasRole('trainer')){
+        //     return redirect(route('trainer.index'));
+        // }
+        // else if( $user->hasRole('student')){
+        //     return "he is already a student";
+        //     return redirect(route('trainer.index'));
+        // }
+        // else {
+        //     $user ->assignRole('student');
+            
+        //     return "add as student successfull";
+        //     return redirect(route('trainer.index'));
+            
         // }
 
 
@@ -79,6 +93,9 @@ Route::resource('seminar-trainers', SeminarTrainerController::class);
 Route::resource('batches', BatchController::class);
 
 Route::get('/user', function(){
+
+
+    // return Auth::user();
     return view('user.index');
 });
 Route::get('/trainer', function(){

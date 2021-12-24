@@ -1,4 +1,4 @@
-0<!-- sidebar @s -->
+<!-- sidebar @s -->
 <div class="nk-sidebar nk-sidebar-fixed is-dark " data-content="sidebarMenu">
                 <div class="nk-sidebar-element nk-sidebar-head">
                     <div class="nk-menu-trigger">

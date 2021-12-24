@@ -10,6 +10,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SuccessStoriesController;
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\TrainingController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,50 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// redirection route after login 
+
+Route::get('redirection', function () {
+  
+    $user= Auth::user();
+    //////////////// adding role if not exist
+
+    if( $user->hasRole('admin')){
+        return redirect(route('admin.index'));
+    }
+    else if( $user->hasRole('branch_admin')){
+        return redirect(route('branchAdmin.index'));
+    }
+
+    else if( $user->hasRole('trainer')){
+        return redirect(route('trainer.index'));
+    }
+    else if( $user->hasRole('student')){
+        // return "he is already a student";
+        return redirect(route('student.index'));
+    }
+    else {
+        $user ->assignRole('student');
+        
+        // return "add as student successfull";
+        return redirect(route('student.index'));
+        
+    }
+})->middleware('auth')->name('redirection');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Serviec Route
 Route::get('services', [ServiceController::class, 'index']) -> name('services');
 Route::get('single-services/{id}', [ServiceController::class, 'singleService']) -> name('singleService');
