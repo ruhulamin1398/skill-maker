@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\course;
 use App\Models\Trainer;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class TrainerController extends Controller
 {
@@ -19,7 +21,7 @@ class TrainerController extends Controller
         $page_name = "All Trainer List";
         $trainer = Trainer::all();
 
-        return view('admin.trainers.index', compact('page_name','trainer'));
+        return view('admin.trainers.index', compact('page_name', 'trainer'));
     }
 
     /**
@@ -68,7 +70,7 @@ class TrainerController extends Controller
         $trainer->last_education = $request->last_education;
         $trainer->current_work   = $request->current_work;
         $trainer->address        = $request->address;
-        
+
         $trainer->short_desctiption = $request->short_desctiption;
         $trainer->long_description  = $request->long_description;
 
@@ -80,11 +82,33 @@ class TrainerController extends Controller
             $trainer->image = $fileName;
         } else {
             return "select Image";
-             
         }
 
         $trainer->save();
-        return redirect()->route('trainers.index')->with('success','New Trainer Added Successful');
+
+
+        $user =  User::where('email', $trainer->email)->first();
+        if (is_null($user)) {
+            $user = new User;
+            $user->email = $request->email;
+            $user->name = $request->name;
+            $user->password = Hash::make(1234);
+            $user->save();
+        }
+        // return $user->getRoleNames();
+        $user =  User::where('email', $trainer->email)->first();
+        $user->removeRole('admin');
+        $user->removeRole('branch_admin');
+        $user->removeRole('student');
+        $user->removeRole('trainer');
+
+        $user->assignRole('trainer');
+
+
+        return $user->getRoleNames();
+
+
+        return redirect()->route('trainers.index')->with('success', 'New Trainer Added Successful');
     }
 
     /**
@@ -98,9 +122,9 @@ class TrainerController extends Controller
         $page_name = "Trainer Details";
         $courses = course::all();
         $seminars = $trainer->seminars;
-         
-          
-        return view('admin.trainers.show', compact('trainer', 'page_name', 'courses','seminars'));
+
+
+        return view('admin.trainers.show', compact('trainer', 'page_name', 'courses', 'seminars'));
     }
 
     /**
@@ -139,25 +163,41 @@ class TrainerController extends Controller
         $trainer->last_education = $request->last_education;
         $trainer->current_work   = $request->current_work;
         $trainer->address        = $request->address;
-        
+
         $trainer->short_desctiption = $request->short_desctiption;
         $trainer->long_description  = $request->long_description;
 
-        if($request->image == ''){
-
-        }else{
+        if ($request->image == '') {
+        } else {
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
                 $fileName = time() . '.' . $extension;
                 $file->move('trainer/images/', $fileName);
                 $trainer->image = $fileName;
-            }  
+            }
             return back();
-
         }
         $trainer->save();
-        return redirect()->route('trainers.index')->with('success',' Trainer Data Update Successful');
+
+        $user =  User::where('email', $trainer->email)->first();
+        if (is_null($user)) {
+            $user = new User;
+            $user->email = $request->email;
+            $user->name = $request->name;
+            $user->password = Hash::make(1234);
+            $user->save();
+        }
+        // return $user->getRoleNames();
+        $user->removeRole('admin');
+        $user->removeRole('branch_admin');
+        $user->removeRole('student');
+        $user->assignRole('trainer');
+
+
+
+
+        return redirect()->route('trainers.index')->with('success', ' Trainer Data Update Successful');
     }
 
     /**
@@ -169,6 +209,6 @@ class TrainerController extends Controller
     public function destroy(Trainer $trainer)
     {
         $trainer->delete();
-        return redirect()->route('trainers.index')->with('success',' Trainer Data Delete Successful');
+        return redirect()->route('trainers.index')->with('success', ' Trainer Data Delete Successful');
     }
 }
