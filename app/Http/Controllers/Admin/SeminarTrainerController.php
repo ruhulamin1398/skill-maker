@@ -48,7 +48,8 @@ class SeminarTrainerController extends Controller
      */
     public function show(SeminarTrainer $seminarTrainer)
     {
-        //
+          $seminarTrainer->delete() ;
+          return back();
     }
 
     /**
@@ -59,10 +60,10 @@ class SeminarTrainerController extends Controller
      */
     public function edit($id)
     {
-        $page_name = 'Assign Trainer';
-        $seminars = seminar::find($id);
+        $page_name = 'Seminar | Assign Trainer';
+        $seminar = seminar::find($id);
         $trainers = Trainer::all();
-        return view('admin.seminar.assign_trainer', compact('page_name','seminars', 'trainers'));
+        return view('admin.seminar.assign_trainer', compact('page_name','seminar', 'trainers'));
     }
 
     /**
@@ -75,10 +76,15 @@ class SeminarTrainerController extends Controller
     public function update(Request $request, $id)
     {
         foreach ($request->trainer_id as $i => $as) {
-            $trainer = new SeminarTrainer();
-            $trainer->seminer_id = $id;
-            $trainer->trainer_id  = $request->trainer_id[$i];
-            $trainer->save();
+            $isExists= SeminarTrainer::where('seminer_id', $id)->where('trainer_id', $request->trainer_id[$i])->first();
+            if(is_null( $isExists)){
+                $trainer = new SeminarTrainer();
+                $trainer->seminer_id = $id;
+                $trainer->trainer_id  = $request->trainer_id[$i];
+                $trainer->save();
+            }
+
+            
         }
         return back()->with('success','New Trainer Added Successful');
     }
@@ -89,8 +95,10 @@ class SeminarTrainerController extends Controller
      * @param  \App\Models\SeminarTrainer  $seminarTrainer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SeminarTrainer $seminarTrainer)
+    public function destroy($id)
     {
-        //
+        $seminarTrainer = SeminarTrainer::find($id);
+        $seminarTrainer->delete() ;
+        return back();
     }
 }
