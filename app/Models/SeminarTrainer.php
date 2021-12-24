@@ -12,6 +12,9 @@ class SeminarTrainer extends Model
 
     public function trainer(){
         return $this->belongsTo(Trainer::class);
+    }  
+    public function seminar(){
+        return $this->belongsTo(seminar::class,'seminer_id');
     }
 
 }

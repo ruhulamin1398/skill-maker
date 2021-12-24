@@ -23,8 +23,8 @@
                                 <th>Date</th>
                                 <th>Price</th>
                                 <th>Status</th>
-                                <th>Action</th>
                                 <th>Trainer</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -43,6 +43,11 @@
                                         @endif
                                     </td>
                                     <td>
+                                        <a href="{{ route('seminar-trainers.edit', $seminars->id) }}" class="btn btn-primary">
+                                            {{ $seminars->trainers->count()}}
+                                        </a>
+                                    </td>
+                                    <td>
                                         <form action="{{ route('seminar.destroy', $seminars->id) }}" method="post">
                                             <a href="{{ route('seminar.edit', $seminars->id) }}" class="btn btn-primary">Edit</a> |
                                             @csrf
@@ -50,11 +55,7 @@
                                             <input type="submit" class="btn btn-danger" onclick="return confirm('Are you sure to delete !!');" value="Delete">
                                         </form>
                                     </td>
-                                    <td>
-                                        <a href="{{ route('seminar-trainers.edit', $seminars->id) }}" class="btn btn-primary">
-                                            {{ $seminars->trainers->count()}}
-                                        </a>
-                                    </td>
+                                  
                                 </tr>
                             @endforeach
                             </tbody>

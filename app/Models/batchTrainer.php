@@ -18,8 +18,8 @@ class batchTrainer extends Model
     }
 
 
-//      public function batches(){
-//         return $this->hasMany(Batch::class, 'model_id','id');
-//     }
+     public function batch(){
+        return $this->belongsTo(Batch::class,'id', 'model_id');
+    }
 }
 

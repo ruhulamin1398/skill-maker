@@ -11,14 +11,14 @@ class Batch extends Model
     protected $guarded = [];
 
     public function course(){
-        return $this->belongsTo(course::class);
+        return $this->belongsTo(course::class, 'model_id','id');
     }
     public function trainers(){
         return $this->hasMany(batchTrainer::class);
     }
 
-    public function batches(){
-        return $this->hasMany(Batch::class, 'model_id','id');
+    public function batch(){
+        return $this->belongsTo(Batch::class, 'model_id','id');
     }
 
 
