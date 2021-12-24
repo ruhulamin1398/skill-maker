@@ -61,10 +61,10 @@
                         @foreach ($trainer->seminars as $seminar)
                         <tr>
                             <td>
-                                <a href="{{route('seminar.show',$seminar->seminar->id)}}"> {{ $seminar->seminar->title }}</a>
+                                <a href="{{route('seminar.edit',$seminar->seminar->id)}}"> {{ $seminar->seminar->title }}</a>
                             </td>
                             <td>
-                                <a href="{{route('seminar.show',$seminar->seminar->id)}}"> {{ $seminar->seminar->date }}</a>
+                                <a href="{{route('seminar.edit',$seminar->seminar->id)}}"> {{ $seminar->seminar->date }}</a>
                             </td>
                         </tr>
                         @endforeach
