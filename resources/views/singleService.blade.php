@@ -60,7 +60,7 @@
             <div class="text-center">{{ $service -> course_title }}</div>
             <hr>
             <div class="text-center mb-3">Price : ${{ $service -> price }}</div>
-            <a href="#" class="appointment-btn scrollto  ">Start Now</a>
+            <a href="{{route('users.enrolls.index')}}?service_id={{ $service -> id }}" class="appointment-btn scrollto  ">Start Now</a>
           </div>
         </div>
 

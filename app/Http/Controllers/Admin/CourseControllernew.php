@@ -155,6 +155,8 @@ class CourseControllernew extends Controller
         $course->description    = $request->description;
         $course->price          = $request->price;
 
+        $course->type          = $request->type;
+
         $course->serial    = $request->serial;
 
 
