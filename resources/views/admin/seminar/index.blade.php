@@ -23,7 +23,8 @@
                                 <th>Date</th>
                                 <th>Price</th>
                                 <th>Status</th>
-                                <th>Trainer</th>
+                                <th>Trainers</th>
+                                <th>Participators</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -45,6 +46,11 @@
                                     <td>
                                         <a href="{{ route('seminar-trainers.edit', $seminars->id) }}" class="btn btn-primary">
                                             {{ $seminars->trainers->count()}}
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('seminar-participators.edit', $seminars->id) }}" class="btn btn-primary">
+                                        {{ $seminars->participators->count()}}
                                         </a>
                                     </td>
                                     <td>

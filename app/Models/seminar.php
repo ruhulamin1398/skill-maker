@@ -12,10 +12,10 @@ class seminar extends Model
     protected $fillable = [
      'title', 'location', 'venue', 'date', 'price','status','description'
     ];
-    public function perticaptes(){
-        return $this->hasMany(buycourse::class,'course_id','id');
+    public function participators(){
+        return $this->hasMany(seminarParticipators::class,'seminar_id');
     }
-
+    
     public function trainers(){
         return $this->hasMany(SeminarTrainer::class,'seminer_id','id');
     }

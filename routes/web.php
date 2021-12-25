@@ -10,6 +10,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SuccessStoriesController;
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\TrainingController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -43,18 +44,28 @@ Route::get('redirection', function () {
     }
     else if( $user->hasRole('student')){
         // return "he is already a student";
-        return redirect(route('student.index'));
+        return redirect(route('users.index'));
     }
     else {
         $user ->assignRole('student');
         
         // return "add as student successfull";
-        return redirect(route('student.index'));
+        return redirect(route('users.index'));
         
     }
 })->middleware('auth')->name('redirection');
 
 
+
+
+
+
+
+Route::group(['namespace' => 'students', 'prefix' => 'students','middleware' => ['auth','role_or_permission:student|test'],'as'=>'users.'], function() {
+    Route::get('/', function () {
+        return view('user.index');
+    })->name('index');
+});
 
 
 

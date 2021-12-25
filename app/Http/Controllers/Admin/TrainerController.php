@@ -105,7 +105,6 @@ class TrainerController extends Controller
         $user->assignRole('trainer');
 
 
-        return $user->getRoleNames();
 
 
         return redirect()->route('trainers.index')->with('success', 'New Trainer Added Successful');
@@ -176,7 +175,10 @@ class TrainerController extends Controller
                 $file->move('trainer/images/', $fileName);
                 $trainer->image = $fileName;
             }
-            return back();
+            else{
+
+                return back();
+            }
         }
         $trainer->save();
 

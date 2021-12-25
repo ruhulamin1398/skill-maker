@@ -79,6 +79,9 @@ Route::resource('office', OfficeController::class);
 Route::resource('success_story', SuccessStoryController::class);
 Route::resource('our-teams', OurTeamController::class);
 Route::resource('seminar', SeminarController::class);
+
+Route::resource('seminar-participators', SeminarParticipatorsController::class);
+Route::resource('seminar-trainers', SeminarTrainerController::class);
 Route::resource('faq', FaqController::class);
 Route::resource('perticipators', PerticipatorController::class);
 Route::resource('trainers', TrainerController::class);
@@ -89,7 +92,6 @@ Route::resource('chapters', ChapterController::class);
 Route::resource('batch-trainers', BatchTrainerController::class);
 Route::resource('coursevideos', CourseVideoController::class);
 Route::resource('freelancers', FreelancerController::class);
-Route::resource('seminar-trainers', SeminarTrainerController::class);
 Route::resource('batches', BatchController::class);
 
 Route::get('/user', function(){
