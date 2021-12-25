@@ -15,12 +15,12 @@ class HomeController extends Controller
  
 
         // return urlencode("dfasf sadfasdfasdf");
-        $service = course::where('type','service') -> take(6);
-        $trainings = course::where('type','trainings') -> take(6);
-        $seminar = seminar::all() -> take(3);
+        $services =  course::where('type','service')->orderBy('serial')->get() -> take(6);
+        $trainings =  course::where('type','service')->orderBy('serial')->get() -> take(6);
+        $seminars = seminar::all() -> take(3);
         return view('index', [
-            'service' => $service,
-            'seminar' => $seminar,
+            'services' => $services,
+            'seminars' => $seminars,
             'trainings' => $trainings,
         ]);
     }

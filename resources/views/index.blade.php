@@ -96,23 +96,60 @@
   </div>
 </section><!-- End Why Us Section -->
 
-<!-- ======= Values Section ======= -->
+
+
+<section id="services12" class="services">
+  <div class="container">
+
+  <header class="section-header2">
+      <!-- <h2>Our Values</h2> -->
+      <p class="section--header">Skillmaker Trainings</p>
+      </header>
+      <p class="text-dark text-center " style="font-size: 120%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!</p>
+
+    <div class="row">
+
+      @foreach ($trainings as $training)
+        <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+                <!-- <div class="icon"><i class="icofont-heart-beat"></i></div> -->
+                <h4><a href="">{{ $training -> course_title }}</a></h4>
+                <p>
+                    @php
+                        echo (implode(' ', array_slice(explode(' ', strip_tags($training -> description)), 0, 13))."\n");
+                    @endphp
+                </p>
+                <button type="button" class="btn btn-primary "><a class="text-light" href="{{route('singleTrainings',$training ->id)}}">Join</a></button>
+            </div>
+        </div>
+      @endforeach
+
+    </div>
+
+  </div>
+</section>
+
+ 
+
+
+<!-- ======= services Section ======= -->
 <section id="values" class="values2">
 
   <div class="container" data-aos="fade-up">
 
     <header class="section-header2">
-      <!-- <h2>Our Values</h2> -->
-      <p class="section--header">HERE IS WHAT WE OFFER</p>
-    </header>
+      <!-- <h2>Skillmaker Services</h2> -->
+      <p class="section--header">Skillmaker Services</p>
+  </header>
+  <p class="text-dark text-center " style="font-size: 120%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!</p>
 
     <div class="row">
 
-      @foreach ($service as $service)
+      @foreach ($services as $service)
         <div class="col-lg-4 mb-3">
             <div class="box" data-aos="fade-up" data-aos-delay="200" style="background: #258cf5;">
-            <img src="{{ asset('service/images/'.$service -> service_image) }}" class="img-fluid" alt="">
-            <h3>{{ $service -> title }}</h3>
+            <img src="{{ asset('course/images/'.$service -> image) }}" class="img-fluid" alt="">
+            <h3>{{ $service ->course_title }}</h3>
             <p>
                 @php
                  echo (implode(' ', array_slice(explode(' ', strip_tags($service->description)), 0, 13))."\n");
@@ -130,7 +167,10 @@
 
   </div>
 
-</section><!-- End Values Section -->
+</section><!-- End services Section -->
+
+
+
 
 
 
@@ -256,7 +296,7 @@
         <h3>UPCOMING SEMINAR SCHEDULE</h3>
         <p>All seminars will be scheduled as per government regulations. Keep visiting the site for the latest updates.</p>
 
-        @foreach ($seminar as $seminar)
+        @foreach ($seminars as $seminar)
             <div class="icon-box">
                 <div class="icon"><i class="bx bx-fingerprint"></i></div>
                 <h4 class="title"><a href="">{{ $seminar -> location }}</a></h4>

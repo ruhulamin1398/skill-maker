@@ -1,8 +1,4 @@
-@php 
-$navCourses = App\Models\course::where('type','training')->orderBy('serial')->take(6);
-$navServices = App\Models\course::where('type','service')->orderBy('serial')->take(6);
-echo $navServices->first();
-@endphp
+
 
 <!DOCTYPE html>
 <html lang="en">
