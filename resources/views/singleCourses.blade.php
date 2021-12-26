@@ -60,7 +60,20 @@
             <div class="text-center">{{ $training -> course_title }}</div>
             <hr>
             <div class="text-center mb-3">Price : ${{ $training -> price }}</div>
-            <a href="#" class="appointment-btn scrollto  ">Start Now</a>
+
+
+            <form action="{{route('users.enrolls.store')}}" method="post">
+              @csrf
+              <input type="text" name="course_id" id="course_id" value="{{$training->id}}" hidden>
+              <input type="text" name="seminar_id" id="seminar_id" value="0" hidden>
+              <input type="text" name="price" id="price" value="{{ $training -> price }}" hidden>
+
+              <input type="text" name="payment_method" id="payment_method" value="CASH" hidden>
+
+              <input type="text" name="payment_Comment" id="payment_Comment" value="Payment via cash" hidden>
+
+            <button type="submit"  class=" btn appointment-btn scrollto  ">Start Now</button>
+            </form>
           </div>
         </div>
 

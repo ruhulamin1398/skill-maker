@@ -6,6 +6,7 @@ use App\Models\enroll;
 use App\Http\Requests\StoreenrollRequest;
 use App\Http\Requests\UpdateenrollRequest;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class EnrollController extends Controller
 {
@@ -16,18 +17,7 @@ class EnrollController extends Controller
      */
     public function index(Request $request)
     {
-
-        $card = array();
-        if($request->service_id){
-            // return $request->service_id;
-        }
-        else{
-           return  abort(404);
-        }
-
-
-        return redirect(route('login'));
-        return view('enroll',compact('card'));
+        ///
     }
 
     /**
@@ -43,12 +33,29 @@ class EnrollController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreenrollRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreenrollRequest $request)
+    public function store(Request $request)
     {
-        //
+        //    return $request;
+        $card = array();
+
+        $enroll = new enroll;
+        $enroll->perticipator_id = Auth::user()->id;
+        $enroll->course_id = $request->course_id;
+        $enroll->seminar_id = $request->seminar_id;
+        $enroll->user_id = Auth::user()->id;
+        $enroll->price = $request->price;
+        $enroll->payment_method = $request->payment_method;
+        $enroll->payment_Comment = $request->payment_Comment;
+        $enroll->is_due = 0;
+
+        $enroll->save();
+        return $enroll;
+
+        return redirect(route('redirect'));
+        // return view('enroll', compact('card'));
     }
 
     /**

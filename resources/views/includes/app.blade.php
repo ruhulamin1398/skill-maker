@@ -128,7 +128,7 @@
   "brandSetting":{
       "brandName":"Skillmaker",
       "brandSubTitle":"Typically replies within a Hours",
-      "brandImg":"https://demos.abasas.tech/website/other/skillmaker/public/images/skillmaker.png",
+      "brandImg":"",
       "welcomeText":"Hi there!\nHow can I help you?",
       "messageText":"Hello, I have a question about ",
       "backgroundColor":"#0a5f54",
