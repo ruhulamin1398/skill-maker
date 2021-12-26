@@ -16,8 +16,18 @@ class EnrollController extends Controller
      */
     public function index(Request $request)
     {
-        if()
-        return $request;
+
+        $card = array();
+        if($request->service_id){
+            // return $request->service_id;
+        }
+        else{
+           return  abort(404);
+        }
+
+
+        return redirect(route('login'));
+        return view('enroll',compact('card'));
     }
 
     /**

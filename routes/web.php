@@ -56,7 +56,7 @@ Route::get('redirection', function () {
 
 
 
-Route::group(['prefix' => 'students', 'middleware' => ['auth', 'role_or_permission:student|test'], 'as' => 'users.'], function () {
+Route::group(['prefix' => 'students', 'middleware' => ['auth'], 'as' => 'users.'], function () {
     Route::get('/', function () {
         return view('user.index');
     })->name('index');
