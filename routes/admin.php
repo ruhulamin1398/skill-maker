@@ -106,7 +106,6 @@ Route::get('/trainer', function(){
 
 // Route::resource('courses', CourseController::class);
 Route::resource('training', TrainingController::class);
-Route::resource('seminars', UserSeminarController::class);
 Route::resource('trainer_seminar', TrainerSeminarController::class);
 Route::resource('trainer_course', TrainerCourseController::class);
 

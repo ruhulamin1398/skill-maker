@@ -19,7 +19,7 @@ class UserSeminarController extends Controller
      */
     public function index()
     {
-        $page_name = 'My Assigned List';
+        $page_name = 'My Seminars List';
         $seminars = Auth::user()->seminars;
         // $course->perticipates->first()->course;
         // $trainer = seminar::where('id', '=', 'chat.model_id');

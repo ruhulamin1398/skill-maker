@@ -19,11 +19,11 @@
                             <li class="nk-menu-item has-sub">
                                 <a href="#" class="nk-menu-link nk-menu-toggle">
                                     <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                    <span class="nk-menu-text"> Courses</span>
+                                    <span class="nk-menu-text"> Services</span>
                                 </a>
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
-                                        <a href="{{ route('courses.index') }}" class="nk-menu-link"><span class="nk-menu-text"> My Courses List</span></a>
+                                        <a href="{{ route('users.services') }}" class="nk-menu-link"><span class="nk-menu-text"> My Services List</span></a>
                                     </li>
                                     
                                 </ul>
@@ -31,11 +31,11 @@
                             <li class="nk-menu-item has-sub">
                                 <a href="#" class="nk-menu-link nk-menu-toggle">
                                     <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                    <span class="nk-menu-text"> Training</span>
+                                    <span class="nk-menu-text"> Trainings</span>
                                 </a>
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
-                                        <a href="{{ route('training.index') }}" class="nk-menu-link"><span class="nk-menu-text"> My Training List</span></a>
+                                        <a href="{{ route('users.trainings') }}" class="nk-menu-link"><span class="nk-menu-text"> My Training List</span></a>
                                     </li>
                                     <li class="nk-menu-item">
                                         {{-- <a href="{{ route('training.create') }}" class="nk-menu-link"><span class="nk-menu-text">Join Training</span></a> --}}
@@ -45,14 +45,14 @@
                             <li class="nk-menu-item has-sub">
                                 <a href="#" class="nk-menu-link nk-menu-toggle">
                                     <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
-                                    <span class="nk-menu-text"> Seminar</span>
+                                    <span class="nk-menu-text"> Seminars</span>
                                 </a>
                                 <ul class="nk-menu-sub">
                                     <li class="nk-menu-item">
-                                        <a href="{{ route('seminars.index') }}" class="nk-menu-link"><span class="nk-menu-text"> My Seminar List</span></a>
+                                        <a href="{{ route('users.seminars.index') }}" class="nk-menu-link"><span class="nk-menu-text"> My Seminar List</span></a>
                                     </li>
                                     <li class="nk-menu-item">
-                                        {{-- <a href="{{ route('seminars.create') }}" class="nk-menu-link"><span class="nk-menu-text">Join Seminar</span></a> --}}
+                                        {{-- <a href="{{ route('users.seminars.create') }}" class="nk-menu-link"><span class="nk-menu-text">Join Seminar</span></a> --}}
                                     </li>
                                 </ul>
                             </li>

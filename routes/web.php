@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\UserSeminarController;
 use App\Http\Controllers\EnrollController;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\HomeController;
@@ -10,7 +11,8 @@ use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SuccessStoriesController;
 use App\Http\Controllers\SupportController;
-use App\Http\Controllers\TrainingController; 
+use App\Http\Controllers\TrainingController;
+use App\Http\Controllers\UserCourseController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -56,7 +58,7 @@ Route::get('redirection', function () {
 
 
 
-Route::group(['prefix' => 'students', 'middleware' => ['auth'], 'as' => 'users.'], function () {
+Route::group(['prefix' => 'user', 'middleware' => ['auth'], 'as' => 'users.'], function () {
     Route::get('/', function () {
         return view('user.index');
     })->name('index');
@@ -64,6 +66,10 @@ Route::group(['prefix' => 'students', 'middleware' => ['auth'], 'as' => 'users.'
 
 
     Route::resource('enrolls', EnrollController::class);
+    Route::resource('seminars', UserSeminarController::class);
+
+    Route::get('services', [UserCourseController::class, 'services'])->name('services');
+    Route::get('trainings', [UserCourseController::class, 'trainings'])->name('trainings');
 });
 
 
