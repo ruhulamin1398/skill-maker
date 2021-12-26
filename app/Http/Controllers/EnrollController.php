@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\enroll;
 use App\Http\Requests\StoreenrollRequest;
 use App\Http\Requests\UpdateenrollRequest;
+use App\Models\seminarParticipators;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,9 +53,16 @@ class EnrollController extends Controller
         $enroll->is_due = 0;
 
         $enroll->save();
-        return $enroll;
 
-        return redirect(route('redirect'));
+
+        if( $enroll->seminar_id){
+
+           $seminarParticipators =  new seminarParticipators;
+           $seminarParticipators->seminar_id =   $request->seminar_id;
+           $seminarParticipators->perticipator_id = $enroll->perticipator_id;
+           $seminarParticipators->save();
+        }
+        return redirect(route('redirection'));
         // return view('enroll', compact('card'));
     }
 
