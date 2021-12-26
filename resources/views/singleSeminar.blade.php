@@ -76,8 +76,14 @@
               <input type="text" name="payment_method" id="payment_method" value="CASH" hidden>
 
               <input type="text" name="payment_Comment" id="payment_Comment" value="Payment via cash" hidden>
+              @if(Auth::user() && Auth::user()->isRegisteredSeminar($seminar -> id))
+              
+            <a   class=" btn appointment-btn scrollto  ">Chat</a>
+              @else
 
             <button type="submit"  class=" btn appointment-btn scrollto  ">RESERVE MY SEAT</button>
+            
+            @endif
             </form>
 
 

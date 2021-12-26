@@ -63,11 +63,26 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-
-    public function seminers(){
-        return $this->hasMany(seminar::class);
-    }
+ 
     public function perticipator(){
         return $this->hasOne(perticipator::class);
     }
+    public function seminars(){
+        return $this->hasMany(seminarParticipators::class,'participator_id');
+    }
+    public function isRegisteredSeminar($seminar_id){
+
+        foreach($this->seminars as $seminar){
+            if($seminar->seminar_id == $seminar_id){
+                return 1;
+            }
+
+        }
+        return 0;
+
+    }
+
+
+    
+
 }

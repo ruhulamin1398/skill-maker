@@ -16,7 +16,7 @@ class CreateEnrollsTable extends Migration
         Schema::create('enrolls', function (Blueprint $table) {
             $table->id();
             
-            $table->unsignedBigInteger('perticipator_id');
+            $table->unsignedBigInteger('participator_id');
             $table->unsignedBigInteger('course_id');
             $table->unsignedBigInteger('seminar_id');
             $table->unsignedBigInteger('user_id');

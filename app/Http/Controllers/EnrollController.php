@@ -43,7 +43,7 @@ class EnrollController extends Controller
         $card = array();
 
         $enroll = new enroll;
-        $enroll->perticipator_id = Auth::user()->id;
+        $enroll->participator_id = Auth::user()->id;
         $enroll->course_id = $request->course_id;
         $enroll->seminar_id = $request->seminar_id;
         $enroll->user_id = Auth::user()->id;
@@ -59,7 +59,7 @@ class EnrollController extends Controller
 
            $seminarParticipators =  new seminarParticipators;
            $seminarParticipators->seminar_id =   $request->seminar_id;
-           $seminarParticipators->perticipator_id = $enroll->perticipator_id;
+           $seminarParticipators->participator_id = $enroll->participator_id;
            $seminarParticipators->save();
         }
         return redirect(route('redirection'));

@@ -29,14 +29,17 @@
                                 @foreach ($seminars as $i=>$seminar)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ date('M-d', strtotime($seminar->date)) }}</td>
-                                    <td>{{ $seminar->title }}</td>
-                                    <td>{{ $seminar->location }}</td>
-                                    <td>{{ $seminar->venue }}</td>
+                                    <td>{{ date('M-d Y', strtotime($seminar->seminar->date)) }}</td>
+                                    <td>{{ $seminar->seminar->title }}</td>
+                                    <td>{{ $seminar->seminar->location }}</td>
+                                    <td>{{ $seminar->seminar->venue }}</td>
                                     <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="{{ route('chats.show',$seminar->chat()->id) }}" class="btn btn-success">Chat Now</a>
-                                     </td>
+                                        <a href="{{ route('singleSeminar',$seminar->seminar->id) }}" class="btn btn-info">View</a> |
+                                      <a href="" class="btn btn-success">Chat Now</a>
+                                   
+                                     {{--- <a href="{{ route('chats.show',$seminar->chat()->id) }}" class="btn btn-success">Chat Now</a>
+                                     ---}}
+                                    </td>
                                 </tr>
 
                                 @endforeach

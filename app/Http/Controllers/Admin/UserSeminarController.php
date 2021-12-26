@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Chat;
 use App\Models\Trainer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class UserSeminarController extends Controller
@@ -19,10 +20,13 @@ class UserSeminarController extends Controller
     public function index()
     {
         $page_name = 'My Assigned List';
-        $seminars = seminar::all();
+        $seminars = Auth::user()->seminars;
         // $course->perticipates->first()->course;
         // $trainer = seminar::where('id', '=', 'chat.model_id');
         // dd($seminars);
+
+// return $seminars;
+
         return view('user.seminars.index', compact('page_name','seminars'));
     }
 
