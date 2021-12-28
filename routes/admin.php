@@ -102,7 +102,7 @@ Route::get('/user', function(){
 });
 Route::get('/trainer', function(){
     return view('trainer.index');
-});
+})->name('trainer.index');
 
 // Route::resource('courses', CourseController::class);
 Route::resource('training', TrainingController::class);

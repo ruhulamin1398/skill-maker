@@ -147,7 +147,7 @@
   <div class="container py-4">
     <div class="text-center">
       <div class="copyright">
-        <p>&copy; Copyright <strong><span>Skill Maker</span></strong>. All Rights Reserved</p>
+        <p>&copy; Copyright <strong><span>SkillMaker</span></strong>. All Rights Reserved</p>
       </div>
     </div>
   </div>

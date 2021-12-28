@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Skill Maker</title>
+  <title>SkillMaker</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -127,7 +127,7 @@
   },
   "brandSetting":{
       "brandName":"Skillmaker",
-      "brandSubTitle":"Typically replies within a Hours",
+      "brandSubTitle":"Typically replies within an Hour",
       "brandImg":"",
       "welcomeText":"Hi there!\nHow can I help you?",
       "messageText":"Hello, I have a question about ",
