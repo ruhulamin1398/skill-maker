@@ -50,7 +50,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col h-100">
-            <h2>UPCOMING SKILLMAKER SEMINARS</h2>
+            <h2>UPCOMING skillmaker SEMINARS</h2>
             <div class="seminar-rs d-flex justify-content-center align-items-center">
               <!-- <h2>PARTICIPATION COST:</h2>
               <span>Rs.800</span> -->

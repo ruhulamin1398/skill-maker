@@ -51,7 +51,7 @@
         <div class="content">
           <h3>About Us</h3>
           <p>
-          Skillmaker is an e-learning and services platform established in 2020. We offer a wide variety of e-learning and services through e-learning courses and services based on current market trend particularly in the US-UK-EU-Canada-UAE markets.
+          skillmaker is an e-learning and services platform established in 2020. We offer a wide variety of e-learning and services through e-learning courses and services based on current market trend particularly in the US-UK-EU-Canada-UAE markets.
           </p>
           <div class="text-center">
             <a href="{{ route('about') }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -103,7 +103,7 @@
 
   <header class="section-header2">
       <!-- <h2>Our Values</h2> -->
-      <p class="section--header">Skillmaker Trainings</p>
+      <p class="section--header">skillmaker Trainings</p>
       </header>
       <p class="text-dark text-center " style="font-size: 120%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!</p>
 
@@ -138,8 +138,8 @@
   <div class="container" data-aos="fade-up">
 
     <header class="section-header2">
-      <!-- <h2>Skillmaker Services</h2> -->
-      <p class="section--header">Skillmaker Services</p>
+      <!-- <h2>skillmaker Services</h2> -->
+      <p class="section--header">skillmaker Services</p>
   </header>
   <p class="text-dark text-center " style="font-size: 120%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!</p>
 
