@@ -1,5 +1,5 @@
 <?php
- 
+
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -90,6 +90,7 @@ Route::resource('supports', SupportController::class);
 Route::resource('courses', CourseControllernew::class);
 Route::resource('chapters', ChapterController::class);
 Route::resource('batch-trainers', BatchTrainerController::class);
+Route::resource('batch-participators', BatchPerticipateController::class);
 Route::resource('coursevideos', CourseVideoController::class);
 Route::resource('freelancers', FreelancerController::class);
 Route::resource('batches', BatchController::class);

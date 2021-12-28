@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\enroll;
 use App\Http\Requests\StoreenrollRequest;
 use App\Http\Requests\UpdateenrollRequest;
+use App\Models\perticipator;
 use App\Models\seminarParticipators;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -39,11 +40,11 @@ class EnrollController extends Controller
      */
     public function store(Request $request)
     {
-        //    return $request;
+            // return Auth::user();
         $card = array();
 
         $enroll = new enroll;
-        $enroll->participator_id = Auth::user()->id;
+        
         $enroll->course_id = $request->course_id;
         $enroll->seminar_id = $request->seminar_id;
         $enroll->user_id = Auth::user()->id;
@@ -51,16 +52,27 @@ class EnrollController extends Controller
         $enroll->payment_method = $request->payment_method;
         $enroll->payment_Comment = $request->payment_Comment;
         $enroll->is_due = 0;
+     
+        $participator= perticipator::where('user_id',Auth::user()->id)->first();
+        if(is_null($participator)){
+            $participator= new perticipator;
+            $participator->user_id = Auth::user()->id;
+            $participator->name = Auth::user()->name;
+            $participator->save();
+        }
 
+        $enroll->participator_id = $participator->id;
         $enroll->save();
 
+        // added him as participant 
+        if ($enroll->seminar_id) {
 
-        if( $enroll->seminar_id){
-
-           $seminarParticipators =  new seminarParticipators;
-           $seminarParticipators->seminar_id =   $request->seminar_id;
-           $seminarParticipators->participator_id = $enroll->participator_id;
-           $seminarParticipators->save();
+            $seminarParticipators =  new seminarParticipators;
+            $seminarParticipators->seminar_id =   $request->seminar_id;
+            $seminarParticipators->participator_id = $enroll->participator_id;
+            $seminarParticipators->save();
+            $enroll->is_assigned = 1;
+            $enroll->save();
         }
         return redirect(route('redirection'));
         // return view('enroll', compact('card'));

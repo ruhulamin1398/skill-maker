@@ -24,6 +24,7 @@ class CreateEnrollsTable extends Migration
             $table->string('payment_method');
             $table->string('payment_Comment');
             $table->string('is_due');
+            $table->integer('is_assigned')->default(0);
 
             $table->timestamps();
         });

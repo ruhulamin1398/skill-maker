@@ -16,7 +16,10 @@ class CreateBatchPerticipatesTable extends Migration
         Schema::create('batch_perticipates', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('batch_id');
+            $table->unsignedBigInteger('participator_id');
             $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('enroll_id');
             $table->timestamps();
         });
     }

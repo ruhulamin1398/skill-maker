@@ -42,7 +42,7 @@
             </div>
             <div class="card-body">
                 <div class="col-md-6 col-sm-12 float-left" style="border-right: 1px solid blue; border-top: 1px solid blue">
-                    <h6 class="p-1">Assigned Student List <a class="btn btn-info float-right" href="">Add New</a></h6>
+                    <h6 class="p-1">Assigned Student List <a class="btn btn-info float-right" href="{{route('batch-participators.index')}}?batch_id={{$batch->id}}">Manage Students</a></h6>
 
                     <div class="col-xs-6">
                         <select class="form-control" name="select1" id="select1">

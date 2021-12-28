@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
 
+use App\Http\Controllers\Controller;
+use App\Models\Batch;
 use App\Models\BatchPerticipate;
+use App\Models\course;
+use App\Models\enroll;
+use App\Models\perticipator;
 use Illuminate\Http\Request;
 
 class BatchPerticipateController extends Controller
@@ -13,9 +17,17 @@ class BatchPerticipateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+
+
+        $page_name = 'Assign Student';
+        $batch = Batch::find($request->batch_id);
+
+        $course = course::find($batch->model_id);
+        $participators = BatchPerticipate::where('batch_id', $request->batch_id)->get();
+        $unAssigned = enroll::where('course_id', $course->id)->where('is_assigned', 0)->get();
+        return view('admin.batch-participator.assign', compact('page_name', 'batch', 'course', 'participators', 'unAssigned'));
     }
 
     /**
@@ -23,9 +35,9 @@ class BatchPerticipateController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        // return $request;
     }
 
     /**
@@ -45,9 +57,19 @@ class BatchPerticipateController extends Controller
      * @param  \App\Models\BatchPerticipate  $batchPerticipate
      * @return \Illuminate\Http\Response
      */
-    public function show(BatchPerticipate $batchPerticipate)
+    public function show( $batchPerticipate_id)
     {
-        //
+        
+        $batchPerticipate =   BatchPerticipate::find($batchPerticipate_id);
+
+          $enroll = enroll::find($batchPerticipate->enroll_id);
+          $enroll->is_assigned = 0;
+          $enroll->save();
+          $batchPerticipate->delete();
+          return back();
+
+
+
     }
 
     /**
@@ -65,12 +87,33 @@ class BatchPerticipateController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\BatchPerticipate  $batchPerticipate
+     * @param  \App\Models\Batch  $batch
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, BatchPerticipate $batchPerticipate)
+    public function update(Request $request, $batch_id)
     {
-        //
+
+        if ($request->participator_id) {
+            $batch = Batch::find($batch_id);
+
+            foreach ($request->participator_id as $participator_id) {
+
+                $batchPerticipate = new BatchPerticipate;
+                $batchPerticipate->participator_id = $participator_id;
+                $batchPerticipate->batch_id = $batch_id;
+                $batchPerticipate->user_id = perticipator::find($participator_id)->user_id;
+                $batchPerticipate->course_id = $batch->course->id;
+
+                $enroll = enroll::where('user_id', $batchPerticipate->user_id)->where('course_id', $batch->course->id)->first();
+                $enroll->is_assigned = 1;
+                $enroll->save();
+
+                $batchPerticipate->enroll_id = $enroll->id;
+                $batchPerticipate->save();
+            }
+        }
+
+return back();
     }
 
     /**
@@ -81,6 +124,9 @@ class BatchPerticipateController extends Controller
      */
     public function destroy(BatchPerticipate $batchPerticipate)
     {
+
+
+        
         //
     }
 }

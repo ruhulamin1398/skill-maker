@@ -15,17 +15,18 @@ class CreatePerticipatorsTable extends Migration
     {
         Schema::create('perticipators', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('father_name');
-            $table->string('number');
-            $table->string('email');
-            $table->string('pasport');
-            $table->string('city');
-            $table->string('country');
-            $table->string('occopation');
-            $table->string('training');
-            $table->string('enablers');
-            $table->string('payment_type');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('name')->nullable();
+            $table->string('father_name')->nullable();
+            $table->string('number')->nullable();
+            $table->string('email')->nullable();
+            $table->string('pasport')->nullable();
+            $table->string('city')->nullable();
+            $table->string('country')->nullable();
+            $table->string('occopation')->nullable();
+            $table->string('training')->nullable();
+            $table->string('enablers')->nullable();
+            $table->string('payment_type')->nullable();
             $table->timestamps();
         });
     }

@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class BatchPerticipate extends Model
 {
     use HasFactory;
+
+
+    public function participator(){
+        return $this->belongsTo(perticipator::class);
+    }
 }

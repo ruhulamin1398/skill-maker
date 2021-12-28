@@ -20,6 +20,6 @@ class Admin
         if(Auth::user()->hasRole('admin')){
             return $next($request);
         }
-        return Abort(403);
+        return redirect(route('redirection'));
     }
 }

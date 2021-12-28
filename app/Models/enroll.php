@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class enroll extends Model
 {
     use HasFactory;
+
+
+    public function participator(){
+        return $this->belongsTo(User::class);
+    }
 }
