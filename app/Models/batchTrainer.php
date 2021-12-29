@@ -13,13 +13,13 @@ class batchTrainer extends Model
         return $this->belongsTo(Trainer::class);
     }
 
-    public function course(){
-        return $this->belongsTo(course::class);
+    public function batch(){
+        return $this->belongsTo(Batch::class);
     }
 
 
-     public function batch(){
-        return $this->belongsTo(Batch::class,'id', 'model_id');
+     public function course(){
+        return $this->belongsTo(course::class,'model_id','id');
     }
 }
 

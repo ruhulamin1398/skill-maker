@@ -66,6 +66,9 @@ class User extends Authenticatable
  
     public function perticipator(){
         return $this->hasOne(perticipator::class);
+    } 
+    public function trainer(){
+        return $this->hasOne(trainer::class);
     }
     public function seminars(){
         return $this->hasMany(seminarParticipators::class,'participator_id');

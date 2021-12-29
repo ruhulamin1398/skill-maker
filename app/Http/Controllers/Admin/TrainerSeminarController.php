@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TrainerSeminarController extends Controller
 {
@@ -13,9 +14,11 @@ class TrainerSeminarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $page_name = "Perticipator List";
-        return view('trainer.seminar.index', compact('page_name'));
+    {  
+        $page_name = "My Seminar List";
+        $trainer= Auth::user()->trainer;
+        
+        return view('trainer.seminar.index', compact('page_name','trainer'));
     }
    
 

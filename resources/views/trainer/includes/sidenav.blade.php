@@ -46,7 +46,7 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="{{ route('trainer.seminar.create') }}" class="nk-menu-link"><span class="nk-menu-text">Seminar List</span></a>
+                                <a href="{{ route('trainer.seminar.index') }}" class="nk-menu-link"><span class="nk-menu-text">Seminar List</span></a>
                             </li>
                            
                         </ul>

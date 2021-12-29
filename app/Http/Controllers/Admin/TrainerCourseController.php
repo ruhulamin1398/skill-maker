@@ -15,14 +15,15 @@ class TrainerCourseController extends Controller
      */
     public function index(Request $request)
     {
+        $type= $request->type;
         if($request->type=="service")
         $page_name = "My Service List";
         else
         $page_name = "My Training List";
 
 
-         $trainer= Auth::user();
-        return view('trainer.course.index', compact('page_name'));
+        $trainer= Auth::user()->trainer;
+        return view('trainer.course.index', compact('page_name','type','trainer'));
     }
 
     /**

@@ -18,64 +18,28 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Student Name</th>
-                                <th>Join Date</th>
+                                <th>Title</th>
+                                <th>Location</th>
+                                <th>Date</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            {{-- @foreach($course as $i=>$courses) --}}
+                             @foreach($trainer->seminars as $i=>$seminar)  
                                 <tr>
-                                    <td>1</td>
-                                    <td>Test Student </td>
-                                    <td>11 Jun 2021</td>
+                                    <td>{{++$i}}</td>
+                                    <td>{{$seminar->seminar->title}}</td> 
+                                    <td>{{$seminar->seminar->location}}</td> 
+                                    <td>{{$seminar->seminar->date}}</td> 
                                     <td>
                                         <a href="" class="btn btn-success">Chat</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Test Student </td>
-                                    <td>11 Jun 2021</td>
-                                    <td>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Test Student </td>
-                                    <td>11 Jun 2021</td>
-                                    <td>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Test Student </td>
-                                    <td>11 Jun 2021</td>
-                                    <td>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Test Student </td>
-                                    <td>11 Jun 2021</td>
-                                    <td>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Test Student </td>
-                                    <td>11 Jun 2021</td>
-                                    <td>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
+                                 
+                                 
 
     
-                            {{-- @endforeach --}}
+                              @endforeach  
                             </tbody>
                         </table>
                     </div>
