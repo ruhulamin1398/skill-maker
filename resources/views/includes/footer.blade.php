@@ -93,7 +93,7 @@
             <img src="{{ asset('theme/frontend/assets/img/logo.png') }}" alt="">
           </a>
           <p>
-            We at Enablers aim to create 2 Million Employment Opportunities by year 2023 in pakistan.
+            We at Skillmaker aim to create 2 Million Employment Opportunities by year 2023 in pakistan.
           </p>
           <div class="social-links pt-4">
             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

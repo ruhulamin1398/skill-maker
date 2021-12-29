@@ -69,7 +69,7 @@ class User extends Authenticatable
     }
     public function seminars(){
         return $this->hasMany(seminarParticipators::class,'participator_id');
-    }
+    }  
     public function isRegisteredSeminar($seminar_id){
 
         foreach($this->seminars as $seminar){

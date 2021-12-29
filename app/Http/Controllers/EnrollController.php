@@ -58,6 +58,7 @@ class EnrollController extends Controller
             $participator= new perticipator;
             $participator->user_id = Auth::user()->id;
             $participator->name = Auth::user()->name;
+            $participator->email = Auth::user()->email;
             $participator->save();
         }
 

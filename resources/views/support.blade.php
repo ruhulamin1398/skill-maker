@@ -52,7 +52,7 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col">
-            <strong>Please select the relevant option to get quick support from Enablers.</strong>
+            <strong>Please select the relevant option to get quick support from Skillmaker.</strong>
           </div>
         </div>
         <div class="row text-center">

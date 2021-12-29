@@ -80,7 +80,7 @@
                                 @endif
                             </div>
                             <div class="form-group col-md-6 float-left">
-                                <label class="form-label"> Where from you heard about Enablers ?<sup class="text-danger">*</sup></label>
+                                <label class="form-label"> Where from you heard about Skillmaker ?<sup class="text-danger">*</sup></label>
                                <select class="form-control" name="enablers">
                                    <option>----------Select One-------</option>
                                    <option value="Social Media">Social Media</option>

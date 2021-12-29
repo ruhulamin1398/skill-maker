@@ -61,7 +61,7 @@ class PerticipatorController extends Controller
             'country.required'      => 'Please Enter Country Name',
             'occopation.required'   => 'Please Enter Your Occopation',
             'training.required'     => 'Please Enter Trainig Name',
-            'enablers.required'     => 'Please Enter Enablers from',
+            'enablers.required'     => 'Please Enter Skillmaker from',
             'payment_type.required' => 'Please Select Payment Type'
 
         ]);

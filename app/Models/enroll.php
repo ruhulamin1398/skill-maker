@@ -11,6 +11,6 @@ class enroll extends Model
 
 
     public function participator(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(perticipator::class);
     }
 }

@@ -34,7 +34,6 @@
                                 
                                 @endforeach
                             </div>
-
                             <div class="form-group">
                                 <input type="submit" name="btn" class="btn btn-primary col-6 btn-block" value="Submit">
                             </div>
