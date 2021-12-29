@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TrainerCourseController extends Controller
 {
@@ -12,9 +13,15 @@ class TrainerCourseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $page_name = "My List";
+        if($request->type=="service")
+        $page_name = "My Service List";
+        else
+        $page_name = "My Training List";
+
+
+         $trainer= Auth::user();
         return view('trainer.course.index', compact('page_name'));
     }
 

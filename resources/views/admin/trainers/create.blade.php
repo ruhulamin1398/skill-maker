@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label"> Email </label>
-                                <input type="email" name="email" placeholder="Enter Trainer Email"  class="form-control" value="{{ old('email') }}">
+                                <input type="email" name="email" placeholder="Enter Trainer Email"  class="form-control" value="{{ old('email') }}" required>
                                 @if($errors->has('email'))
                                     <span class="text-danger ">{{ $errors->first('email') }}</span>
                                 @endif
@@ -54,7 +54,7 @@
                             
                             <div class="form-group col-md-6 float-left">
                                 <label class="form-label">Image <sup class="text-danger">*</sup></label>
-                                <input type="file" name="image" class="form-control">
+                                <input type="file" name="image" class="form-control" required>
                                 @if($errors->has('image'))
                                 <span class="text-danger ">{{ $errors->first('image') }}</span>
                              @endif

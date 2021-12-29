@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\TrainerCourseController;
+use App\Http\Controllers\Admin\TrainerSeminarController;
 use App\Http\Controllers\Admin\UserSeminarController;
 use App\Http\Controllers\EnrollController;
 use App\Http\Controllers\FreelancerController;
@@ -70,6 +72,14 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth'], 'as' => 'users.'], f
 
     Route::get('services', [UserCourseController::class, 'services'])->name('services');
     Route::get('trainings', [UserCourseController::class, 'trainings'])->name('trainings');
+});
+
+Route::group(['prefix' => 'trainer', 'middleware' => ['auth'], 'as' => 'trainer.'], function () {
+    Route::get('/', function () {
+        return view('trainer.index');
+    })->name('index');
+    Route::resource('seminar', TrainerSeminarController::class);
+    Route::resource('course', TrainerCourseController::class);
 });
 
 

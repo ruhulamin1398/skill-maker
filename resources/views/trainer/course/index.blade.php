@@ -32,50 +32,10 @@
                                     <td>test Title</td>
                                     <td>Paid</td>
                                     <td>
-                                        <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
+                                        <a href="{{ route('trainer.seminar.index') }}" class="btn btn-info">Students</a>
                                         <a href="" class="btn btn-success">Chat</a>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>test course </td>
-                                    <td>test Title</td>
-                                    <td>Paid</td>
-                                    <td>
-                                        <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>test course </td>
-                                    <td>test Title</td>
-                                    <td>Paid</td>
-                                    <td>
-                                         <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>test course </td>
-                                    <td>test Title</td>
-                                    <td>Paid</td>
-                                    <td>
-                                         <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1</td>
-                                    <td>test course </td>
-                                    <td>test Title</td>
-                                    <td>Paid</td>
-                                    <td>
-                                         <a href="{{ route('trainer_seminar.index') }}" class="btn btn-info">Students</a>
-                                        <a href="" class="btn btn-success">Chat</a>
-                                    </td>
-                                </tr>
+                               
                             {{-- @endforeach --}}
                             </tbody>
                         </table>

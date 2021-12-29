@@ -106,9 +106,8 @@ Route::get('/trainer', function(){
 })->name('trainer.index');
 
 // Route::resource('courses', CourseController::class);
+
 Route::resource('training', TrainingController::class);
-Route::resource('trainer_seminar', TrainerSeminarController::class);
-Route::resource('trainer_course', TrainerCourseController::class);
 
 
 //Route::get('seminar-trainers/index/{id}', [SeminerTrainerController::class, 'seminar'])->name('admin.seminar-trainers.seminar');

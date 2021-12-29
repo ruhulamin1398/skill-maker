@@ -43,25 +43,25 @@ class TrainerController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request,[
-        //     'name'           => 'required',
-        //     'email'          => 'required',
-        //     'phone'          => 'required',
-        //     'last_education' => 'required',
-        //     'current_work'   => 'required',
-        //     'address'        => 'required',
-        //     'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
-        // ],[
-        //     'name.required'           => 'Please Enter Name',
-        //     'email.required'          => 'Please Enter Email',
-        //     'phone.required'          => 'Please Enter Phone Number',
-        //     'last_education.required' => 'Please Enter Last Educcation',
-        //     'current_work.required'   => 'Please Enter Current Work',
-        //     'address.required'        => 'Please Enter Address',
-        //     'image.required'         => 'Please Select Image',
-        //     'image.mimes'            => 'Please Select Jpg,png,jpeg Type',
-        //     'image.max'              => 'Please Select Image Less Then 8 Mb'
-        // ]);
+        $this->validate($request,[
+            'name'           => 'required',
+            'email'          => 'required',
+            // 'phone'          => 'required',
+            // 'last_education' => 'required',
+            // 'current_work'   => 'required',
+            // 'address'        => 'required',
+            'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
+        ],[
+            'name.required'           => 'Please Enter Name',
+            'email.required'          => 'Please Enter Email',
+            'phone.required'          => 'Please Enter Phone Number',
+            'last_education.required' => 'Please Enter Last Educcation',
+            'current_work.required'   => 'Please Enter Current Work',
+            'address.required'        => 'Please Enter Address',
+            'image.required'         => 'Please Select Image',
+            'image.mimes'            => 'Please Select Jpg,png,jpeg Type',
+            'image.max'              => 'Please Select Image Less Then 8 Mb'
+        ]);
 
         $trainer = new Trainer();
         $trainer->name           = $request->name;
@@ -84,7 +84,7 @@ class TrainerController extends Controller
             return "select Image";
         }
 
-        $trainer->save();
+       
 
 
         $user =  User::where('email', $trainer->email)->first();
@@ -95,6 +95,10 @@ class TrainerController extends Controller
             $user->password = Hash::make(1234);
             $user->save();
         }
+        $trainer->user_id = $user->id;
+        $trainer->save();
+
+
         // return $user->getRoleNames();
         $user =  User::where('email', $trainer->email)->first();
         $user->removeRole('admin');
@@ -157,7 +161,6 @@ class TrainerController extends Controller
         //     'image'          => 'required | mimes:jpg,png,jpeg|max:7048'
         // ]);
         $trainer->name           = $request->name;
-        $trainer->email          = $request->email;
         $trainer->phone          = $request->phone;
         $trainer->last_education = $request->last_education;
         $trainer->current_work   = $request->current_work;
@@ -180,8 +183,7 @@ class TrainerController extends Controller
                 return back();
             }
         }
-        $trainer->save();
-
+        
         $user =  User::where('email', $trainer->email)->first();
         if (is_null($user)) {
             $user = new User;
@@ -190,6 +192,15 @@ class TrainerController extends Controller
             $user->password = Hash::make(1234);
             $user->save();
         }
+
+        
+        $user->email = $request->email;
+        $user->save();
+
+        $trainer->email = $request->email;
+        $trainer->user_id = $user->id;
+        $trainer->save();
+
         // return $user->getRoleNames();
         $user->removeRole('admin');
         $user->removeRole('branch_admin');
