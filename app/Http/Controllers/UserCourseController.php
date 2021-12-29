@@ -11,12 +11,20 @@ class UserCourseController extends Controller
 
 
     public function services(){
-        return  BatchPerticipate::where('user_id',Auth::user()->id)->get();
+        $page_name = 'My Services';
+        $courses = BatchPerticipate::where('user_id',Auth::user()->id)->get();
+        $type="service";
+        // return compact('page_name','courses','type');
+        return view('user.courses.index',compact('page_name','courses','type'));
+        
         
     }
 
     public function trainings(){
-        return  BatchPerticipate::where('user_id',Auth::user()->id)->get();
+        $page_name = 'My  Trainings';
+        $courses = BatchPerticipate::where('user_id',Auth::user()->id)->get();
+        $type="training";
+        return view('user.courses.index',compact('page_name','courses','type'));
     }
     //
 }

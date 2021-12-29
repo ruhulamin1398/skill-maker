@@ -19,24 +19,36 @@
                             <tr>
                                 <th>#</th>
                                 <th>Course Title</th>
+                                <th>Batch</th>
                                 <th>Price</th>
                                 <th>Status</th>
+                                <th>videos</th>
                                 <th>More</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($course as $i=>$courses)
-                                <tr>
+                            @foreach($courses as $i=>$course)
+
+                        @if( $course->course->type ==  $type )  
+                            
+                            <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $courses->title }}</td>
-                                    <td>{{ number_format($courses->price,'2') }}</td>
+                                    <td>{{ $course->course->course_title }}</td>
+                                    <td>{{ $course->batch->batch_name }} </td>
+                                    <td>{{ number_format($course->enroll->price,'2') }}</td>
                                     <td>Paid</td>
+                                    
+                                    <td><a href="" class="btn btn-primary">
+                                            {{ $course->course->courseVideo->count()}}
+                                        </a> </td>
+
+                                        
                                     <td>
                                         <a href="" class="btn btn-info">View</a> |
                                         <a href="{{ route('chats.index') }}" class="btn btn-success">Chat Now</a>
                                      </td>
                                 </tr>
-
+                                @endif
                             @endforeach
                             </tbody>
                         </table>
