@@ -49,11 +49,12 @@ class BatchController extends Controller
     public function show(Batch $batch)
     {
 
+
+
         // return $batch->course;
         $page_name = "Batch Details";
         $assignedTrainers = $batch->trainers;
         // return $assignedTrainers;
-
         $batches = Batch::all();
         
 

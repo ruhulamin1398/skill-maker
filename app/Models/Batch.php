@@ -17,9 +17,12 @@ class Batch extends Model
         return $this->hasMany(batchTrainer::class);
     }
 
+    public function participators(){
+        return $this->hasMany(BatchPerticipate::class);
+    }
+
     public function batch(){
         return $this->belongsTo(Batch::class, 'model_id','id');
     }
-
 
 }

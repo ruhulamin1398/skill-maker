@@ -44,27 +44,39 @@
                 <div class="col-md-6 col-sm-12 float-left" style="border-right: 1px solid blue; border-top: 1px solid blue">
                     <h6 class="p-1">Assigned Student List <a class="btn btn-info float-right" href="{{route('batch-participators.index')}}?batch_id={{$batch->id}}">Manage Students</a></h6>
 
-                    <div class="col-xs-6">
-                        <select class="form-control" name="select1" id="select1">
-                          <option>Select one</option>
-                          @foreach ($batches as $delete)
-                            <option value="{{ $delete->id }}">{{ $delete->batch_name }}</option>
-                          @endforeach
-                          {{-- <option value="1">Fruit</option>
-                          <option value="2">Animal</option>
-                          <option value="3">Bird</option>
-                          <option value="4">Car</option> --}}
-                        </select>
-                      </div>
-                      <div class="col-xs-6">
-                        <select class="form-control" name="select2" id="select2">
-                            @foreach ($assignedTrainers as $i=>$trainers2)
-                               <option value="{{ $trainers2->id }}">{{ $trainers2->trainer->name }}</option>
-                            @endforeach
 
-                      
-                      </select>
-                      </div>
+                    <hr/>
+                    <table class="datatable-init table mt-2">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @php($i = 1)
+                        @foreach ($batch->participators as $participator)
+                                <tr>
+                                    <td>{{ ++$i }}</td>
+                                    <td class="text-capitalize">{{$participator->participator->name }}</td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td>
+                                        
+                                            <a href="" class="btn btn-success text-light fas fa-eye"    >  </a>
+                                       
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+
+
+                  
+                       
 
                 </div>
                 <div class="col-md-6 col-sm-12 float-left" style="border-top: 1px solid blue">
@@ -81,6 +93,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @php($i = 1)
                             @foreach ($assignedTrainers as $i=>$trainers)
                                 <tr>
                                     <td>{{ ++$i }}</td>
