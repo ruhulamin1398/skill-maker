@@ -16,6 +16,7 @@ use App\Http\Controllers\SuccessStoriesController;
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\UserCourseController;
+use App\Http\Controllers\VideoPlayerController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -91,6 +92,7 @@ Route::group(['prefix' => 'trainer', 'middleware' => ['auth'], 'as' => 'trainer.
 
 
 
+Route::resource('player', VideoPlayerController::class);
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
