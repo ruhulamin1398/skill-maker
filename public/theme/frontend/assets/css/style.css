@@ -2533,16 +2533,19 @@ section {
   line-height: 1.3;
   padding: 8px 0;
   margin-right: 4px;
+  
   border-radius: 50%;
   text-align: center;
   width: 42px;
   height: 42px;
   transition: 0.3s;
+  
 }
 
 #footer .social-links a:hover {
   background: red;
   color: #fff;
+  
   text-decoration: none;
 }
 #footer .appointment-btn {
