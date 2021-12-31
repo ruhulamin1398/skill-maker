@@ -2543,7 +2543,7 @@ section {
 }
 
 #footer .social-links a:hover {
-  background: red;
+  /* background: red; */
   color: #fff;
   
   text-decoration: none;

@@ -35,10 +35,10 @@
           <div class="social-links pt-4">
             <div class="row">
               <div class="col-2">  </div>
-              <div class="col-2"> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> </div>
-              <div class="col-2"> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a></div>
-              <div class="col-2"> <a href="#" class="twitter"><i class="bx bxl-youtube"></i></a> </div>
-              <div class="col-2"> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(9)->key }}" class="facebook"><i class="bx bxl-facebook"></i></a></div> 
+              
+              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(10)->key }}" class="instagram"><i class="bx bxl-instagram"></i></a> </div>
+              <div class="col-2"> <a href="{{App\Models\additionalSetting::find(11)->key }}" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
               <div class="col-2">  </div>
             </div>
 

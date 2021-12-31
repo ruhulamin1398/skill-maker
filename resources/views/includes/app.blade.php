@@ -52,7 +52,7 @@
       <div class="social-links"> 
         <a href="{{App\Models\additionalSetting::find(9)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
         <a href="{{App\Models\additionalSetting::find(10)->key   }}" class="instagram"><i class="icofont-instagram"></i></a> 
-        <a href="{{App\Models\additionalSetting::find(11)  }}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
+        <a href="{{App\Models\additionalSetting::find(11)->key  }}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
     </div>
   </div>
