@@ -45,9 +45,10 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
-        <i class="icofont-phone"></i> +1 5589 55488 55
-        <i class="icofont-google-map"></i> A108 Adam Street, NY
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(16)->key  }}</a>
+        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(12)->key  }}
+        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(13)->key  }}
+        <i class="icofont-google-map"></i>  {{App\Models\additionalSetting::find(15)->key  }}
       </div>
       <div class="social-links"> 
         <a href="{{App\Models\additionalSetting::find(9)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>

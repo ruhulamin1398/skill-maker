@@ -43,8 +43,8 @@
             </div>
 
 <p class="  m-4 text-right font-weight-bold">
-  E-mail : info@skillmaker.org <br>
-  WhatsApp : +1(516)410-4922
+  E-mail : {{App\Models\additionalSetting::find(16)->key  }}<br>
+  WhatsApp : {{App\Models\additionalSetting::find(17)->key  }}
 </p>
 
 
