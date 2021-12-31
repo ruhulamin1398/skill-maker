@@ -1,6 +1,6 @@
 <?php
-
-use App\Models\User;
+ 
+use App\Models\User; 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 /*
@@ -94,6 +94,9 @@ Route::resource('batch-participators', BatchPerticipateController::class);
 Route::resource('coursevideos', CourseVideoController::class);
 Route::resource('freelancers', FreelancerController::class);
 Route::resource('batches', BatchController::class);
+
+Route::resource('additional-settings', AdditionalSettingController::class);
+Route::resource('additional-images', AdditionalImageController::class);
 
 Route::get('/user', function(){
 
