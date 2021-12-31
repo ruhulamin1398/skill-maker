@@ -51,8 +51,8 @@
         <div class="content">
           <h3>About Us</h3>
           <p>
-          skillmaker is an e-learning and services platform established in 2020. We offer a wide variety of e-learning and services through e-learning courses and services based on current market trend particularly in the US-UK-EU-Canada-UAE markets.
-          </p>
+          {{App\Models\additionalSetting::find(1)->value }}
+        </p>
           <div class="text-center">
             <a href="{{ route('about') }}" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
           </div>
@@ -66,7 +66,7 @@
                 <a href="{{ route('marketplace') }}">
                     <i class="bx bx-receipt"></i>
                     <h4>Marketplace</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <p>{{App\Models\additionalSetting::find(2)->value }}</p>
                 </a>
               </div>
             </div>
@@ -75,7 +75,7 @@
                 <a href="">
                     <i class="bx bx-cube-alt"></i>
                     <h4>Seller Deshboard</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <p>{{App\Models\additionalSetting::find(3)->value }}</p>
                     </a>
               </div>
             </div>
@@ -84,7 +84,7 @@
                <a href="">
                 <i class="bx bx-images"></i>
                 <h4>Investment Group</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <p>{{App\Models\additionalSetting::find(4)->value }}</p>
                </a>
               </div>
             </div>
@@ -105,7 +105,7 @@
       <!-- <h2>Our Values</h2> -->
       <p class="section--header">skillmaker Trainings</p>
       </header>
-      <p class="text-dark text-center " style="font-size: 120%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!</p>
+      <p class="text-dark text-center " style="font-size: 120%;"> {{App\Models\additionalSetting::find(5)->value }}</p>
 
     <div class="row">
 
@@ -141,7 +141,7 @@
       <!-- <h2>skillmaker Services</h2> -->
       <p class="section--header">skillmaker Services</p>
   </header>
-  <p class="text-dark text-center " style="font-size: 120%;"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!</p>
+  <p class="text-dark text-center " style="font-size: 120%;">{{App\Models\additionalSetting::find(6)->value }}</p>
 
     <div class="row">
 
@@ -176,8 +176,7 @@
 
 
 
-
-
+{{---
 
 <section style="background: url('https://www.enablers.org/wp-content/uploads/2020/02/enablers-amazon-seller-dashboard.jpg?id=14547)');">
   <div class="spacer"> </div>
@@ -196,6 +195,7 @@
   <div class="spacer"> </div>
   <div class="spacer"> </div>
 </section>
+--}}
 
 
 
@@ -294,7 +294,7 @@
 
       <div class="col-xl-7 col-lg-6 icon-boxes p-4    ">
         <h3>UPCOMING SEMINAR SCHEDULE</h3>
-        <p>All seminars will be scheduled as per government regulations. Keep visiting the site for the latest updates.</p>
+        <p>{{App\Models\additionalSetting::find(7)->value }}</p>
 
         @foreach ($seminars as $seminar)
             <div class="icon-box">
@@ -309,7 +309,7 @@
 
 
       <div class="col-xl-5 col-lg-6  p-4">
-      <img class="img-responsive" src="https://www.enablers.org/wp-content/uploads/2020/02/enablers-amazon-fba-training-saqib-azhar.jpg">
+      <img class="img-responsive" src="{{ asset(App\Models\additionalImage::find(2)->link )}}">
     </div>
 
 
