@@ -148,25 +148,25 @@ INSERT INTO `courses` (`id`, `course_title`, `image`, `introduction_video`, `des
         DB::select($sql);
 
 
-        $sql =
-            "INSERT INTO `our_teams` (`id`, `name`, `location`, `short_desctiption`, `long_description`, `image`, `serial`, `type`, `created_at`, `updated_at`) VALUES
-(1, 'ISRAT AHAMMED', 'Bangladesh', 'Ambassador', '<p>&nbsp;<br></p>', '1639897817.JPG', 1, '', '2021-12-19 00:41:32', '2021-12-19 01:10:17'),
-(2, 'JAMIL HUSSAIN', 'Bangladesh', 'Ambassador', '<p>&nbsp;<br></p>', '1639897888.jpg', 2, '', '2021-12-19 00:48:31', '2021-12-19 01:11:28'),
-(3, 'Kamran Ahmed', 'Bangladesh', 'Administrator Finance And Operations', '<p>&nbsp;<br></p>', '1639897956.JPG', 3, '', '2021-12-19 00:50:30', '2021-12-19 01:12:36'),
-(4, 'SHAHABUB KHAN', 'Bangladesh', 'Ambassador', '<p>&nbsp;<br></p>', '1639898031.JPG', 4, '', '2021-12-19 00:53:04', '2021-12-19 01:13:51'),
-(5, 'Shams Russel', 'Bangladesh', 'Advisor of skillmaker', '<p>&nbsp;<br></p>', '1639898081.jpeg', 5, '', '2021-12-19 00:54:53', '2021-12-19 01:14:41');
-";
-        DB::select($sql);
+//         $sql =
+//             "INSERT INTO `our_teams` (`id`, `name`, `location`, `short_desctiption`, `long_description`, `image`, `serial`, `type`, `created_at`, `updated_at`) VALUES
+// (1, 'ISRAT AHAMMED', 'Bangladesh', 'Ambassador', '<p>&nbsp;<br></p>', '1639897817.JPG', 1, '', '2021-12-19 00:41:32', '2021-12-19 01:10:17'),
+// (2, 'JAMIL HUSSAIN', 'Bangladesh', 'Ambassador', '<p>&nbsp;<br></p>', '1639897888.jpg', 2, '', '2021-12-19 00:48:31', '2021-12-19 01:11:28'),
+// (3, 'Kamran Ahmed', 'Bangladesh', 'Administrator Finance And Operations', '<p>&nbsp;<br></p>', '1639897956.JPG', 3, '', '2021-12-19 00:50:30', '2021-12-19 01:12:36'),
+// (4, 'SHAHABUB KHAN', 'Bangladesh', 'Ambassador', '<p>&nbsp;<br></p>', '1639898031.JPG', 4, '', '2021-12-19 00:53:04', '2021-12-19 01:13:51'),
+// (5, 'Shams Russel', 'Bangladesh', 'Advisor of skillmaker', '<p>&nbsp;<br></p>', '1639898081.jpeg', 5, '', '2021-12-19 00:54:53', '2021-12-19 01:14:41');
+// ";
+//         DB::select($sql);
 
-        $sql =
-            "INSERT INTO `trainers` (`id`, `name`, `email`, `phone`, `last_education`, `current_work`, `address`, `short_desctiption`, `long_description`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'MAHPARA FERDOUS', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador', '&nbsp;', '1639899027.JPG', '2021-12-19 01:30:27', '2021-12-19 01:35:38'),
-(2, 'SHAHZAMAN SIDDIQUEE', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador', '<p>&nbsp;<br></p>', '1639900360.jpg', '2021-12-19 01:52:40', '2021-12-19 01:52:55'),
-(3, 'SHIHABUL SADMAN', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador Bangladesh', '<p>&nbsp;<br></p>', '1639900545.JPG', '2021-12-19 01:55:45', '2021-12-19 01:55:45'),
-(4, 'RASHEDUL HAQUE', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador', '<p>&nbsp;<br></p>', '1639902219.jpeg', '2021-12-19 02:23:39', '2021-12-19 02:23:39'),
-(5, 'Ahnaf Habib', NULL, NULL, NULL, NULL, 'Bangladesh', 'UX/UI Designer & Ambassador', '<p>&nbsp;<br></p>', '1639902335.jpg', '2021-12-19 02:25:35', '2021-12-19 02:25:35'),
-(6, 'Shawan Ahmed chowdhury', NULL, NULL, NULL, NULL, 'Bangladesh', 'Digital Marketer & Ambassador', '<p>&nbsp;<br></p>', '1639902387.jpg', '2021-12-19 02:26:27', '2021-12-19 02:26:27');
-";
-        DB::select($sql);
+//         $sql =
+//             "INSERT INTO `trainers` (`id`, `name`, `email`, `phone`, `last_education`, `current_work`, `address`, `short_desctiption`, `long_description`, `image`, `created_at`, `updated_at`) VALUES
+// (1, 'MAHPARA FERDOUS', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador', '&nbsp;', '1639899027.JPG', '2021-12-19 01:30:27', '2021-12-19 01:35:38'),
+// (2, 'SHAHZAMAN SIDDIQUEE', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador', '<p>&nbsp;<br></p>', '1639900360.jpg', '2021-12-19 01:52:40', '2021-12-19 01:52:55'),
+// (3, 'SHIHABUL SADMAN', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador Bangladesh', '<p>&nbsp;<br></p>', '1639900545.JPG', '2021-12-19 01:55:45', '2021-12-19 01:55:45'),
+// (4, 'RASHEDUL HAQUE', NULL, NULL, NULL, NULL, 'Bangladesh', 'Amazon Specialist & Ambassador', '<p>&nbsp;<br></p>', '1639902219.jpeg', '2021-12-19 02:23:39', '2021-12-19 02:23:39'),
+// (5, 'Ahnaf Habib', NULL, NULL, NULL, NULL, 'Bangladesh', 'UX/UI Designer & Ambassador', '<p>&nbsp;<br></p>', '1639902335.jpg', '2021-12-19 02:25:35', '2021-12-19 02:25:35'),
+// (6, 'Shawan Ahmed chowdhury', NULL, NULL, NULL, NULL, 'Bangladesh', 'Digital Marketer & Ambassador', '<p>&nbsp;<br></p>', '1639902387.jpg', '2021-12-19 02:26:27', '2021-12-19 02:26:27');
+// ";
+//         DB::select($sql);
     }
 }
