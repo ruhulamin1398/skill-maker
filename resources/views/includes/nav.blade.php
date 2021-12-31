@@ -14,8 +14,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
                 <li class="{{ (request()-> is('ourTeam')) ? 'active' : '' }}"><a href="{{route('ourTeam')}}">Our Team</a></li>
  
                 <li class="{{ (request()-> is('officies')) ? 'active' : '' }}"><a href="{{route('officies')}}">Our Offices</a></li>
-                <li class=""><a href="#">Terms And Condition</a></li>
-                <li class=""><a href="#">Privacy Policy</a></li>
+               
             </ul>
         </li>
 
