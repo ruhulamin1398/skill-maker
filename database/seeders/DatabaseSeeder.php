@@ -168,5 +168,39 @@ INSERT INTO `courses` (`id`, `course_title`, `image`, `introduction_video`, `des
 // (6, 'Shawan Ahmed chowdhury', NULL, NULL, NULL, NULL, 'Bangladesh', 'Digital Marketer & Ambassador', '<p>&nbsp;<br></p>', '1639902387.jpg', '2021-12-19 02:26:27', '2021-12-19 02:26:27');
 // ";
 //         DB::select($sql);
+
+
+
+$sql = "
+INSERT INTO `additional_images` (`id`, `page`, `dimension`, `title`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'home', '', 'footer', '/images/banner2.jpg', NULL, NULL),
+(2, 'About Us', '', 'Breadcrum', '/theme/frontend/assets/img/about-us.jpg', NULL, NULL),
+(3, 'Officals', '', 'Breadcrum', '/theme/frontend/assets/img/office.jpg', NULL, NULL),
+(4, 'Services', '', 'Breadcrum', '/theme/frontend/assets/img/services-1.jpg', NULL, NULL),
+(5, 'Traning', '', 'Breadcrum', '/theme/frontend/assets/img/training-1.jpg', NULL, NULL),
+(6, 'Seminar', '', 'Breadcrum', '/theme/frontend/assets/img/seminar.jpg', NULL, NULL),
+(7, 'Support', '', 'Breadcrum', '/theme/frontend/assets/img/support.jpg', NULL, NULL),
+(8, 'Marketplace', '', 'Headings', '/theme/frontend/assets/img/marketplace.jpg', NULL, NULL);";
+
+DB::select($sql);
+
+$sql = "
+
+INSERT INTO `additional_settings` (`id`, `page`, `key`, `value`, `created_at`, `updated_at`) VALUES
+(1, 'home', 'about-us', 'skillmaker is an e-learning and services platform established in 2020. We offer a wide variety of e-learning and services through e-learning courses and services based on current market trend particularly in the US-UK-EU-Canada-UAE markets.', NULL, NULL),
+(2, 'home', 'marketplace', 'Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip', NULL, NULL),
+(3, 'home', '\r\nSeller Deshboard', 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt', NULL, NULL),
+(4, 'home', 'Investment Group', 'Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere', NULL, NULL),
+(5, 'home', 'skillmaker Trainings', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!', NULL, NULL),
+(6, 'home', 'skillmaker Services', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, asperiores? Molestiae amet blanditiis voluptatum eos voluptatibus impedit suscipit, cupiditate soluta illum quidem atque nisi porro, animi fugit. Ut, laudantium distinctio!', NULL, NULL),
+(7, 'home', 'UPCOMING SEMINAR SCHEDULE', 'All seminars will be scheduled as per government regulations. Keep visiting the site for the latest updates.', NULL, NULL),
+(8, 'Support', 'Headings text', 'Please select the relevant option to get quick support from Skillmaker.', NULL, NULL),
+(9, 'Marketplace', 'Headnings', 'The simplest way to get more done, faster.\r\nFind the perfect freelancer in three easy step.', NULL, NULL);
+
+";
+
+DB::select($sql);
+
     }
+
 }
