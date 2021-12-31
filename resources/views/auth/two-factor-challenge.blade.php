@@ -1,7 +1,9 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <a href="{{ url('/') }}" class="logo mr-auto"><img src="{{asset('images/skillmaker-removebg-.png')}}" alt="" class="img-fluid" width="270px"></a>
+
+
         </x-slot>
 
         <div x-data="{ recovery: false }">
