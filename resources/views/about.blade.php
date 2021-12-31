@@ -2,6 +2,17 @@
 @section('status', 'active')
 
 
+@section('css')
+<style>
+  #pageHero {
+    background: url("{{ asset(App\Models\additionalImage::find(2)->link )}}") center center;
+    background-repeat: no-repeat;
+    background-size:  100% auto;
+  }
+
+  
+</style>
+@endsection
 
 @section('hero')
 -
@@ -19,7 +30,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 style="color: white;"> All about the skillmaker</h1>
+        <h1 style="color: white;"> &nbsp;&nbsp;</h1>
       </div>
     </div>
   </div>

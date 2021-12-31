@@ -1,9 +1,15 @@
 @extends('includes.app')
-
 @section('css')
-<style>
-  #hero {
-    background: url("https://enablers.org/wp-content/uploads/2020/01/services-1.jpg") center center;
+<style> 
+ #pageHero {
+    background: url("{{ asset(App\Models\additionalImage::find(8)->link )}}") center center;
+    background-repeat: no-repeat;
+    background-size:  100% auto;
+  }
+ 
+
+  .icon{
+    display: none  !important;
   }
 </style>
 @endsection
@@ -22,8 +28,8 @@
     <div class="container d-flex justify-content-center align-items-center h-100">
       <div class="row">
           <div class="col">
-              <h1>Hire A Freelancer</h1>
-              <span>Freelance services. On demand.</span>
+              <h1>&nbsp;&nbsp;</h1>
+              
               <form action="">
                 <div class="form">
 
@@ -37,6 +43,7 @@
 @endsection
 @section('content')
 <!-- ======= Disclaimer ======= -->
+{{--
 <section id="disclaimer">
     <div class="container">
         <div class="row text-center">
@@ -76,6 +83,8 @@
         </div>
     </div>
 </section>
+
+--}}
 <!-- ======= Freelancer ======= -->
 <section id="freelancer">
     <div class="container">
@@ -115,15 +124,18 @@
                 </div>
             @endforeach
         </div>
-        <div class="row text-center">
+       {{-- <div class="row text-center">
             <div class="col">
                 <div class="view-all">
                     <a href="">View All</a>
                 </div>
             </div>
         </div>
+        --}}
     </div>
 </section>
+
+{{--
 <!-- ======= Explore ======= -->
 <section id="explore">
     <div class="container">
@@ -216,4 +228,6 @@
         </div>
     </div>
 </section>
+
+--}}
 @endsection

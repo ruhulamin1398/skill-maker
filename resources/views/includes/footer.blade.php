@@ -90,7 +90,7 @@
 
         <div class="col-lg-3 col-md-6 footer-contact">
           <a href="">
-            <img src="{{ asset('theme/frontend/assets/img/logo.png') }}" alt="">
+            <img src="{{ asset(App\Models\additionalImage::find(1)->link }}" alt="">
           </a>
           <p>
             We at Skillmaker aim to create 2 Million Employment Opportunities by year 2023 in pakistan.

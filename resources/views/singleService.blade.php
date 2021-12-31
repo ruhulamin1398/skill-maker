@@ -20,7 +20,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 style="color: white;">{{ $service ->course_title  }} </h1>
+        <h1 style="color: white;"> &nbsp;&nbsp; </h1>
       </div>
     </div>
   </div>

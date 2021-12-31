@@ -1,13 +1,15 @@
 @extends('includes.app')
 
+
 @section('css')
-<style>
-  #hero {
-    background: url("https://enablers.org/wp-content/uploads/2020/01/services-1.jpg") center center;
-
-
-
+<style> 
+ #pageHero {
+    background: url("{{ asset(App\Models\additionalImage::find(6)->link )}}") center center;
+    background-repeat: no-repeat;
+    background-size:  100% auto;
   }
+ 
+
   .icon{
     display: none  !important;
   }
@@ -29,7 +31,7 @@
     <div class="container">
       <div class="row">
           <div class="col">
-              <h1>Seminars</h1>
+              <h1>&nbsp;&nbsp;</h1>
           </div>
       </div>
     </div>
@@ -50,7 +52,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col h-100">
-            <h2>UPCOMING skillmaker SEMINARS</h2>
+            <h2>UPCOMING SKILLMAKER SEMINARS</h2>
             <div class="seminar-rs d-flex justify-content-center align-items-center">
               <!-- <h2>PARTICIPATION COST:</h2>
               <span>Rs.800</span> -->

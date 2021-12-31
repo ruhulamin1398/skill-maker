@@ -8,7 +8,7 @@ $navServices = App\Models\course::where('type','service')->orderBy('serial')->ge
 
 <nav class="nav-menu d-none d-lg-block">
     <ul>
-        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="{{ route('marketplace') }}">Company Profile</a>
+        <li class="drop-down {{ (request()-> is('about')) ? 'active' : '' }}}}"><a href="#">Company Profile</a>
             <ul>
                 <li class="{{ (request()-> is('about')) ? 'active' : '' }}"><a href="{{route('about')}}">About</a></li>
                 <li class="{{ (request()-> is('ourTeam')) ? 'active' : '' }}"><a href="{{route('ourTeam')}}">Our Team</a></li>

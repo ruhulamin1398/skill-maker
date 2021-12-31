@@ -182,7 +182,7 @@
                                     </ul>
                                 </li>
 
-
+{{--
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
@@ -197,7 +197,8 @@
                                         </li>
 
                                     </ul>
-                                </li>
+                                </li> 
+                                --}}
                                 <li class="nk-menu-item has-sub">
                                     <a href="#" class="nk-menu-link nk-menu-toggle">
                                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
