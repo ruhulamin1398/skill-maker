@@ -31,7 +31,7 @@
                                 <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $file->title }}</td> 
-                                    <td>{{ $file->Page }}</td> 
+                                    <td>{{ $file->page }}</td> 
                                     <td>{{ $file->dimention }}</td>  
                                     <td>
                                         
