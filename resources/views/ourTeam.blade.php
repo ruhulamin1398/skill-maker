@@ -1,13 +1,15 @@
 @extends('includes.app')
 
+
 @section('css')
-<style>
-  #hero {
-    background: url("https://enablers.org/wp-content/uploads/2020/01/services-1.jpg") center center;
-
-
-
+<style> 
+ #pageHero {
+    background: url("{{ asset(App\Models\additionalImage::find(11)->link )}}") center center;
+    background-repeat: no-repeat;
+    background-size:  100% auto;
   }
+ 
+
   .icon{
     display: none  !important;
   }
