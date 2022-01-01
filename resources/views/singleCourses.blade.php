@@ -59,7 +59,7 @@
           <div class="content border border-dark rounded p-4 mb-4 text-center">
             <div class="text-center">{{ $training -> course_title }}</div>
             <hr>
-            <div class="text-center mb-3">Price : ${{ $training -> price }}</div>
+            <div class="text-center mb-3">Price : TK{{ $training -> price }}</div>
 
 
             <form action="{{route('users.enrolls.store')}}" method="post">

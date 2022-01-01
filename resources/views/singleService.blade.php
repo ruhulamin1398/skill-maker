@@ -59,7 +59,7 @@
           <div class="content border border-dark rounded p-4 text-center">
             <div class="text-center">{{ $service -> course_title }}</div>
             <hr>
-            <div class="text-center mb-3">Price : ${{ $service -> price }}</div>
+            <div class="text-center mb-3">Price : TK{{ $service -> price }}</div>
             {{--<a href="{{route('users.enrolls.index')}}?service_id={{ $service -> id }}" class="appointment-btn scrollto  ">Start Now</a> --}}
 
             <form action="{{route('users.enrolls.store')}}" method="post">

@@ -63,7 +63,7 @@
             <div class="text-left">  <span class="font-weight-bold ">Location: &nbsp;&nbsp;&nbsp;</span><span class="font-italic ">   {{ $seminar -> location }} </span> </div>
             <div class="text-left"> <span class="font-weight-bold ">Venue: &nbsp;&nbsp;&nbsp;</span>  <span class="font-italic ">  {{ $seminar -> venue }} </span> </div> 
             <hr>
-            <div class="text-center mb-3">Price : ${{ $seminar -> price }}</div>
+            <div class="text-center mb-3">Price : TK{{ $seminar -> price }}</div>
             <!-- <a href="#" class="appointment-btn scrollto  ">RESERVE MY SEAT</a> -->
 
 
