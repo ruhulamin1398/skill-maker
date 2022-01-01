@@ -22,7 +22,7 @@
     <div class="container">
       <div class="row">
           <div class="col">
-          <h1>LISTEN FROM , WHO NEVER GAVE UP</h1>
+          <h1> &nbsp;&nbsp;</h1>
           </div>
       </div>
     </div>
