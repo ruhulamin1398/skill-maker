@@ -213,19 +213,16 @@
     </div>
 </section><!-- End About Section -->
  --}}
-
-<!-- ======= Founder Section ======= -->
-<section class="founder mt-4 pt-4">
-  <div class="container">
-
-    <div class="title text-center">
-      <h2>OUR PATHFINDERS</h2>
-    </div>
-
-    <div class="row">
+ 
 
 
-       @foreach ($ourTeams as $ourTeam)
+    <!-- ======= Team Section ======= -->
+    <section id="doctors" class="doctors2">
+      <div class="container" data-aos="fade-up">
+      <h1 class="mb-4 text-center">OUR PATHFINDERS</h1>
+        <div class="row">
+
+            @foreach ($ourTeams as $ourTeam)
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member" data-aos="fade-up" data-aos-delay="100">
                   <div class="member-img">
@@ -244,13 +241,11 @@
                 </div>
               </div>
             @endforeach
- 
 
-    </div>
-  </div>
-</section><!-- End Team Section -->
+        </div>
 
-
+      </div>
+    </section><!-- End Team Section -->
 
 
 
