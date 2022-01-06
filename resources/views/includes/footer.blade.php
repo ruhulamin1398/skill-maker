@@ -14,7 +14,7 @@
 
           <div class="footer_image">
 
-            <img src="{{ asset(App\Models\additionalImage::find(2)->link )}}" alt="">
+            <img src="{{ asset(App\Models\additionalImage::find(1)->link )}}" alt="">
 
 
           </div>
