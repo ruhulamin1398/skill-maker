@@ -20,7 +20,7 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1 style="color: white;">Seminar : &nbsp;&nbsp;&nbsp;&nbsp; {{ $seminar ->title  }} </h1>
+        <h1 style="color: white;"> &nbsp;&nbsp;&nbsp;&nbsp;  </h1>
       </div>
     </div>
   </div>
