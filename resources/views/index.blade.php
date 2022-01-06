@@ -199,7 +199,7 @@
 
 
 
-
+{{--
 <!-- ======= Testimonials Section ======= -->
 <section id="testimonials" class="testimonials">
   <div class="container">
@@ -280,6 +280,7 @@
   </div>
 </section><!-- End Testimonials Section -->
 
+--}}
 
 
 
