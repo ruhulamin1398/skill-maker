@@ -16,7 +16,7 @@ class HomeController extends Controller
 
         // return urlencode("dfasf sadfasdfasdf");
         $services =  course::where('type','service')->orderBy('serial')->get() -> take(6);
-        $trainings =  course::where('type','service')->orderBy('serial')->get() -> take(6);
+        $trainings =  course::where('type','training')->orderBy('serial')->get() -> take(6);
         $seminars = seminar::all() -> take(3);
         return view('index', [
             'services' => $services,
