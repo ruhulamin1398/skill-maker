@@ -29,13 +29,20 @@
                             <tbody>
                             @foreach($courses as $i=>$course)
 
-                        @if( $course->course->type ==  $type )  
+                        @if( $course->course && $course->course->type ==  $type )  
                             
                             <tr>
                                     <td>{{ ++$i }}</td>
                                     <td>{{ $course->course->course_title }}</td>
-                                    <td>{{ $course->batch->batch_name }} </td>
-                                    <td>{{ number_format($course->enroll->price,'2') }}</td>
+                                    <td>
+                                    @if( $course->batch)  
+                                    {{ $course->batch->batch_name }} 
+                                    @else
+                                    Not Assigned
+                                    @endif
+                                
+                                </td>
+                                    <td>{{ number_format($course->price,'2') }}</td>
                                     <td>Paid</td>
                                     
                                     <td><a href="" class="btn btn-primary">
@@ -44,8 +51,8 @@
 
                                         
                                     <td>
-                                        <a href="" class="btn btn-info">View</a> |
-                                        <a href="{{ route('chats.index') }}" class="btn btn-success">Chat Now</a>
+                                        <a href="" class="btn btn-info">View</a> 
+                                        <!-- | <a href="{{ route('chats.index') }}" class="btn btn-success">Chat Now</a> -->
                                      </td>
                                 </tr>
                                 @endif

@@ -13,4 +13,7 @@ class enroll extends Model
     public function participator(){
         return $this->belongsTo(perticipator::class);
     }
+    public function course(){
+        return $this->belongsTo(course::class);
+    }
 }

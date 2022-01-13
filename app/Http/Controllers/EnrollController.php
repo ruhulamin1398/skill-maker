@@ -40,12 +40,12 @@ class EnrollController extends Controller
      */
     public function store(Request $request)
     {
-            // return Auth::user();
+        //    return Auth::user();
         $card = array();
 
         $enroll = new enroll;
         
-        $enroll->course_id = $request->course_id;
+        $enroll->course_id = $request->course_id; 
         $enroll->seminar_id = $request->seminar_id;
         $enroll->user_id = Auth::user()->id;
         $enroll->price = $request->price;
@@ -65,6 +65,9 @@ class EnrollController extends Controller
         $enroll->participator_id = $participator->id;
         $enroll->save();
 
+        
+        // return  $enroll;
+
         // added him as participant 
         if ($enroll->seminar_id) {
 
@@ -74,6 +77,7 @@ class EnrollController extends Controller
             $seminarParticipators->save();
             $enroll->is_assigned = 1;
             $enroll->save();
+
         }
         return redirect(route('redirection'));
         // return view('enroll', compact('card'));

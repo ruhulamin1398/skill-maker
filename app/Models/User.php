@@ -15,6 +15,8 @@ use Spatie\Permission\Traits\HasRoles;
 
 
 use App\Models\seminar;
+use Illuminate\Support\Facades\Auth;
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -63,29 +65,37 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
- 
-    public function perticipator(){
+
+    public function perticipator()
+    {
         return $this->hasOne(perticipator::class);
-    } 
-    public function trainer(){
+    }
+    public function trainer()
+    {
         return $this->hasOne(trainer::class);
     }
-    public function seminars(){
-        return $this->hasMany(seminarParticipators::class,'participator_id');
-    }  
-    public function isRegisteredSeminar($seminar_id){
+    public function seminars()
+    {
+        return $this->hasMany(seminarParticipators::class, 'participator_id');
+    }
+    public function isRegisteredSeminar($seminar_id)
+    {
 
-        foreach($this->seminars as $seminar){
-            if($seminar->seminar_id == $seminar_id){
-                return 1;
-            }
+        $seminarParticipator =  seminarParticipators::where('participator_id', Auth::user()->perticipator->id)->where('seminar_id', $seminar_id)->first();
 
+        if (!is_null($seminarParticipator)) {
+            return 1;
+        } else {
+            return  0;
         }
-        return 0;
+
+        // foreach($this->seminars as $seminar){
+        //     if($seminar->seminar_id == $seminar_id){
+        //         return 1;
+        //     }
+
+        // }
+        // return 0;
 
     }
-
-
-    
-
 }

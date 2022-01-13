@@ -78,7 +78,7 @@
               <input type="text" name="payment_Comment" id="payment_Comment" value="Payment via cash" hidden>
               @if(Auth::user() && Auth::user()->isRegisteredSeminar($seminar -> id))
               
-            <a   class=" btn appointment-btn scrollto  ">Chat</a>
+            <a  href="{{ route('users.seminars.index') }}"  class=" btn appointment-btn scrollto  ">View</a>
               @else
 
             <button type="submit"  class=" btn appointment-btn scrollto  ">RESERVE MY SEAT</button>

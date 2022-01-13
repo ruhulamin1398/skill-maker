@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\seminar;
 use App\Http\Controllers\Controller;
 use App\Models\Chat;
+use App\Models\seminarParticipators;
 use App\Models\Trainer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +20,10 @@ class UserSeminarController extends Controller
      */
     public function index()
     {
+    
         $page_name = 'My Seminars List';
-        $seminars = Auth::user()->seminars;
+        $seminars = seminarParticipators::where('participator_id',Auth::user()->perticipator->id)->get();
+        // return $seminars;
         // $course->perticipates->first()->course;
         // $trainer = seminar::where('id', '=', 'chat.model_id');
         // dd($seminars);
