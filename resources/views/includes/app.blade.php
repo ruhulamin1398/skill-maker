@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,14 +43,14 @@
   <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
     <div class="container d-flex">
       <div class="contact-info mr-auto">
-        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(16)->key  }}</a>
-        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(12)->key  }}
-        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(13)->key  }}
-        <i class="icofont-google-map"></i>  {{App\Models\additionalSetting::find(15)->key  }}
+        <i class="icofont-envelope"></i> <a href="mailto:contact@example.com">{{App\Models\additionalSetting::find(16)->key }}</a>
+        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(12)->key }}
+        <i class="icofont-phone"></i> {{App\Models\additionalSetting::find(13)->key }}
+        <i class="icofont-google-map"></i> {{App\Models\additionalSetting::find(15)->key }}
       </div>
-      <div class="social-links"> 
+      <div class="social-links">
         <a href="{{App\Models\additionalSetting::find(9)->key }}" class="facebook"><i class="icofont-facebook"></i> </a>
-        <a href="{{App\Models\additionalSetting::find(10)->key   }}" class="instagram"><i class="icofont-instagram"></i></a> 
+        <a href="{{App\Models\additionalSetting::find(10)->key   }}" class="instagram"><i class="icofont-instagram"></i></a>
         <a href="{{App\Models\additionalSetting::find(11)->key  }}" class="linkedin"><i class="icofont-linkedin"></i></i></a>
       </div>
     </div>
@@ -67,7 +65,15 @@
 
       @include('includes.nav')
 
-      <a href="#" class="appointment-btn scrollto">AMZ BootCamp</a>
+      <a href="{{route('login')}}" class="appointment-btn scrollto">
+        @if (Auth::check())
+        My Account
+        @else
+        Login
+        @endif 
+
+
+      </a>
 
     </div>
   </header><!-- End Header -->
@@ -78,7 +84,7 @@
   <!-- End Hero -->
 
   <main id="main">
-@yield('content')
+    @yield('content')
     <!-- End Contact Section -->
 
   </main><!-- End #main -->
@@ -104,45 +110,45 @@
   <script src="{{asset('theme/frontend/assets/js/main.js')}}"></script>
 
 
-@yield('js')
+  @yield('js')
 
 
-<script>
+  <script>
     var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?69118';
     var s = document.createElement('script');
     s.type = 'text/javascript';
     s.async = true;
     s.src = url;
     var options = {
-  "enabled":true,
-  "chatButtonSetting":{
-      "backgroundColor":"#4dc247",
-      "ctaText":"",
-      "borderRadius":"25",
-      "marginLeft":"0",
-      "marginBottom":"50",
-      "marginRight":"50",
-      "position":"right"
-  },
-  "brandSetting":{
-      "brandName":"skillmaker",
-      "brandSubTitle":"Typically replies within an Hour",
-      "brandImg":"",
-      "welcomeText":"Hi there!\nHow can I help you?",
-      "messageText":"Hello, I have a question about ",
-      "backgroundColor":"#0a5f54",
-      "ctaText":"Start Chat",
-      "borderRadius":"25",
-      "autoShow":false,
-      "phoneNumber":"+8801974775455"
-  }
-};
+      "enabled": true,
+      "chatButtonSetting": {
+        "backgroundColor": "#4dc247",
+        "ctaText": "",
+        "borderRadius": "25",
+        "marginLeft": "0",
+        "marginBottom": "50",
+        "marginRight": "50",
+        "position": "right"
+      },
+      "brandSetting": {
+        "brandName": "skillmaker",
+        "brandSubTitle": "Typically replies within an Hour",
+        "brandImg": "",
+        "welcomeText": "Hi there!\nHow can I help you?",
+        "messageText": "Hello, I have a question about ",
+        "backgroundColor": "#0a5f54",
+        "ctaText": "Start Chat",
+        "borderRadius": "25",
+        "autoShow": false,
+        "phoneNumber": "+8801974775455"
+      }
+    };
     s.onload = function() {
-        CreateWhatsappChatWidget(options);
+      CreateWhatsappChatWidget(options);
     };
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
-</script>
+  </script>
 
 </body>
 
