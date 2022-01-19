@@ -25,11 +25,11 @@
           <h1 class="mb-4 text-center"> Let's make <br> learning effective</h1>
           <div class="row mt-4">
             <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">ABOUT US</a></div>
-            <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CAREER</a></div>
+            <div class="col-6"><a href="{{route('seminar')}}" class="appointment-btn m-2">SEMINARS</a></div>
             <div class="col-6"><a href="{{route('trainings')}}" class="appointment-btn m-2">COURSES</a></div>
-            <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">FIND US ON MAP</a></div>
-            <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">SERVICES</a></div>
-            <div class="col-6"><a href="{{route('about')}}" class="appointment-btn m-2">CONTACT DETAILS</a></div>
+            <div class="col-6"><a target="_blank" href="{{App\Models\additionalSetting::find(18)->key }}" class="appointment-btn m-2">FIND US ON MAP</a></div>
+            <div class="col-6"><a href="{{route('services')}}" class="appointment-btn m-2">SERVICES</a></div>
+            <div class="col-6"><a href="{{route('officies')}}" class="appointment-btn m-2">OFFICIES</a></div>
           </div>
 
           <div class="social-links pt-4">

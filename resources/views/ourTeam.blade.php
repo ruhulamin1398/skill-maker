@@ -45,13 +45,13 @@
               </div>
               <div class="member-info">
                 <h4>{{ $trainer -> name }}</h4>
-                <strong>{{ $trainer -> location }}</strong>
+                <strong>{{ $trainer -> address }}</strong>
                 <span>
                     @php
-                    echo (implode(' ', array_slice(explode(' ', strip_tags($trainer ->long_desctiption)), 0, 13))."\n");
+                    echo (implode(' ', array_slice(explode(' ', strip_tags($trainer ->short_desctiption)), 0, 13))."\n");
                     @endphp
                 </span>
-                <a href="">Read More</a>
+                <a href="{{route('ourTrainerProfile',$trainer -> id)}}">Read More</a>
               </div>
             </div>
           </div>
@@ -78,12 +78,13 @@
                   <div class="member-info">
                     <h4>{{ $ourTeam -> name }}</h4>
                     <strong>{{ $ourTeam -> location }}</strong>
+                    
                     <span>
                         @php
                         echo (implode(' ', array_slice(explode(' ', strip_tags($ourTeam -> short_desctiption)), 0, 13))."\n");
                         @endphp
                     </span>
-                    <a href="">Read More</a>
+                    <a href="{{route('ourTeamProfile',$ourTeam -> id)}}">Read More</a>
                   </div>
                 </div>
               </div>

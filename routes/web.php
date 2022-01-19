@@ -118,7 +118,9 @@ Route::get('officies', [OfficeController::class, 'index'])->name('officies');
 // About Route
 Route::get('about', [AboutController::class, 'index'])->name('about');
 // Sucess Stories
-Route::get('out-team', [OurTeamController::class, 'index'])->name('ourTeam');
+Route::get('our-team', [OurTeamController::class, 'index'])->name('ourTeam');
+Route::get('our-team/profile/{id}', [OurTeamController::class, 'team'])->name('ourTeamProfile');
+Route::get('our-trainer/profile/{id}', [OurTeamController::class, 'trainer'])->name('ourTrainerProfile');
 
 Route::get('form', function () {
     return view('form');

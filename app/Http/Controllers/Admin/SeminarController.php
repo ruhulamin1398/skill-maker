@@ -71,7 +71,7 @@ class SeminarController extends Controller
         if ($request->hasFile('breadcrumb_image')) {
             $file = $request->file('breadcrumb_image');
             $extension = $file->getClientOriginalExtension();
-            $fileName = str_replace(' ', '_', $request->title).time() . 'breadcrumb_image.' . $extension;
+            $fileName = time() . 'breadcrumb_image.' . $extension;
             $file->move('seminar/images/', $fileName);
             $seminar->breadcrumb_image = $fileName;
         } else {
@@ -139,7 +139,7 @@ class SeminarController extends Controller
              if ($request->hasFile('breadcrumb_image')) {
                  $file = $request->file('breadcrumb_image');
                  $extension = $file->getClientOriginalExtension();
-                 $fileName = str_replace(' ', '_', $request->title).time() . 'breadcrumb_image.' . $extension;
+                 $fileName = time() . 'breadcrumb_image.' . $extension;
                  $file->move('seminar/images/', $fileName);
                  $seminar->breadcrumb_image = $fileName;
              } else {

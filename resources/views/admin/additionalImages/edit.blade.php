@@ -39,7 +39,7 @@
                         <div class="form-group">
                                 <label class="form-label">Image<sup class="text-danger">*</sup></label>
                                 <img src="{{ asset($additionalImage->link) }}" style="height: 120px; width: 120px"><br/>
-                                <input type="file" name="link"  class="form-control" required>
+                                <input type="file" name="link"  class="form-control" >
                                 @if($errors->has('link'))
                                     <span class="text-danger ">{{ $errors->first('link') }}</span>
                                 @endif

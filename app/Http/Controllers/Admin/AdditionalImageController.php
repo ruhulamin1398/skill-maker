@@ -84,11 +84,9 @@ class AdditionalImageController extends Controller
      $this->validate($request,[
             'page'                => 'required', 
             'title'                 => 'required',
-            'link'               => 'required '
         ],[
             'page.required'               => 'Please Enter Page Name',
             'title.required'               => 'Please Enter Title',
-            'link.required'              => 'Please Select Image',
         ]);
 
 

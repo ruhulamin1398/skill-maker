@@ -16,7 +16,7 @@ class CreateAdditionalSettingsTable extends Migration
         Schema::create('additional_settings', function (Blueprint $table) {
             $table->id();
             $table->string('page');
-            $table->string('key');
+            $table->string('key',500);
             $table->longText('value');
             $table->timestamps();
         });

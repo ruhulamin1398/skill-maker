@@ -59,7 +59,7 @@ class FileManagerController extends Controller
         if ($request->hasFile('file')) {
             $file1 = $request->file('file');
             $extension = $file1->getClientOriginalExtension();
-            $fileName = str_replace(' ', '_', $request->title).time() . '.' . $extension;
+            $fileName = time() . '.' . $extension;
             $file1->move('files/', $fileName);
             $file->link = $fileName;
         } 

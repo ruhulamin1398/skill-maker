@@ -72,7 +72,7 @@ class CourseControllernew extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
-            $fileName = str_replace(' ', '_', $request->course_title) . time() . 'image.' . $extension;
+            $fileName = time() . 'image.' . $extension;
             $file->move('course/images/', $fileName);
             $course->image = $fileName;
         } else {
@@ -81,7 +81,7 @@ class CourseControllernew extends Controller
         if ($request->hasFile('breadcrumb_image')) {
             $file = $request->file('breadcrumb_image');
             $extension = $file->getClientOriginalExtension();
-            $fileName = str_replace(' ', '_', $request->course_title) . time() . 'breadcrumb_image.' . $extension;
+            $fileName =  time() . 'breadcrumb_image.' . $extension;
             $file->move('course/images/', $fileName);
             $course->breadcrumb_image = $fileName;
         } else {
@@ -167,7 +167,7 @@ class CourseControllernew extends Controller
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
                 $extension = $file->getClientOriginalExtension();
-                $fileName = str_replace(' ', '_', $request->course_title) . time() . 'image.' . $extension;
+                $fileName = time() . 'image.' . $extension;
                 $file->move('course/images/', $fileName);
                 $course->image = $fileName;
             } else {
@@ -182,7 +182,7 @@ class CourseControllernew extends Controller
             if ($request->hasFile('breadcrumb_image')) {
                 $file = $request->file('breadcrumb_image');
                 $extension = $file->getClientOriginalExtension();
-                $fileName = str_replace(' ', '_', $request->course_title) . time() . 'breadcrumb_image.' . $extension;
+                $fileName = 'breadcrumb_image.' . $extension;
                 $file->move('course/images/', $fileName);
                 $course->breadcrumb_image = $fileName;
             } else {

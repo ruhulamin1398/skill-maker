@@ -14,4 +14,16 @@ class OurTeamController extends Controller
         $trainers = Trainer::all();
         return view('ourTeam',compact('ourTeams','trainers') );
     }
+    public function team($id){
+        $team= ourTeam::find($id);
+        // return  $team ;
+    
+        return view('ourTeamProfile',compact('team') );
+    } 
+    public function trainer($id){
+        $trainer= trainer::find($id);
+        // return  $team ;
+    
+        return view('ourTrainerProfile',compact('trainer') );
+    }
 }
