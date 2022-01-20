@@ -22,6 +22,7 @@
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Image</th>
+                                <th>Serial</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -35,6 +36,11 @@
                                     <td>
                                         <img src="{{ asset('trainer/images/'.$trainers->image) }}" class="img-thumbnail" style="height: 70px;width: 70px">
                                     </td>
+
+                                    
+                                    <td>{{ $trainers->serial }}</td>
+
+
                                     <td>
                                         <form action="{{ route('trainers.destroy', $trainers->id) }}" method="post">
                                              <a href="{{ route('trainers.show', $trainers->id) }}" class="btn btn-success">View</a> |

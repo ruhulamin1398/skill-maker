@@ -11,7 +11,7 @@ class OurTeamController extends Controller
 {
     public function index(){
         $ourTeams= ourTeam::orderBy('serial')->get();
-        $trainers = Trainer::all();
+        $trainers = Trainer::orderBy('serial')->get();
         return view('ourTeam',compact('ourTeams','trainers') );
     }
     public function team($id){

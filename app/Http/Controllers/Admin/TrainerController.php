@@ -19,7 +19,7 @@ class TrainerController extends Controller
     public function index()
     {
         $page_name = "All Trainer List";
-        $trainer = Trainer::all();
+        $trainer = Trainer::orderBy('serial')->get();
 
         return view('admin.trainers.index', compact('page_name', 'trainer'));
     }
@@ -42,7 +42,7 @@ class TrainerController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
         $this->validate($request,[
             'name'           => 'required',
             'email'          => 'required',
@@ -70,7 +70,9 @@ class TrainerController extends Controller
         $trainer->last_education = $request->last_education;
         $trainer->current_work   = $request->current_work;
         $trainer->address        = $request->address;
-
+         
+        $trainer->serial        = $request->serial;
+        
         $trainer->short_desctiption = $request->short_desctiption;
         $trainer->long_description  = $request->long_description;
 
@@ -166,6 +168,8 @@ class TrainerController extends Controller
         $trainer->current_work   = $request->current_work;
         $trainer->address        = $request->address;
 
+        $trainer->serial        = $request->serial;
+        
         $trainer->short_desctiption = $request->short_desctiption;
         $trainer->long_description  = $request->long_description;
 

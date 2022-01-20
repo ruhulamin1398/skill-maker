@@ -83,6 +83,13 @@
                                     <span class="text-danger ">{{ $errors->first('long_description') }}</span>
                                 @endif
                             </div>
+                            <div class="form-group col-md-12 float-left">
+                                <label class="form-label"> Serial<sup class="text-danger">*</sup></label>
+                                <input type="number" name="serial"  class="form-control" value="{{  $trainer->serial }}">
+                                @if($errors->has('name'))
+                                    <span class="text-danger ">{{ $errors->first('serial') }}</span>
+                                @endif
+                            </div>
 
                             
                             <div class="form-group col-md-12 float-left">

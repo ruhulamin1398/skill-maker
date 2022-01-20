@@ -25,6 +25,7 @@ class CreateTrainersTable extends Migration
             $table->longText('short_desctiption')->nullable();
             $table->longText('long_description' )->nullable();
             $table->string('image')->nullable();
+            $table->integer('serial')->default(999);
             $table->timestamps();
         });
     }
